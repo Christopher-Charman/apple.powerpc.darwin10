@@ -1,0 +1,21 @@
+name: PPC experiment contract
+
+on:
+  pull_request:
+    paths:
+      - 'tools/validate_experiment.py'
+      - 'tests/test_experiment_contract.py'
+      - '.github/workflows/experiment-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate experiment contract
+        run: python3 -m unittest discover -s tests -p 'test_experiment_contract.py' -v
