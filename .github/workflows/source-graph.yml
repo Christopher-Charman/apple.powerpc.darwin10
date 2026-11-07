@@ -12,6 +12,7 @@ on:
       - 'tools/ppc_patch_gate.py'
       - 'tools/verify_historical_sources.py'
       - 'tools/verify_release_parity.py'
+      - 'tools/verify_notify_contract.py'
       - 'source-releases/**'
       - 'tools/verify_source_graph.py'
       - '.github/workflows/source-graph.yml'
@@ -33,4 +34,5 @@ jobs:
           python3 tools/verify_source_graph.py
           python3 tools/verify_historical_sources.py
           python3 tools/verify_release_parity.py
+          python3 tools/verify_notify_contract.py
           python3 -m unittest discover -s tests -p "test_ppc_patch_gate.py" -v
