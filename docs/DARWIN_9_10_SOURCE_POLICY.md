@@ -43,3 +43,7 @@ Additional complete official XNU snapshots are available at `src/releases/10.6.2
 ## Notification-service source uplift
 
 The recovered 10A222 project evidence identifies the later Snow Leopard `notify-23` source rebuild as an important PPC-compatible successor-contract intervention when the older 10A190 notifier was insufficient. Exact Apple OSS sources now coexist for `notify-16` (10.5.8), `notify-23` (10.6.0), and `notify-25.1` (10.6.8) under their release-specific directories. The three source versions are suitable for contract and regression comparison. This does not recover Educovas' original compiled notifier, patches or boot logs, nor independently validate PPC runtime behaviour.
+
+### Verified notify successor source delta
+
+`docs/notify_23_to_25_1_source_delta.json` records four changed paths and review findings. The 10.6.8 daemon changes `_notify_lib_notify_state_new(0)` to `_notify_lib_notify_state_new(0, 1024)`, a concrete successor library-contract difference; the MIG definition also moves to the SDK. This makes unqualified reversion to the earlier daemon unsafe as an automatic operation. Reconcile Libnotify and SDK-generated IPC interfaces before PPC build/boot acceptance.
