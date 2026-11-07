@@ -26,6 +26,8 @@ on:
       - 'tools/verify_developer_seed_lineage.py'
       - 'tests/test_developer_seed_lineage.py'
       - 'tools/scan_ppc_source_guards.py'
+      - 'tools/qualify_ppc_cross_compile.py'
+      - 'tests/test_ppc_cross_compile.py'
       - 'tests/test_ppc_source_guards.py'
       - 'tests/test_darwinbuild_context.py'
       - 'tooling/darwinbuild/**'
@@ -68,3 +70,4 @@ jobs:
           python3 tools/verify_developer_seed_lineage.py
           python3 -m unittest discover -s tests -p "test_developer_seed_lineage.py" -v
           python3 -m unittest discover -s tests -p "test_ppc_source_guards.py" -v
+          python3 -m unittest discover -s tests -p "test_ppc_cross_compile.py" -v
