@@ -28,6 +28,15 @@ def inspect():
     for entry in result:
         if entry['inherits'] and entry['inherits'] not in BUILDS:
             raise ValueError('unresolved build index inheritance: ' + entry['build'])
+    # Darwinbuild 10.6.8 overlay must agree with the release-exact Apple source manifest.
+    last = plistlib.loads((PLISTS / '10K540.plist').read_bytes())
+    official = {item['project']: item['tag'] for item in json.loads(
+        (ROOT / 'source-releases/10.6.8.json').read_text(encoding='utf-8'))['projects']}
+    for project, entry in last['projects'].items():
+        tag = project + '-' + str(entry['version'])
+        if official.get(project) != tag:
+            raise ValueError('darwinbuild / official source tag mismatch: ' + tag)
+    result[-1]['overlay_projects_verified'] = len(last['projects'])
     return result
 
 

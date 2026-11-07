@@ -14,6 +14,7 @@ class DarwinBuildContextTests(unittest.TestCase):
         self.assertEqual(len(builds), 9)
         self.assertEqual(builds[0]['build'], '10A432')
         self.assertEqual(builds[-1]['build'], '10K540')
+        self.assertEqual(builds[-1]['overlay_projects_verified'], 50)
         self.assertEqual(builds[0]['default_architectures'], ['i386', 'x86_64'])
         self.assertTrue(all(builds[i]['inherits'] == builds[i-1]['build'] for i in range(1, len(builds))))
 
