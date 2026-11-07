@@ -39,3 +39,7 @@ The `source-releases/` directory contains Apple's first-party `release.json` rec
 ## XNU regression-comparison checkpoints
 
 Additional complete official XNU snapshots are available at `src/releases/10.6.2/xnu-1486.2.11/` and `src/releases/10.6.3/xnu-1504.3.12/`. These permit direct, release-specific source comparison of the early Snow Leopard XNU transition before the 10.6.8 A5-associated baseline. A source delta alone is not evidence of PPC runtime regression or a justified reversion.
+
+## Notification-service source uplift
+
+The recovered 10A222 project evidence identifies the later Snow Leopard `notify-23` source rebuild as an important PPC-compatible successor-contract intervention when the older 10A190 notifier was insufficient. Exact Apple OSS sources now coexist for `notify-16` (10.5.8), `notify-23` (10.6.0), and `notify-25.1` (10.6.8) under their release-specific directories. The three source versions are suitable for contract and regression comparison. This does not recover Educovas' original compiled notifier, patches or boot logs, nor independently validate PPC runtime behaviour.
