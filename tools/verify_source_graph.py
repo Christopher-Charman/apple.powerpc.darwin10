@@ -10,6 +10,8 @@ EXPECTED = {
     'src/releases/10.5/xnu-1228.15.4': ('9d80f9528906753d682f9d65d56a0276bad56b4d', 3156),
     'src/releases/10.6/xnu-1456.1.26': ('46708ce5a6d4a42164ddb67a90fa6fbc7f986430', 3379),
     'src/releases/10.6.8/xnu-1504.15.3': ('0ffff24afe52ed47d20c5a06f07a10200f89f32b', 3386),
+    'src/releases/10.6/cups-218': ('9938def0573b75abc0d2394b8a5e9ad66eca6609', 1336),
+    'src/releases/10.6/libxml2-21': ('fc7b70e014720bcd2841ea820dcd796857f73380', 3786),
     'historical-vendored/xnu-1228.15.4': ('9d80f9528906753d682f9d65d56a0276bad56b4d', 3156),
     'historical-vendored/xnu-1456.1.26': ('46708ce5a6d4a42164ddb67a90fa6fbc7f986430', 3379),
     'historical-vendored/xnu-1504.15.3': ('0ffff24afe52ed47d20c5a06f07a10200f89f32b', 3386),

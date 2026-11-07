@@ -25,3 +25,9 @@ Source after 10.7 is eligible **only** where a concrete component or isolated ch
 Keep pristine Apple release snapshots unchanged. Put porting patches in reviewable, separately attributed paths; do not overwrite an upstream tree in place. Preserve Apple and third-party license notices. A release-specific source candidate is distinct from community patch output, installed image contents, and actual PPC hardware runtime validation.
 
 For the current build, establish source revision, compiler/linker, OS build, image digest, hardware model and boot ROM, then execute the [first diagnostic](FIRST_CURRENT_DIAGNOSTIC.md) and publish only evidence-backed gate transitions.
+
+## Source parity recovered from project chronology
+
+The project chronology records first-party source builds of **cups-218** (printing) and **libxml2-21** (XML runtime) on the modified 10A190_PPC line. Their complete official Apple OSS source trees are now imported at `src/releases/10.6/cups-218/` and `src/releases/10.6/libxml2-21/`, from exact upstream commits `254894616d00a03a51a36e2873c2928be4d050ed` and `1727d2fb2f5fad56a3dad1f1244143a23958f19b`. These are source-parity recoveries, not a reproduction of the historical binaries. Original contributor credit and source-built runtime evidence remain separate.
+
+Other project-era components such as BootX, 10.6PPC KEXT donors, `OSInstall_10A190.mpkg`, `notifyd`, ImageIO and the A5 file-sharing/ALF remediation require distinct licensing, binary/source and version reconciliation before inclusion. Do not publish proprietary binaries or assume upstream OSS is equivalent to the modified runtime payload.
