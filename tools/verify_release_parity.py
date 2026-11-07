@@ -26,6 +26,21 @@ def verify():
         if len({p['project'] for p in projects}) != len(projects):
             raise ValueError('duplicate project: ' + version)
         releases[version] = {p['project']: p['tag'] for p in projects}
+    # Every vendored release-tagged source must correspond to the official
+    # project/tag pair for that precise release, except explicitly marked
+    # experimental trees retained for historical comparison.
+    exceptions = {'10.6/Libc-594.9.1'}
+    for path in (ROOT / 'src/releases').glob('*/*'):
+        if not path.is_dir():
+            continue
+        version, tag = path.parent.name, path.name
+        if version not in releases:
+            continue
+        project = tag.split('-', 1)[0]
+        if releases[version].get(project) != tag:
+            if version + '/' + tag not in exceptions:
+                raise ValueError('vendored source not in official release: ' + version + '/' + tag)
+            print('HISTORICAL_CANDIDATE_NOT_RELEASE_MEMBER: ' + version + '/' + tag)
     for version, name in (('10.5.1', 'xnu'), ('10.6.8', 'xnu')):
         if name not in releases[version]:
             raise ValueError('missing xnu in ' + version)

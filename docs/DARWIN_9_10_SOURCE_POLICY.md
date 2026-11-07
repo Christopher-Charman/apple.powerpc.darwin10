@@ -47,3 +47,7 @@ The recovered 10A222 project evidence identifies the later Snow Leopard `notify-
 ### Verified notify successor source delta
 
 `docs/notify_23_to_25_1_source_delta.json` records four changed paths and review findings. The 10.6.8 daemon changes `_notify_lib_notify_state_new(0)` to `_notify_lib_notify_state_new(0, 1024)`, a concrete successor library-contract difference; the MIG definition also moves to the SDK. This makes unqualified reversion to the earlier daemon unsafe as an automatic operation. Reconcile Libnotify and SDK-generated IPC interfaces before PPC build/boot acceptance.
+
+### Candidate-vs-release distinction
+
+The vendored `src/releases/10.6/Libc-594.9.1` is a retained historical source candidate, **not** the first-party Mac OS X 10.6.0 Libc release member (`Libc-583`). The first-party 10.6.8 Libc member is `Libc-594.9.5`. The release-parity verifier explicitly labels this exception instead of silently promoting it to shipping provenance.
