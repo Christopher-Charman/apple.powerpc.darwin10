@@ -17,3 +17,15 @@ python3 tools/verify_historical_sources.py
 ```
 
 The first command fetches the exact upstream commit into the project checkout; the second checks the committed lock, gitlink and URL mappings. Neither compiles the kernel or validates a boot image. Do not indiscriminately fetch the macOS 11 component graph. Add further 10.5–10.6.x components only after checking exact Apple OSS tags, licenses, release correspondence and dependency edges; keep candidate vs verified image provenance separate.
+
+## Fully vendored XNU source trees
+
+The three critical kernel generations are additionally checked in as **complete tracked source files**, not only submodule pointers:
+
+| Source tree | Tracked files | Verified Git tree SHA |
+| --- | ---: | --- |
+| `historical-vendored/xnu-1228.15.4/` | 3,156 | `9d80f9528906753d682f9d65d56a0276bad56b4d` |
+| `historical-vendored/xnu-1456.1.26/` | 3,379 | `46708ce5a6d4a42164ddb67a90fa6fbc7f986430` |
+| `historical-vendored/xnu-1504.15.3/` | 3,386 | `0ffff24afe52ed47d20c5a06f07a10200f89f32b` |
+
+Each imported tree SHA was compared directly against the corresponding pinned Apple OSS upstream commit tree and matched. This permits offline source analysis without submodule initialization. Other 10.5/10.6 components remain pinned submodule references pending per-component source/ABI selection; they are **not** falsely represented as already vendored.
