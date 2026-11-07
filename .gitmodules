@@ -1745,3 +1745,47 @@
 [submodule "snowleopard/libstdcxx_40"]
 	path = src/apple-darwin-10.6.8/libstdcxx_40
 	url = https://github.com/apple-oss-distributions/libstdcxx_40
+
+# Apple OSS historical Darwin 9 / Darwin 10 source candidates, pinned to tags
+[submodule "historical/10.5/xnu/xnu-1228.15.4"]
+	path = historical/10.5/xnu/xnu-1228.15.4
+	url = https://github.com/apple-oss-distributions/xnu.git
+[submodule "historical/10.6/xnu/xnu-1456.1.26"]
+	path = historical/10.6/xnu/xnu-1456.1.26
+	url = https://github.com/apple-oss-distributions/xnu.git
+[submodule "historical/10.6/xnu/xnu-1504.3.12"]
+	path = historical/10.6/xnu/xnu-1504.3.12
+	url = https://github.com/apple-oss-distributions/xnu.git
+[submodule "historical/10.6/xnu/xnu-1504.15.3"]
+	path = historical/10.6/xnu/xnu-1504.15.3
+	url = https://github.com/apple-oss-distributions/xnu.git
+[submodule "historical/10.5/Libc/Libc-498.1.7"]
+	path = historical/10.5/Libc/Libc-498.1.7
+	url = https://github.com/apple-oss-distributions/Libc.git
+[submodule "historical/10.6/Libc/Libc-594.9.5"]
+	path = historical/10.6/Libc/Libc-594.9.5
+	url = https://github.com/apple-oss-distributions/Libc.git
+[submodule "historical/10.5/Libsystem/Libsystem-111.1.1"]
+	path = historical/10.5/Libsystem/Libsystem-111.1.1
+	url = https://github.com/apple-oss-distributions/Libsystem.git
+[submodule "historical/10.6/Libsystem/Libsystem-125.2.11"]
+	path = historical/10.6/Libsystem/Libsystem-125.2.11
+	url = https://github.com/apple-oss-distributions/Libsystem.git
+[submodule "historical/10.5/dyld/dyld-95.3"]
+	path = historical/10.5/dyld/dyld-95.3
+	url = https://github.com/apple-oss-distributions/dyld.git
+[submodule "historical/10.6/dyld/dyld-132.13"]
+	path = historical/10.6/dyld/dyld-132.13
+	url = https://github.com/apple-oss-distributions/dyld.git
+[submodule "historical/10.5/cctools/cctools-667.8.0"]
+	path = historical/10.5/cctools/cctools-667.8.0
+	url = https://github.com/apple-oss-distributions/cctools.git
+[submodule "historical/10.6/cctools/cctools-773"]
+	path = historical/10.6/cctools/cctools-773
+	url = https://github.com/apple-oss-distributions/cctools.git
+[submodule "historical/10.5/ld64/ld64-77.1"]
+	path = historical/10.5/ld64/ld64-77.1
+	url = https://github.com/apple-oss-distributions/ld64.git
+[submodule "historical/10.6/ld64/ld64-97.17"]
+	path = historical/10.6/ld64/ld64-97.17
+	url = https://github.com/apple-oss-distributions/ld64.git
