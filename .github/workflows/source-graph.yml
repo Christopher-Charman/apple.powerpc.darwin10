@@ -21,6 +21,8 @@ on:
       - 'tests/test_build_macho_load_commands.py'
       - 'tools/verify_ppc_dependency_sources.py'
       - 'tools/verify_darwinbuild_context.py'
+      - 'tools/verify_ppc_historical_context.py'
+      - 'docs/provenance/**'
       - 'tests/test_darwinbuild_context.py'
       - 'tooling/darwinbuild/**'
       - 'tests/test_ppc_dependency_sources.py'
@@ -58,3 +60,4 @@ jobs:
           python3 -m unittest discover -s tests -p "test_build_macho_load_commands.py" -v
           python3 -m unittest discover -s tests -p "test_ppc_dependency_sources.py" -v
           python3 -m unittest discover -s tests -p "test_darwinbuild_context.py" -v
+          python3 tools/verify_ppc_historical_context.py
