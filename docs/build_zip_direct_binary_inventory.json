@@ -1,6 +1,6 @@
 {
   "archive_sha256": "a7bb2bab2112673dec9fe57e66221431b78d06a2ec134ac75ae0fc24b24fe77f",
-  "binary_architecture_verification": "CPU headers checked; embedded FAT slice consistency not assessed",
+  "binary_architecture_verification": "FAT bounds, overlap and embedded Mach-O CPU headers verified",
   "entries": 5188,
   "macho_magic_candidates": [
     {

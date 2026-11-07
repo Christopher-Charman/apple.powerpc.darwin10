@@ -58,6 +58,7 @@ def inventory(outer):
             size = lib.archive_entry_size(entry)
             digest = hashlib.sha256()
             prefix = b''
+            candidate_bytes = bytearray()
             while True:
                 n = lib.archive_read_data(handle, chunk, len(chunk))
                 if n < 0:
@@ -68,6 +69,8 @@ def inventory(outer):
                 digest.update(block)
                 if len(prefix) < 16384:
                     prefix += block[:16384 - len(prefix)]
+                if candidate_bytes or block[:4] in MAGIC:
+                    candidate_bytes.extend(block)
             if prefix[:4] in MAGIC:
                 magic = prefix[:4]
                 if magic in (b'\xca\xfe\xba\xbe', b'\xbe\xba\xfe\xca', b'\xca\xfe\xba\xbf', b'\xbf\xba\xfe\xca'):
@@ -78,9 +81,24 @@ def inventory(outer):
                     if narch > 128 or len(prefix) < 8 + narch * width:
                         raise ValueError('invalid FAT table: ' + name)
                     cpus = []
+                    ranges = []
                     for i in range(narch):
                         cpu = struct.unpack(endian + 'I', prefix[8 + i * width:12 + i * width])[0]
                         cpus.append(cpu)
+                        start, length = struct.unpack(endian + ('QQ' if wide else 'II'), prefix[16 + i * width:16 + i * width + (16 if wide else 8)])
+                        if length < 12 or start + length > size:
+                            raise ValueError('invalid FAT slice bounds: ' + name)
+                        ranges.append((start, length))
+                    for i, (start, length) in enumerate(ranges):
+                        for other_start, other_length in ranges[i + 1:]:
+                            if start < other_start + other_length and other_start < start + length:
+                                raise ValueError('overlapping FAT slices: ' + name)
+                        embedded = candidate_bytes[start:start + 12]
+                        if len(embedded) < 12 or bytes(embedded[:4]) not in MAGIC - {b'\xca\xfe\xba\xbe', b'\xbe\xba\xfe\xca', b'\xca\xfe\xba\xbf', b'\xbf\xba\xfe\xca'}:
+                            raise ValueError('invalid embedded Mach-O: ' + name)
+                        inner_endian = '>' if bytes(embedded[:4]) in (b'\xfe\xed\xfa\xce', b'\xfe\xed\xfa\xcf') else '<'
+                        if struct.unpack(inner_endian + 'I', embedded[4:8])[0] != cpus[i]:
+                            raise ValueError('FAT CPU mismatch: ' + name)
                 else:
                     endian = '>' if magic in (b'\xfe\xed\xfa\xce', b'\xfe\xed\xfa\xcf') else '<'
                     cpus = [struct.unpack(endian + 'I', prefix[4:8])[0]]
@@ -91,7 +109,7 @@ def inventory(outer):
         lib.archive_read_free(handle)
     return {'archive_sha256': ARCHIVE_HASH, 'tome_sha256': TOME_HASH,
             'entries': count, 'macho_magic_candidates': matches,
-            'binary_architecture_verification': 'CPU headers checked; embedded FAT slice consistency not assessed'}
+            'binary_architecture_verification': 'FAT bounds, overlap and embedded Mach-O CPU headers verified'}
 
 
 if __name__ == '__main__':
