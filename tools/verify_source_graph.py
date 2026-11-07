@@ -1,39 +1,58 @@
 #!/usr/bin/env python3
-"""Validate exact source-release graph and checked-in XNU baseline (stdlib only)."""
-import re
+"""Check Darwin 9/10 source graph and reject unqualified modern source trees."""
+import configparser
 import subprocess
 import sys
 from pathlib import Path
 
-SNOW = "src/apple-darwin-10.6.8/"
-LATER = "src/apple-distributions-macos11/"
-XNU = "src/xnu-1504.15.3/"
-XNU_COMMIT = "99c11f3f90a18f35d3692ea77444b51fd972a4f4"
+SNOW = 'src/apple-darwin-10.6.8/'
+EXPECTED = {
+    'src/releases/10.5/xnu-1228.15.4': ('9d80f9528906753d682f9d65d56a0276bad56b4d', 3156),
+    'src/releases/10.6/xnu-1456.1.26': ('46708ce5a6d4a42164ddb67a90fa6fbc7f986430', 3379),
+    'src/releases/10.6.8/xnu-1504.15.3': ('0ffff24afe52ed47d20c5a06f07a10200f89f32b', 3386),
+    'historical-vendored/xnu-1228.15.4': ('9d80f9528906753d682f9d65d56a0276bad56b4d', 3156),
+    'historical-vendored/xnu-1456.1.26': ('46708ce5a6d4a42164ddb67a90fa6fbc7f986430', 3379),
+    'historical-vendored/xnu-1504.15.3': ('0ffff24afe52ed47d20c5a06f07a10200f89f32b', 3386),
+}
+EXCLUDED = ('src/xnu/', 'src/apple-distributions-macos11/')
 
 
 def run(*args):
-    return subprocess.check_output(["git", *args], universal_newlines=True)
+    return subprocess.check_output(['git', *args], universal_newlines=True)
 
 
 def verify():
-    data = Path(".gitmodules").read_text()
-    names = re.findall(r'^\[submodule "([^"]+)"\]$', data, re.M)
-    paths = re.findall(r"^\s*path\s*=\s*(\S+)", data, re.M)
-    entries = run("ls-tree", "-r", "HEAD", SNOW, LATER).splitlines()
-    links = [x.split("\t", 1)[1] for x in entries if x.startswith("160000 commit ")]
-    assert len(names) == len(set(names)) == len(paths) == len(links) == 582, "submodule count/name mismatch"
-    assert set(paths) == set(links), "submodule mapping does not match pinned gitlinks"
-    assert sum(x.startswith(SNOW) for x in paths) == 353, "Snow Leopard graph changed"
-    assert sum(x.startswith(LATER) for x in paths) == 229, "macOS 11 reference graph changed"
-    assert len(run("ls-tree", "-r", "--name-only", "HEAD", XNU).splitlines()) == 3386, "XNU source snapshot incomplete"
-    entry = run("ls-tree", "HEAD", SNOW + "xnu").strip()
-    assert entry.startswith("160000 commit " + XNU_COMMIT + "\t"), "Snow Leopard XNU pin changed"
-    print("PASS: release-specific graphs, 582 gitlinks and exact XNU 1504.15.3 source")
+    cfg = configparser.ConfigParser()
+    if not cfg.read('.gitmodules'):
+        raise ValueError('missing root .gitmodules')
+    paths = [cfg.get(section, 'path') for section in cfg.sections()]
+    if len(paths) != len(set(paths)) or len(cfg.sections()) != len(paths):
+        raise ValueError('duplicate submodule path')
+    entries = run('ls-tree', '-r', 'HEAD').splitlines()
+    links = {line.split('\t', 1)[1] for line in entries if line.startswith('160000 commit ')}
+    if set(paths) != links or len(links) != 367:
+        raise ValueError('gitlink mapping mismatch')
+    if sum(path.startswith(SNOW) for path in paths) != 353:
+        raise ValueError('10.6.8 component graph mismatch')
+    if sum(path.startswith('historical/') for path in paths) != 14:
+        raise ValueError('10.5/10.6 historical graph mismatch')
+    for path in EXCLUDED:
+        if any(line.split('\t', 1)[1].startswith(path) for line in entries):
+            raise ValueError('unqualified modern source tree: ' + path)
+    for path, (tree_sha, count) in EXPECTED.items():
+        if run('rev-parse', 'HEAD:' + path).strip() != tree_sha:
+            raise ValueError('source tree hash mismatch: ' + path)
+        if len(run('ls-tree', '-r', '--name-only', 'HEAD', path).splitlines()) != count:
+            raise ValueError('source tree file count mismatch: ' + path)
+    pin = run('ls-tree', 'HEAD', SNOW + 'xnu').strip()
+    if not pin.startswith('160000 commit 99c11f3f90a18f35d3692ea77444b51fd972a4f4\t'):
+        raise ValueError('10.6.8 XNU pin mismatch')
+    print('PASS: 353 Snow Leopard + 14 historical source pins; six verified XNU snapshots; modern whole-tree exclusions')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     try:
         verify()
-    except (AssertionError, OSError, subprocess.CalledProcessError) as exc:
-        print(f"source graph invalid: {exc}", file=sys.stderr)
+    except (ValueError, OSError, subprocess.CalledProcessError) as exc:
+        print('source graph invalid: {}'.format(exc), file=sys.stderr)
         sys.exit(1)
