@@ -1,0 +1,83 @@
+{
+  "changed_files": 18,
+  "changes": [
+    {
+      "path": "DirectoryService.xcodeproj/project.pbxproj",
+      "status": "M"
+    },
+    {
+      "path": "PlugIns/BSD/FlatFileNode.cpp",
+      "status": "M"
+    },
+    {
+      "path": "PlugIns/Local/CDSLocalAuthHelper.cpp",
+      "status": "M"
+    },
+    {
+      "path": "PlugIns/Local/CDSLocalPlugin.cpp",
+      "status": "M"
+    },
+    {
+      "path": "PlugIns/Local/CDSLocalPluginNode.cpp",
+      "status": "M"
+    },
+    {
+      "path": "PlugIns/Local/InitialDB/groups/_dpaudio.plist",
+      "status": "A"
+    },
+    {
+      "path": "PlugIns/Local/InitialDB/users/_dpaudio.plist",
+      "status": "A"
+    },
+    {
+      "path": "Server/CRefTable.cpp",
+      "status": "M"
+    },
+    {
+      "path": "Server/DSmemberdMIG.defs",
+      "status": "M"
+    },
+    {
+      "path": "Server/DirServiceMain.cpp",
+      "status": "M"
+    },
+    {
+      "path": "Server/Mbrd_Cache.cpp",
+      "status": "M"
+    },
+    {
+      "path": "Server/Mbrd_HashTable.c",
+      "status": "M"
+    },
+    {
+      "path": "Server/Mbrd_HashTable.h",
+      "status": "M"
+    },
+    {
+      "path": "Server/Mbrd_MembershipResolver.cpp",
+      "status": "M"
+    },
+    {
+      "path": "Server/Mbrd_UserGroup.cpp",
+      "status": "M"
+    },
+    {
+      "path": "Server/Mbrd_UserGroup.h",
+      "status": "M"
+    },
+    {
+      "path": "Server/ServerControl.cpp",
+      "status": "M"
+    },
+    {
+      "path": "Server/com.apple.DirectoryServices.plist",
+      "status": "M"
+    }
+  ],
+  "left": "src/releases/10.6/DirectoryService-621",
+  "left_tree": "bd53241aacad6a7e39e953a02f8663508bab9ce5",
+  "reversion_recommendation": "requires PPC build and runtime evidence",
+  "right": "src/releases/10.6.8/DirectoryService-621.12",
+  "right_tree": "f29ae461575b52e3061d6178d9ee34e15cb14acd",
+  "runtime_parity": "not_assessed"
+}

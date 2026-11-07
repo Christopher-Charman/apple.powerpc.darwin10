@@ -1,0 +1,139 @@
+{
+  "changed_files": 32,
+  "changes": [
+    {
+      "path": "arm/pthreads/Makefile.inc",
+      "status": "M"
+    },
+    {
+      "path": "arm/pthreads/start_wqthread.s",
+      "status": "A"
+    },
+    {
+      "path": "arm/pthreads/thread_start.s",
+      "status": "A"
+    },
+    {
+      "path": "arm/string/Makefile.inc",
+      "status": "M"
+    },
+    {
+      "path": "arm/string/NEON/bcopy.s",
+      "status": "A"
+    },
+    {
+      "path": "arm/string/NEON/bzero.s",
+      "status": "A"
+    },
+    {
+      "path": "arm/string/bcopy.s",
+      "status": "M"
+    },
+    {
+      "path": "arm/string/bzero.s",
+      "status": "M"
+    },
+    {
+      "path": "arm/string/memcmp.s",
+      "status": "A"
+    },
+    {
+      "path": "arm/string/memset_pattern.s",
+      "status": "M"
+    },
+    {
+      "path": "arm/sys/OSAtomic-v4.c",
+      "status": "M"
+    },
+    {
+      "path": "darwin/_dirhelper.c",
+      "status": "M"
+    },
+    {
+      "path": "gdtoa/FreeBSD/gdtoa-misc.c.patch",
+      "status": "M"
+    },
+    {
+      "path": "gdtoa/gdtoa-misc-fbsd.c",
+      "status": "M"
+    },
+    {
+      "path": "gen/FreeBSD/glob.3",
+      "status": "M"
+    },
+    {
+      "path": "gen/FreeBSD/glob.3.patch",
+      "status": "M"
+    },
+    {
+      "path": "gen/FreeBSD/glob.c",
+      "status": "M"
+    },
+    {
+      "path": "gen/FreeBSD/glob.c.patch",
+      "status": "M"
+    },
+    {
+      "path": "gen/asl.c",
+      "status": "M"
+    },
+    {
+      "path": "gen/asl_private.h",
+      "status": "M"
+    },
+    {
+      "path": "gen/glob-fbsd.c",
+      "status": "M"
+    },
+    {
+      "path": "gen/glob.3",
+      "status": "M"
+    },
+    {
+      "path": "gen/magazine_malloc.c",
+      "status": "M"
+    },
+    {
+      "path": "gen/stack_logging_disk.c",
+      "status": "M"
+    },
+    {
+      "path": "include/libkern/OSThermalNotification.h",
+      "status": "M"
+    },
+    {
+      "path": "locale/xlocale.c",
+      "status": "M"
+    },
+    {
+      "path": "pthreads/pthread.c",
+      "status": "M"
+    },
+    {
+      "path": "pthreads/pthread_machdep.h",
+      "status": "M"
+    },
+    {
+      "path": "stdlib/psort-fbsd.c",
+      "status": "M"
+    },
+    {
+      "path": "stdlib/psort.c.patch",
+      "status": "M"
+    },
+    {
+      "path": "stdlib/psort_b-fbsd.c",
+      "status": "M"
+    },
+    {
+      "path": "stdlib/psort_r-fbsd.c",
+      "status": "M"
+    }
+  ],
+  "left": "src/releases/10.6/Libc-583",
+  "left_tree": "75515abbc4ece291741c3d9129eceef5a85e913e",
+  "reversion_recommendation": "requires PPC build and runtime evidence",
+  "right": "src/releases/10.6.8/Libc-594.9.5",
+  "right_tree": "c577656a4766b334a0c8e0d6bc8dbd68c2bb4ae0",
+  "runtime_parity": "not_assessed"
+}
