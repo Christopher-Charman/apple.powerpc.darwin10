@@ -1,0 +1,27 @@
+{
+  "changed_files": 4,
+  "changes": [
+    {
+      "path": "notifyd.tproj/Makefile",
+      "status": "M"
+    },
+    {
+      "path": "notifyd.tproj/daemon.c",
+      "status": "M"
+    },
+    {
+      "path": "notifyd.tproj/notify_ipc.defs",
+      "status": "D"
+    },
+    {
+      "path": "notifyd.tproj/notify_proc.c",
+      "status": "M"
+    }
+  ],
+  "left": "src/releases/10.6/notify-23",
+  "left_tree": "38946c7473e54cd68bbe85d8b6c907f835ba9d2c",
+  "reversion_recommendation": "requires PPC build and runtime evidence",
+  "right": "src/releases/10.6.8/notify-25.1",
+  "right_tree": "11e89af8448d664497294015b8f128878b16b4de",
+  "runtime_parity": "not_assessed"
+}
