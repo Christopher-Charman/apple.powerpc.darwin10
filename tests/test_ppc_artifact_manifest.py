@@ -18,7 +18,7 @@ class ArtifactManifestTests(unittest.TestCase):
     def test_verified_ppc_and_mutation_rejected(self):
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)
-            binary = b'\xfe\xed\xfa\xce' + struct.pack('>II', 18, 0) + b'\0' * 20
+            binary = b'\xfe\xed\xfa\xce' + struct.pack('>IIIIII', 18, 0, 1, 0, 0, 0)
             (root / 'binary').write_bytes(binary)
             data = {'archive_sha256': 'a' * 64, 'artifacts': [{'path': 'binary', 'sha256': hashlib.sha256(binary).hexdigest()}]}
             manifest = root / 'manifest.json'
