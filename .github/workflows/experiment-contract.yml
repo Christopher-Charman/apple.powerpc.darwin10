@@ -4,7 +4,9 @@ on:
   pull_request:
     paths:
       - 'tools/validate_experiment.py'
+      - 'tools/hash_input.py'
       - 'tests/test_experiment_contract.py'
+      - 'tests/test_hash_input.py'
       - '.github/workflows/experiment-contract.yml'
   workflow_dispatch:
 
@@ -18,4 +20,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Validate experiment contract
-        run: python3 -m unittest discover -s tests -p 'test_experiment_contract.py' -v
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
