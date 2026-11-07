@@ -23,6 +23,8 @@ on:
       - 'tools/verify_darwinbuild_context.py'
       - 'tools/verify_ppc_historical_context.py'
       - 'docs/provenance/**'
+      - 'tools/verify_developer_seed_lineage.py'
+      - 'tests/test_developer_seed_lineage.py'
       - 'tests/test_darwinbuild_context.py'
       - 'tooling/darwinbuild/**'
       - 'tests/test_ppc_dependency_sources.py'
@@ -61,3 +63,5 @@ jobs:
           python3 -m unittest discover -s tests -p "test_ppc_dependency_sources.py" -v
           python3 -m unittest discover -s tests -p "test_darwinbuild_context.py" -v
           python3 tools/verify_ppc_historical_context.py
+          python3 tools/verify_developer_seed_lineage.py
+          python3 -m unittest discover -s tests -p "test_developer_seed_lineage.py" -v
