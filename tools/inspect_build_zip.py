@@ -16,6 +16,46 @@ MAGIC = {b'\xfe\xed\xfa\xce', b'\xce\xfa\xed\xfe', b'\xfe\xed\xfa\xcf', b'\xcf\x
          b'\xca\xfe\xba\xbe', b'\xbe\xba\xfe\xca', b'\xca\xfe\xba\xbf', b'\xbf\xba\xfe\xca'}
 
 
+def macho_load_commands(data, offset, length):
+    """Parse bounded Mach-O dylib dependencies from a validated slice."""
+    magic = bytes(data[offset:offset + 4])
+    if magic not in (b'\xfe\xed\xfa\xce', b'\xce\xfa\xed\xfe', b'\xfe\xed\xfa\xcf', b'\xcf\xfa\xed\xfe'):
+        raise ValueError('invalid Mach-O slice magic')
+    endian = '>' if magic in (b'\xfe\xed\xfa\xce', b'\xfe\xed\xfa\xcf') else '<'
+    wide = magic in (b'\xfe\xed\xfa\xcf', b'\xcf\xfa\xed\xfe')
+    header = 32 if wide else 28
+    if length < header:
+        raise ValueError('truncated Mach-O header')
+    filetype, ncmds, sizeofcmds = struct.unpack(endian + 'III', data[offset + 12:offset + 24])
+    if ncmds > 65536 or sizeofcmds > length - header:
+        raise ValueError('Mach-O load command table exceeds slice')
+    position = offset + header
+    limit = position + sizeofcmds
+    deps = []
+    install_name = None
+    for _ in range(ncmds):
+        if position + 8 > limit:
+            raise ValueError('truncated Mach-O load command')
+        cmd, cmdsize = struct.unpack(endian + 'II', data[position:position + 8])
+        if cmdsize < 8 or position + cmdsize > limit:
+            raise ValueError('invalid Mach-O load command bounds')
+        base_cmd = cmd & 0x7fffffff
+        if base_cmd in (0xc, 0xd, 0x18, 0x1f, 0x23):
+            if cmdsize < 24:
+                raise ValueError('truncated Mach-O dylib command')
+            name_offset = struct.unpack(endian + 'I', data[position + 8:position + 12])[0]
+            if name_offset < 24 or name_offset >= cmdsize:
+                raise ValueError('invalid dylib install name offset')
+            raw = bytes(data[position + name_offset:position + cmdsize]).split(b'\0', 1)[0]
+            name = raw.decode('utf-8', 'replace')
+            if base_cmd == 0xd:
+                install_name = name
+            else:
+                deps.append(name)
+        position += cmdsize
+    return {'filetype': filetype, 'dependencies': deps, 'install_name': install_name}
+
+
 def inventory(outer):
     if hashlib.sha256(outer.read_bytes()).hexdigest() != ARCHIVE_HASH:
         raise ValueError('BUILD.zip identity mismatch')
@@ -89,6 +129,7 @@ def inventory(outer):
                         if length < 12 or start + length > size:
                             raise ValueError('invalid FAT slice bounds: ' + name)
                         ranges.append((start, length))
+                    metadata = []
                     for i, (start, length) in enumerate(ranges):
                         for other_start, other_length in ranges[i + 1:]:
                             if start < other_start + other_length and other_start < start + length:
@@ -99,11 +140,13 @@ def inventory(outer):
                         inner_endian = '>' if bytes(embedded[:4]) in (b'\xfe\xed\xfa\xce', b'\xfe\xed\xfa\xcf') else '<'
                         if struct.unpack(inner_endian + 'I', embedded[4:8])[0] != cpus[i]:
                             raise ValueError('FAT CPU mismatch: ' + name)
+                        metadata.append(macho_load_commands(candidate_bytes, start, length))
                 else:
                     endian = '>' if magic in (b'\xfe\xed\xfa\xce', b'\xfe\xed\xfa\xcf') else '<'
                     cpus = [struct.unpack(endian + 'I', prefix[4:8])[0]]
+                    metadata = [macho_load_commands(candidate_bytes, 0, size)]
                 matches.append({'path': name, 'bytes': size, 'sha256': digest.hexdigest(),
-                                'magic': magic.hex(), 'cpu_types': cpus,
+                                'magic': magic.hex(), 'cpu_types': cpus, 'slice_load_commands': metadata,
                                 'contains_ppc': any(cpu in (18, 0x01000012) for cpu in cpus)})
     finally:
         lib.archive_read_free(handle)

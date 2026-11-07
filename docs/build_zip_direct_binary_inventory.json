@@ -11,7 +11,19 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/acyclic",
-      "sha256": "e595b336d4569b091645cec30551e1c58b7ac5fbc5bc7b4d8b1fc02ba06448cb"
+      "sha256": "e595b336d4569b091645cec30551e1c58b7ac5fbc5bc7b4d8b1fc02ba06448cb",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libgraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 1970072,
@@ -23,7 +35,36 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/bash",
-      "sha256": "595f89f0484b11102ce56dbf265784df0e4cf9a98a1e7a5e492db7c712237341"
+      "sha256": "595f89f0484b11102ce56dbf265784df0e4cf9a98a1e7a5e492db7c712237341",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libncurses.5.4.dylib",
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libncurses.5.4.dylib",
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libncurses.5.4.dylib",
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 14288,
@@ -33,7 +74,19 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/bcomps",
-      "sha256": "935090f25f27d2c69e3816858aa819c1cd8c0c66175fc86b49f2a2724a757f79"
+      "sha256": "935090f25f27d2c69e3816858aa819c1cd8c0c66175fc86b49f2a2724a757f79",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libgraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 11840980,
@@ -44,7 +97,25 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/libexec/gcc/powerpc-apple-darwin10/4.2.1/cc1",
-      "sha256": "1597de5571437dc7e65dcb6b61a3c1aaf5e8e90bc231ce436b3caea72be886fa"
+      "sha256": "1597de5571437dc7e65dcb6b61a3c1aaf5e8e90bc231ce436b3caea72be886fa",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 12140148,
@@ -55,7 +126,25 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/libexec/gcc/powerpc-apple-darwin10/4.2.1/cc1obj",
-      "sha256": "443335c4c9cd58f2014c4139429c12f3eb9346da5e43931ec35d249b88f25990"
+      "sha256": "443335c4c9cd58f2014c4139429c12f3eb9346da5e43931ec35d249b88f25990",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 13373108,
@@ -66,7 +155,25 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/libexec/gcc/powerpc-apple-darwin10/4.2.1/cc1objplus",
-      "sha256": "7a78c588ea86e9a49919fc112dada8dda09ce07b75e267a85a3b208e366e5a20"
+      "sha256": "7a78c588ea86e9a49919fc112dada8dda09ce07b75e267a85a3b208e366e5a20",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 13073940,
@@ -77,7 +184,25 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/libexec/gcc/powerpc-apple-darwin10/4.2.1/cc1plus",
-      "sha256": "f359139a51ad087b100746be8879b682fc70356104a3b31534d69e4d591bc946"
+      "sha256": "f359139a51ad087b100746be8879b682fc70356104a3b31534d69e4d591bc946",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 18684,
@@ -87,7 +212,19 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/ccomps",
-      "sha256": "ab290ac47b4b1505edad55f3b73906ec0174493ef608500df7c98db2123ea16d"
+      "sha256": "ab290ac47b4b1505edad55f3b73906ec0174493ef608500df7c98db2123ea16d",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libgraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 37488,
@@ -99,7 +236,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/chflags",
-      "sha256": "8e7d75ad1f6822f62b7aa12a5b27e514b6f29c501f54af4f80ab33397b4f8883"
+      "sha256": "8e7d75ad1f6822f62b7aa12a5b27e514b6f29c501f54af4f80ab33397b4f8883",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 50048,
@@ -111,7 +271,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/chgrp",
-      "sha256": "c6a83dec083399394865fe3b41426093582229d7e6dafbf463945121dc333225"
+      "sha256": "c6a83dec083399394865fe3b41426093582229d7e6dafbf463945121dc333225",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 71972,
@@ -123,7 +306,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/chmod",
-      "sha256": "fa2ee41cf487dc890e1b48e7325c38c287f6e35e5adf449850a333c7daca1c98"
+      "sha256": "fa2ee41cf487dc890e1b48e7325c38c287f6e35e5adf449850a333c7daca1c98",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 50048,
@@ -135,7 +341,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/sbin/chown",
-      "sha256": "c6a83dec083399394865fe3b41426093582229d7e6dafbf463945121dc333225"
+      "sha256": "c6a83dec083399394865fe3b41426093582229d7e6dafbf463945121dc333225",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 482336,
@@ -145,7 +374,24 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/circo",
-      "sha256": "85deee6333d5689c907fd73893ed47fafff70171612f810406f55aa8979cb95b"
+      "sha256": "85deee6333d5689c907fd73893ed47fafff70171612f810406f55aa8979cb95b",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libexpat.1.dylib",
+            "/usr/local/lib/graphviz/libpathplan.0.dylib",
+            "/usr/local/lib/graphviz/libgraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/X11/lib/libfreetype.6.dylib",
+            "/usr/X11/lib/libpng12.0.dylib",
+            "/usr/lib/libz.1.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 49788,
@@ -157,7 +403,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/cksum",
-      "sha256": "ed6055b0da047de10652da8eaf21b971bd86159376519dfd3d7517c123669c09"
+      "sha256": "ed6055b0da047de10652da8eaf21b971bd86159376519dfd3d7517c123669c09",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 265416,
@@ -168,7 +437,25 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/libexec/gcc/powerpc-apple-darwin10/4.2.1/collect2",
-      "sha256": "7c78df65e8c273da0e1bbcb4a045fa0779a09ba8e6665292075da5c5a490531d"
+      "sha256": "7c78df65e8c273da0e1bbcb4a045fa0779a09ba8e6665292075da5c5a490531d",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 62612,
@@ -180,7 +467,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/compress",
-      "sha256": "7267d28114d367def834661d0bfd0a468af47a4c92707244074dd5fe8292b444"
+      "sha256": "7267d28114d367def834661d0bfd0a468af47a4c92707244074dd5fe8292b444",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 63336,
@@ -192,7 +502,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/cp",
-      "sha256": "d9a16e35427c50732c72058801be88a74ec7ec0d7300fbbdddbfb02dd61e1e20"
+      "sha256": "d9a16e35427c50732c72058801be88a74ec7ec0d7300fbbdddbfb02dd61e1e20",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 74940,
@@ -204,7 +537,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/dd",
-      "sha256": "eb9102dbebaf9ddbeaebd7e03f5c5cd581ef09ed4298082a2d2d07fe5deeb1b2"
+      "sha256": "eb9102dbebaf9ddbeaebd7e03f5c5cd581ef09ed4298082a2d2d07fe5deeb1b2",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 14064,
@@ -214,7 +570,19 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/dijkstra",
-      "sha256": "726dd0ba6108faf745fb30418be1f60ee25326153548771aa7c5f30c47156575"
+      "sha256": "726dd0ba6108faf745fb30418be1f60ee25326153548771aa7c5f30c47156575",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libagraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 543644,
@@ -224,7 +592,24 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/dot",
-      "sha256": "8bb60e885ddc20909a0bdde423db3c80b9db612d214eb37f67c388f70b49e23e"
+      "sha256": "8bb60e885ddc20909a0bdde423db3c80b9db612d214eb37f67c388f70b49e23e",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libexpat.1.dylib",
+            "/usr/local/lib/graphviz/libpathplan.0.dylib",
+            "/usr/local/lib/graphviz/libgraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/X11/lib/libfreetype.6.dylib",
+            "/usr/X11/lib/libpng12.0.dylib",
+            "/usr/lib/libz.1.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 31832,
@@ -234,7 +619,21 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/dot2gxl",
-      "sha256": "f1fecba590c2ab4d26e254fe90ed1496cc0a057bb5733854389baac045a02898"
+      "sha256": "f1fecba590c2ab4d26e254fe90ed1496cc0a057bb5733854389baac045a02898",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libagraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/local/lib/graphviz/libgraph.0.dylib",
+            "/usr/lib/libexpat.1.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 58508,
@@ -246,7 +645,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/du",
-      "sha256": "de4bceb81cc814db5995fee643bd53f8f7c240b8dd051380f6aa0c4fbf2e2b91"
+      "sha256": "de4bceb81cc814db5995fee643bd53f8f7c240b8dd051380f6aa0c4fbf2e2b91",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 72956,
@@ -258,7 +680,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/encode_keychange",
-      "sha256": "85499256578b9839126bdc992e79d5eee0bc63b511d0dae5d806791ab3fdbef9"
+      "sha256": "85499256578b9839126bdc992e79d5eee0bc63b511d0dae5d806791ab3fdbef9",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 523580,
@@ -268,7 +728,24 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/fdp",
-      "sha256": "76b28dc7172bd33a334e0564563bdaa50e552b9d270545a6704fcb45e07f37d0"
+      "sha256": "76b28dc7172bd33a334e0564563bdaa50e552b9d270545a6704fcb45e07f37d0",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libexpat.1.dylib",
+            "/usr/local/lib/graphviz/libpathplan.0.dylib",
+            "/usr/local/lib/graphviz/libgraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/X11/lib/libfreetype.6.dylib",
+            "/usr/X11/lib/libpng12.0.dylib",
+            "/usr/lib/libz.1.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 247940,
@@ -279,7 +756,23 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/libexec/gcc/powerpc-apple-darwin10/4.2.1/install-tools/fixincl",
-      "sha256": "d38403dc5207944ad017b27da68fd664efa77064815390f5b99afa9f0920306b"
+      "sha256": "d38403dc5207944ad017b27da68fd664efa77064815390f5b99afa9f0920306b",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 13904,
@@ -289,7 +782,19 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/gc",
-      "sha256": "63099acfaa9941b0d7840ae92470939c8ba2977632a4ff443175eadd6ca1705e"
+      "sha256": "63099acfaa9941b0d7840ae92470939c8ba2977632a4ff443175eadd6ca1705e",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libgraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 26508,
@@ -299,7 +804,19 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/gvcolor",
-      "sha256": "5c76739608dd410406f4aa01451a2f24f5bb475a48346500df4d96b70929f0d4"
+      "sha256": "5c76739608dd410406f4aa01451a2f24f5bb475a48346500df4d96b70929f0d4",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libgraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 554824,
@@ -309,7 +826,21 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/gvpack",
-      "sha256": "fc59f7f15186baa7c979b96167c3cbd214cb30cb711358eb5e767503a4cfa0bb"
+      "sha256": "fc59f7f15186baa7c979b96167c3cbd214cb30cb711358eb5e767503a4cfa0bb",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libexpat.1.dylib",
+            "/usr/X11/lib/libfreetype.6.dylib",
+            "/usr/X11/lib/libpng12.0.dylib",
+            "/usr/lib/libz.1.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 119260,
@@ -319,7 +850,20 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/gvpr",
-      "sha256": "2e6be7e10b9a10460c9efd8070d662ad6afa56641af4e8295a35ff36c46e8b03"
+      "sha256": "2e6be7e10b9a10460c9efd8070d662ad6afa56641af4e8295a35ff36c46e8b03",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libexpr.0.dylib",
+            "/usr/local/lib/graphviz/libagraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 31832,
@@ -329,7 +873,21 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/gxl2dot",
-      "sha256": "f1fecba590c2ab4d26e254fe90ed1496cc0a057bb5733854389baac045a02898"
+      "sha256": "f1fecba590c2ab4d26e254fe90ed1496cc0a057bb5733854389baac045a02898",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libagraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/local/lib/graphviz/libgraph.0.dylib",
+            "/usr/lib/libexpat.1.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 63188,
@@ -341,7 +899,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/install",
-      "sha256": "26d74bf8dc3b0b351a50515d245396a42faafb65f16d74fadb0f88efd41198da"
+      "sha256": "26d74bf8dc3b0b351a50515d245396a42faafb65f16d74fadb0f88efd41198da",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 41580,
@@ -353,7 +934,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/ipcrm",
-      "sha256": "e72a6cd1be4a8ff97c9b39e320beab9e3af539b98ca26f04f8ac51a4663dd858"
+      "sha256": "e72a6cd1be4a8ff97c9b39e320beab9e3af539b98ca26f04f8ac51a4663dd858",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 3260236,
@@ -365,7 +969,33 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/ksh",
-      "sha256": "6169d855b5727e9172636402b8f5e76477d0358615fa5bd8f88344f95d9efdfc"
+      "sha256": "6169d855b5727e9172636402b8f5e76477d0358615fa5bd8f88344f95d9efdfc",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 41828,
@@ -377,7 +1007,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/link",
-      "sha256": "d0f09c72d69e428d16679ad6087fa314dd251155d91d318f7acb27439b529bce"
+      "sha256": "d0f09c72d69e428d16679ad6087fa314dd251155d91d318f7acb27439b529bce",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 41828,
@@ -389,7 +1042,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/ln",
-      "sha256": "d0f09c72d69e428d16679ad6087fa314dd251155d91d318f7acb27439b529bce"
+      "sha256": "d0f09c72d69e428d16679ad6087fa314dd251155d91d318f7acb27439b529bce",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 37512,
@@ -401,7 +1077,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/mkdir",
-      "sha256": "2a48f6a4c6ea611de935c62f685d9d7ebebf6f925b01078d44473a94f2202559"
+      "sha256": "2a48f6a4c6ea611de935c62f685d9d7ebebf6f925b01078d44473a94f2202559",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 37356,
@@ -413,7 +1112,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/mkfifo",
-      "sha256": "98e5da192f6cc0cd25e5f0070f9e46703bba311a49eb116ce5b381d87c97a229"
+      "sha256": "98e5da192f6cc0cd25e5f0070f9e46703bba311a49eb116ce5b381d87c97a229",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 41408,
@@ -425,7 +1147,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/sbin/mknod",
-      "sha256": "a6e846b4d6bb3f6c0c43ded451763dfda4dc5ca9d12cf62403c68ed1cc285ae2"
+      "sha256": "a6e846b4d6bb3f6c0c43ded451763dfda4dc5ca9d12cf62403c68ed1cc285ae2",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 50744,
@@ -437,7 +1182,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/mv",
-      "sha256": "74451749f452bb79970216af58dd91ac323a8bf923303afb36fd3e5c775a20a3"
+      "sha256": "74451749f452bb79970216af58dd91ac323a8bf923303afb36fd3e5c775a20a3",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 296800,
@@ -447,7 +1215,16 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/bin/nasm",
-      "sha256": "f86a424cb66f58b9930f62447e11e88bd416adf3b8855bd1368d98c06fc73981"
+      "sha256": "f86a424cb66f58b9930f62447e11e88bd416adf3b8855bd1368d98c06fc73981",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 103488,
@@ -457,7 +1234,16 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/bin/ndisasm",
-      "sha256": "7898bc925be13084026de65ef215c7e6b709949018da95a175af456a76fca919"
+      "sha256": "7898bc925be13084026de65ef215c7e6b709949018da95a175af456a76fca919",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 507016,
@@ -467,7 +1253,24 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/neato",
-      "sha256": "6fa6c063b5e5a3056671cf98bf2e43988a6887486df4dae0f83eb464b75bf212"
+      "sha256": "6fa6c063b5e5a3056671cf98bf2e43988a6887486df4dae0f83eb464b75bf212",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libexpat.1.dylib",
+            "/usr/local/lib/graphviz/libpathplan.0.dylib",
+            "/usr/local/lib/graphviz/libgraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/X11/lib/libfreetype.6.dylib",
+            "/usr/X11/lib/libpng12.0.dylib",
+            "/usr/lib/libz.1.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 13604,
@@ -477,7 +1280,19 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/nop",
-      "sha256": "feb523049b1ef20688929b9fc8ec045023b6690985fbb42d7e6eafcfaed2887c"
+      "sha256": "feb523049b1ef20688929b9fc8ec045023b6690985fbb42d7e6eafcfaed2887c",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libagraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 110028,
@@ -489,7 +1304,36 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/ntp-keygen",
-      "sha256": "abc563c01ddb9e2d5fcaa97d155a1170827dd799ecdf543b5b620ba56ab372aa"
+      "sha256": "abc563c01ddb9e2d5fcaa97d155a1170827dd799ecdf543b5b620ba56ab372aa",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 974904,
@@ -501,7 +1345,36 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/ntpd",
-      "sha256": "079c5d4a94dd75d3a465f2d9d0abdbc6e7b58884126de5a25b0a54b481d72a84"
+      "sha256": "079c5d4a94dd75d3a465f2d9d0abdbc6e7b58884126de5a25b0a54b481d72a84",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 182736,
@@ -513,7 +1386,33 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/ntpdate",
-      "sha256": "717b635481df735c9a57bda63e1528a2e3fed33dbe6c7354a86858c43b4af925"
+      "sha256": "717b635481df735c9a57bda63e1528a2e3fed33dbe6c7354a86858c43b4af925",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 264812,
@@ -525,7 +1424,36 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/ntpdc",
-      "sha256": "770c88b650dddbecfa8ae2c8ac4908466f9d34b2894a8ce01eaa7784f8687f15"
+      "sha256": "770c88b650dddbecfa8ae2c8ac4908466f9d34b2894a8ce01eaa7784f8687f15",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libedit.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libedit.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libedit.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 248532,
@@ -537,7 +1465,36 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/ntpq",
-      "sha256": "a7ef7a95f41d52674d81044c0a47e73b93b06b99d9d669e356c1d56d0e9ad1e5"
+      "sha256": "a7ef7a95f41d52674d81044c0a47e73b93b06b99d9d669e356c1d56d0e9ad1e5",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libedit.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libedit.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libedit.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 37412,
@@ -549,7 +1506,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/pathchk",
-      "sha256": "10896242c052158bed1ec09780ecbf63a9513065634990ab1d9d64fee40340bb"
+      "sha256": "10896242c052158bed1ec09780ecbf63a9513065634990ab1d9d64fee40340bb",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 332116,
@@ -561,7 +1541,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/pax",
-      "sha256": "1bca54f865a851b1b06521ad611197b88ec2dad583bf1d427eb9b23b356a4a1c"
+      "sha256": "1bca54f865a851b1b06521ad611197b88ec2dad583bf1d427eb9b23b356a4a1c",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 14208,
@@ -571,7 +1574,19 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/prune",
-      "sha256": "e43a65835272536c523e63aaf3742811eb7fcbaa4d3758123e1b02e9bd542ab8"
+      "sha256": "e43a65835272536c523e63aaf3742811eb7fcbaa4d3758123e1b02e9bd542ab8",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libagraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 62460,
@@ -583,7 +1598,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/readlink",
-      "sha256": "27cdba391dee1febc56fd4d1e5f19437f8d326f0be762141d2439f4a9914c66c"
+      "sha256": "27cdba391dee1febc56fd4d1e5f19437f8d326f0be762141d2439f4a9914c66c",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 50460,
@@ -595,7 +1633,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/rm",
-      "sha256": "51c2bf931c1c2af9c6a7c2da15a8e8c61b01b4f12eafe86161b0aea794ebd578"
+      "sha256": "51c2bf931c1c2af9c6a7c2da15a8e8c61b01b4f12eafe86161b0aea794ebd578",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 37196,
@@ -607,7 +1668,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/rmdir",
-      "sha256": "419ebe88eab7837ff97f9118002630559bb3d56bcfdf26075aff59c3be750359"
+      "sha256": "419ebe88eab7837ff97f9118002630559bb3d56bcfdf26075aff59c3be750359",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 14312,
@@ -617,7 +1701,19 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/sccmap",
-      "sha256": "0872549f73ebd490e27e826bb71bd7a1aeca695b8054c69a7f6e4c98df6070a9"
+      "sha256": "0872549f73ebd490e27e826bb71bd7a1aeca695b8054c69a7f6e4c98df6070a9",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libagraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 1970104,
@@ -629,7 +1725,36 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/sh",
-      "sha256": "b9ff71802a4f357fc3cce23f58199ee8ecacda96e869b900559dae2a06395437"
+      "sha256": "b9ff71802a4f357fc3cce23f58199ee8ecacda96e869b900559dae2a06395437",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libncurses.5.4.dylib",
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libncurses.5.4.dylib",
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libncurses.5.4.dylib",
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 42868,
@@ -641,7 +1766,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmpbulkget",
-      "sha256": "fa47d39000469b010a254ed62f320c6a994f7f876634c2c536110b7498db6e2a"
+      "sha256": "fa47d39000469b010a254ed62f320c6a994f7f876634c2c536110b7498db6e2a",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 51372,
@@ -653,7 +1816,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmpbulkwalk",
-      "sha256": "780842faa39650a610c442e29d7766d8a1feb9cd03fa0d63b57bcb6c7ed01204"
+      "sha256": "780842faa39650a610c442e29d7766d8a1feb9cd03fa0d63b57bcb6c7ed01204",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 91188,
@@ -665,7 +1866,54 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/sbin/snmpd",
-      "sha256": "5404034b70e2e77980a40399eaf89c79d1f225930b94a0353a648128859201a6"
+      "sha256": "5404034b70e2e77980a40399eaf89c79d1f225930b94a0353a648128859201a6",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpmibs.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpmibs.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpmibs.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 73452,
@@ -677,7 +1925,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmpdelta",
-      "sha256": "c8d2b995c5e32fcf629e4ab6c7606d11da568938c446dc8e1b17b13d04de9b56"
+      "sha256": "c8d2b995c5e32fcf629e4ab6c7606d11da568938c446dc8e1b17b13d04de9b56",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 51216,
@@ -689,7 +1975,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmpdf",
-      "sha256": "c2dcd171b9ec5d2beedc66c9c7418f2059c472935d32fa1a837b7ed50de13338"
+      "sha256": "c2dcd171b9ec5d2beedc66c9c7418f2059c472935d32fa1a837b7ed50de13338",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 42560,
@@ -701,7 +2025,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmpget",
-      "sha256": "3f3fa163ea0bce5056f1f8c5712ccdd01cf7c61d8acf59aad14570f72c2506ba"
+      "sha256": "3f3fa163ea0bce5056f1f8c5712ccdd01cf7c61d8acf59aad14570f72c2506ba",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 42568,
@@ -713,7 +2075,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmpgetnext",
-      "sha256": "4c4b78bd93b17673e0829317d1e388df8b51e9041890cda31c8c3fabe84c58cf"
+      "sha256": "4c4b78bd93b17673e0829317d1e388df8b51e9041890cda31c8c3fabe84c58cf",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 172280,
@@ -725,7 +2125,36 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmpnetstat",
-      "sha256": "3152a4254c6927acda6024d73fa56528dc13f027f8d5ce3c7700720220ff1298"
+      "sha256": "3152a4254c6927acda6024d73fa56528dc13f027f8d5ce3c7700720220ff1298",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 50896,
@@ -737,7 +2166,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmpset",
-      "sha256": "1c5248e79b2f26fff43df14cb29274eec46672e83ecee1a44c95e09484e23d47"
+      "sha256": "1c5248e79b2f26fff43df14cb29274eec46672e83ecee1a44c95e09484e23d47",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 60324,
@@ -749,7 +2216,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmpstatus",
-      "sha256": "b9c93e036d95b6a5216850918cdd3d8df7a89867da23dbed31d1da090669c1b7"
+      "sha256": "b9c93e036d95b6a5216850918cdd3d8df7a89867da23dbed31d1da090669c1b7",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 85996,
@@ -761,7 +2266,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmptable",
-      "sha256": "afb607cf81d11b65440031b000e478c1376511216eace282e5c155fe1fef437c"
+      "sha256": "afb607cf81d11b65440031b000e478c1376511216eace282e5c155fe1fef437c",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 51512,
@@ -773,7 +2316,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmptest",
-      "sha256": "8bf76bb4a40c987c136c9dd0c3e924d99cc14b3c8236d08eb17a40359c757012"
+      "sha256": "8bf76bb4a40c987c136c9dd0c3e924d99cc14b3c8236d08eb17a40359c757012",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 51644,
@@ -785,7 +2366,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmptranslate",
-      "sha256": "e9f623aaca5e6f83843412c8339d7f4a145fe06eba1d24864f981ea3280045ed"
+      "sha256": "e9f623aaca5e6f83843412c8339d7f4a145fe06eba1d24864f981ea3280045ed",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 51612,
@@ -797,7 +2416,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmptrap",
-      "sha256": "70af1b87d73ebcc21de5df00ff76359f6e28e9d4b516bed9b93be77109f52ea7"
+      "sha256": "70af1b87d73ebcc21de5df00ff76359f6e28e9d4b516bed9b93be77109f52ea7",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 97884,
@@ -809,7 +2466,57 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/sbin/snmptrapd",
-      "sha256": "4fcf9bdd92c5dcf94401b2b8933b8135800e96458cecfa185c47bf386d8a1c18"
+      "sha256": "4fcf9bdd92c5dcf94401b2b8933b8135800e96458cecfa185c47bf386d8a1c18",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmptrapd.15.dylib",
+            "/usr/lib/libnetsnmpmibs.15.dylib",
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmptrapd.15.dylib",
+            "/usr/lib/libnetsnmpmibs.15.dylib",
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmptrapd.15.dylib",
+            "/usr/lib/libnetsnmpmibs.15.dylib",
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 102712,
@@ -821,7 +2528,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmpusm",
-      "sha256": "1d75081c5a22cc287c48ba82a921730438e18fa90ab3e6796be1e9f491df9208"
+      "sha256": "1d75081c5a22cc287c48ba82a921730438e18fa90ab3e6796be1e9f491df9208",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 84832,
@@ -833,7 +2578,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmpvacm",
-      "sha256": "1cb432904feed6a5f13d2a016a000208ed6e4f4ec2417b756f790c62975ca48b"
+      "sha256": "1cb432904feed6a5f13d2a016a000208ed6e4f4ec2417b756f790c62975ca48b",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 51188,
@@ -845,7 +2628,45 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/snmpwalk",
-      "sha256": "c7846a92745d5b0feaeba37d1c89546bf61dc7a4aa8d0199d9ad9f827cfd7d37"
+      "sha256": "c7846a92745d5b0feaeba37d1c89546bf61dc7a4aa8d0199d9ad9f827cfd7d37",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 137008,
@@ -857,7 +2678,33 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/sntp",
-      "sha256": "5b77e23365e3a3d1c2aeabf3e728566987d843e9f35c4cfc135c1c1c7375ef1d"
+      "sha256": "5b77e23365e3a3d1c2aeabf3e728566987d843e9f35c4cfc135c1c1c7375ef1d",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 62460,
@@ -869,7 +2716,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/stat",
-      "sha256": "27cdba391dee1febc56fd4d1e5f19437f8d326f0be762141d2439f4a9914c66c"
+      "sha256": "27cdba391dee1febc56fd4d1e5f19437f8d326f0be762141d2439f4a9914c66c",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 49788,
@@ -881,7 +2751,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/sum",
-      "sha256": "ed6055b0da047de10652da8eaf21b971bd86159376519dfd3d7517c123669c09"
+      "sha256": "ed6055b0da047de10652da8eaf21b971bd86159376519dfd3d7517c123669c09",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 49712,
@@ -893,7 +2786,33 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/tickadj",
-      "sha256": "82b2ceba329affbbd19f1d81f026f1b07e61d4056cb6e4f77d41801f2961453d"
+      "sha256": "82b2ceba329affbbd19f1d81f026f1b07e61d4056cb6e4f77d41801f2961453d",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 50084,
@@ -905,7 +2824,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/touch",
-      "sha256": "1b4116e706d5199331a0dc118230e6a8e0eb6ee1cfbd323b48dede95f4febc3e"
+      "sha256": "1b4116e706d5199331a0dc118230e6a8e0eb6ee1cfbd323b48dede95f4febc3e",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 13872,
@@ -915,7 +2857,19 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/tred",
-      "sha256": "6490418b1178386ed061a74d2c0d852e3a5a62747c3a54162e01a6ab802a8246"
+      "sha256": "6490418b1178386ed061a74d2c0d852e3a5a62747c3a54162e01a6ab802a8246",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libgraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 490492,
@@ -925,7 +2879,24 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/twopi",
-      "sha256": "c3ef4d9bc9cfde97ff18dea0b9e2945070a1c07002177b3983ab00d4718e67ad"
+      "sha256": "c3ef4d9bc9cfde97ff18dea0b9e2945070a1c07002177b3983ab00d4718e67ad",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libexpat.1.dylib",
+            "/usr/local/lib/graphviz/libpathplan.0.dylib",
+            "/usr/local/lib/graphviz/libgraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/X11/lib/libfreetype.6.dylib",
+            "/usr/X11/lib/libpng12.0.dylib",
+            "/usr/lib/libz.1.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 62612,
@@ -937,7 +2908,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/uncompress",
-      "sha256": "7267d28114d367def834661d0bfd0a468af47a4c92707244074dd5fe8292b444"
+      "sha256": "7267d28114d367def834661d0bfd0a468af47a4c92707244074dd5fe8292b444",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 13944,
@@ -947,7 +2941,19 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/bin/unflatten",
-      "sha256": "2309fe393111fd3b19d368b86406badd2bc581a87959acd35308f4f944d72c56"
+      "sha256": "2309fe393111fd3b19d368b86406badd2bc581a87959acd35308f4f944d72c56",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/local/lib/graphviz/libagraph.0.dylib",
+            "/usr/local/lib/graphviz/libcdt.0.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 50460,
@@ -959,7 +2965,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/bin/unlink",
-      "sha256": "51c2bf931c1c2af9c6a7c2da15a8e8c61b01b4f12eafe86161b0aea794ebd578"
+      "sha256": "51c2bf931c1c2af9c6a7c2da15a8e8c61b01b4f12eafe86161b0aea794ebd578",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 4652,
@@ -969,7 +2998,14 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/lib/gcc/powerpc-apple-darwin10/4.2.1/crt2.o",
-      "sha256": "d5dad5bc658f6cb57eeed5bc49934133663d608493e5b7437ae8d01dc45bee6b"
+      "sha256": "d5dad5bc658f6cb57eeed5bc49934133663d608493e5b7437ae8d01dc45bee6b",
+      "slice_load_commands": [
+        {
+          "dependencies": [],
+          "filetype": 1,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 10584,
@@ -979,7 +3015,14 @@
       ],
       "magic": "feedfacf",
       "path": "BUILD/usr/lib/gcc/powerpc-apple-darwin10/4.2.1/ppc64/crt3.o",
-      "sha256": "6955aa46ed4084a09fdd43b331118c59dfcc0295b55628951588a7bb1eefa8b1"
+      "sha256": "6955aa46ed4084a09fdd43b331118c59dfcc0295b55628951588a7bb1eefa8b1",
+      "slice_load_commands": [
+        {
+          "dependencies": [],
+          "filetype": 1,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 11984,
@@ -989,7 +3032,14 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/lib/gcc/powerpc-apple-darwin10/4.2.1/crt3.o",
-      "sha256": "7eb4f34a07eb94828466bb92646e4c2b8dbbd76f7e99b5e687b0be6dfe241a97"
+      "sha256": "7eb4f34a07eb94828466bb92646e4c2b8dbbd76f7e99b5e687b0be6dfe241a97",
+      "slice_load_commands": [
+        {
+          "dependencies": [],
+          "filetype": 1,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 32956,
@@ -999,7 +3049,18 @@
       ],
       "magic": "feedface",
       "path": "BUILD/System/Library/Frameworks/Python.framework/Versions/2.5/Extras/lib/python/twisted/internet/cfsupport.so",
-      "sha256": "dce4ee49c5f3b24cae9a9bb7fc6da88db88a66bd50f7581bb0ebfe5b8ab4500b"
+      "sha256": "dce4ee49c5f3b24cae9a9bb7fc6da88db88a66bd50f7581bb0ebfe5b8ab4500b",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 32896,
@@ -1009,7 +3070,18 @@
       ],
       "magic": "feedface",
       "path": "BUILD/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/twisted/internet/cfsupport.so",
-      "sha256": "9812e43bef64b91346cd391b52b450605642fb38e680e3442227aa9285bbe1db"
+      "sha256": "9812e43bef64b91346cd391b52b450605642fb38e680e3442227aa9285bbe1db",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 8504,
@@ -1019,7 +3091,16 @@
       ],
       "magic": "feedface",
       "path": "BUILD/System/Library/Frameworks/Python.framework/Versions/2.5/Extras/lib/python/twisted/runner/portmap.so",
-      "sha256": "51b06fa13fc4962f43e86faab35dbbf2d4e1942a30f5c3fa9a7d6f6c18a0ca5c"
+      "sha256": "51b06fa13fc4962f43e86faab35dbbf2d4e1942a30f5c3fa9a7d6f6c18a0ca5c",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 8504,
@@ -1029,7 +3110,16 @@
       ],
       "magic": "feedface",
       "path": "BUILD/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/twisted/runner/portmap.so",
-      "sha256": "36b87894d1f39d39b3cfb122c203a548210601905af51b11cc454260ca6cdf31"
+      "sha256": "36b87894d1f39d39b3cfb122c203a548210601905af51b11cc454260ca6cdf31",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 13836,
@@ -1039,7 +3129,16 @@
       ],
       "magic": "feedface",
       "path": "BUILD/System/Library/Frameworks/Python.framework/Versions/2.5/Extras/lib/python/twisted/test/raiser.so",
-      "sha256": "dd013656b239fbdaf237b95d2ac8a7287acd3ad1884f52a1be9f14873c38fe3e"
+      "sha256": "dd013656b239fbdaf237b95d2ac8a7287acd3ad1884f52a1be9f14873c38fe3e",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 13700,
@@ -1049,7 +3148,16 @@
       ],
       "magic": "feedface",
       "path": "BUILD/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/twisted/test/raiser.so",
-      "sha256": "1df81e5b40892b03550b0a98ceb15b8a5abf041c4510794132f21a4d3207f0d5"
+      "sha256": "1df81e5b40892b03550b0a98ceb15b8a5abf041c4510794132f21a4d3207f0d5",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 8796,
@@ -1059,7 +3167,16 @@
       ],
       "magic": "feedface",
       "path": "BUILD/System/Library/Frameworks/Python.framework/Versions/2.5/Extras/lib/python/twisted/protocols/_c_urlarg.so",
-      "sha256": "6a822d864516e27eac69ba46104e10ab7b3be89056a6f24287a4c8940b0436ba"
+      "sha256": "6a822d864516e27eac69ba46104e10ab7b3be89056a6f24287a4c8940b0436ba",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 8796,
@@ -1069,7 +3186,16 @@
       ],
       "magic": "feedface",
       "path": "BUILD/System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/twisted/protocols/_c_urlarg.so",
-      "sha256": "84827f40f55e632c99f2dcd36da532553b8314a1276bded7ec2ded1f227956cd"
+      "sha256": "84827f40f55e632c99f2dcd36da532553b8314a1276bded7ec2ded1f227956cd",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 515280,
@@ -1080,7 +3206,25 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/powerpc-apple-darwin10-cpp-4.2.1",
-      "sha256": "ff4c01f4848661929317012f8d4080c534a3461a65026760a6821b1ccf05ee64"
+      "sha256": "ff4c01f4848661929317012f8d4080c534a3461a65026760a6821b1ccf05ee64",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 515280,
@@ -1091,7 +3235,25 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/powerpc-apple-darwin10-g++-4.2.1",
-      "sha256": "c66e9d077eb29844a9e2e54726f2e5c98a475ab315bcc04b8e173dc42d17792a"
+      "sha256": "c66e9d077eb29844a9e2e54726f2e5c98a475ab315bcc04b8e173dc42d17792a",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 511184,
@@ -1102,7 +3264,25 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/powerpc-apple-darwin10-gcc-4.2.1",
-      "sha256": "4480c697e8f8782b70be1182b9c019ffbeb2cf059b45c2ec3c63b2d291a3e2c4"
+      "sha256": "4480c697e8f8782b70be1182b9c019ffbeb2cf059b45c2ec3c63b2d291a3e2c4",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 51300,
@@ -1112,7 +3292,16 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/c++-4.2",
-      "sha256": "62d9e4a9a59ad78eb5e2c2f1a88199c6d56e49fc83790be6775436e08fc56f21"
+      "sha256": "62d9e4a9a59ad78eb5e2c2f1a88199c6d56e49fc83790be6775436e08fc56f21",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 51300,
@@ -1122,7 +3311,16 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/cpp-4.2",
-      "sha256": "39b02d36ab21bb0401f1d41c13429e234d473d4da2dc5e4d627f08c588740776"
+      "sha256": "39b02d36ab21bb0401f1d41c13429e234d473d4da2dc5e4d627f08c588740776",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 51300,
@@ -1132,7 +3330,16 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/g++-4.2",
-      "sha256": "62d9e4a9a59ad78eb5e2c2f1a88199c6d56e49fc83790be6775436e08fc56f21"
+      "sha256": "62d9e4a9a59ad78eb5e2c2f1a88199c6d56e49fc83790be6775436e08fc56f21",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 51300,
@@ -1142,7 +3349,16 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/gcc-4.2",
-      "sha256": "8748ae71f05856e55bd7a5e42006bc8fd9200bca8a150edbc61753c53cbf83f1"
+      "sha256": "8748ae71f05856e55bd7a5e42006bc8fd9200bca8a150edbc61753c53cbf83f1",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 121108,
@@ -1153,7 +3369,25 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/bin/gcov-4.2",
-      "sha256": "1bcaed6cd1152fd44fc5d698813dcfa34d7bb1535eec5e2c3b99d0f8a73e7993"
+      "sha256": "1bcaed6cd1152fd44fc5d698813dcfa34d7bb1535eec5e2c3b99d0f8a73e7993",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libiconv.2.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 2,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 152144,
@@ -1165,7 +3399,42 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/Library/Perl/5.10.0/darwin-thread-multi-2level/auto/NetSNMP/agent/agent.bundle",
-      "sha256": "634d635e62097c33d3349c35b62b4e382d453e568e31959ebb07000b5d20c0d9"
+      "sha256": "634d635e62097c33d3349c35b62b4e382d453e568e31959ebb07000b5d20c0d9",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpmibs.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpmibs.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpmibs.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 50972,
@@ -1177,7 +3446,33 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/Library/Perl/5.10.0/darwin-thread-multi-2level/auto/NetSNMP/ASN/ASN.bundle",
-      "sha256": "298b5deea1b4536bfced6c9b8e0bc5823aec13df2ac8b50ac19d06eff0f50cd7"
+      "sha256": "298b5deea1b4536bfced6c9b8e0bc5823aec13df2ac8b50ac19d06eff0f50cd7",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 115360,
@@ -1189,7 +3484,33 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/Library/Perl/5.10.0/darwin-thread-multi-2level/auto/NetSNMP/default_store/default_store.bundle",
-      "sha256": "6a3f8bf23bf0629f3c482a65c6beaf93442ead92241e618eb9ddfca000764bc5"
+      "sha256": "6a3f8bf23bf0629f3c482a65c6beaf93442ead92241e618eb9ddfca000764bc5",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 51220,
@@ -1201,7 +3522,33 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/Library/Perl/5.10.0/darwin-thread-multi-2level/auto/NetSNMP/agent/default_store/default_store.bundle",
-      "sha256": "2c1164fe72ba2078bbd3606872258076f37717377b8f3658ea09a566d3325bf6"
+      "sha256": "2c1164fe72ba2078bbd3606872258076f37717377b8f3658ea09a566d3325bf6",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 90584,
@@ -1213,7 +3560,33 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/Library/Perl/5.10.0/darwin-thread-multi-2level/auto/NetSNMP/OID/OID.bundle",
-      "sha256": "f3f2c28e5cbff9d7e00bcde616d269c23a51c293fc503c2a6fd66a32dbf53328"
+      "sha256": "f3f2c28e5cbff9d7e00bcde616d269c23a51c293fc503c2a6fd66a32dbf53328",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 428168,
@@ -1225,7 +3598,33 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/Library/Perl/5.10.0/darwin-thread-multi-2level/auto/SNMP/SNMP.bundle",
-      "sha256": "b22ac022ea8383614f7c56afda250bc37d536cf43a4c589bcc21fab21edb55b5"
+      "sha256": "b22ac022ea8383614f7c56afda250bc37d536cf43a4c589bcc21fab21edb55b5",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 73404,
@@ -1237,7 +3636,39 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/Library/Perl/5.10.0/darwin-thread-multi-2level/auto/NetSNMP/TrapReceiver/TrapReceiver.bundle",
-      "sha256": "9486522a6e425fa4df4217e84e18159b334bb1f30962a40344d15caec72794a9"
+      "sha256": "9486522a6e425fa4df4217e84e18159b334bb1f30962a40344d15caec72794a9",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmptrapd.15.dylib",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmptrapd.15.dylib",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmptrapd.15.dylib",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 8,
+          "install_name": null
+        }
+      ]
     },
     {
       "bytes": 57040,
@@ -1247,7 +3678,17 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/lib/graphviz/libagraph.0.dylib",
-      "sha256": "94ea075e11bf81ed5d1141c6f283bd39092a08732626741f1400ac047211312d"
+      "sha256": "94ea075e11bf81ed5d1141c6f283bd39092a08732626741f1400ac047211312d",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/local/lib/graphviz/libagraph.0.dylib"
+        }
+      ]
     },
     {
       "bytes": 21860,
@@ -1257,7 +3698,17 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/lib/graphviz/libcdt.0.dylib",
-      "sha256": "e3c4ffc93951213025c8a1024958caf880eece7dbf820ebcd1878241adf217cb"
+      "sha256": "e3c4ffc93951213025c8a1024958caf880eece7dbf820ebcd1878241adf217cb",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/local/lib/graphviz/libcdt.0.dylib"
+        }
+      ]
     },
     {
       "bytes": 756372,
@@ -1267,7 +3718,21 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/lib/graphviz/libdotneato.0.dylib",
-      "sha256": "ff474352856aa0ce10f6ed9116fa4d880e38cfba2d3779893b3d68e4c209da30"
+      "sha256": "ff474352856aa0ce10f6ed9116fa4d880e38cfba2d3779893b3d68e4c209da30",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libexpat.1.dylib",
+            "/usr/X11/lib/libfreetype.6.dylib",
+            "/usr/X11/lib/libpng12.0.dylib",
+            "/usr/lib/libz.1.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/local/lib/graphviz/libdotneato.0.dylib"
+        }
+      ]
     },
     {
       "bytes": 92652,
@@ -1277,7 +3742,17 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/lib/graphviz/libexpr.0.dylib",
-      "sha256": "1e17db3b9a9bc40e80a36afd5cd1215afd10eb8122c4297c8825e3fb1341debd"
+      "sha256": "1e17db3b9a9bc40e80a36afd5cd1215afd10eb8122c4297c8825e3fb1341debd",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libgcc_s.1.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/local/lib/graphviz/libexpr.0.dylib"
+        }
+      ]
     },
     {
       "bytes": 225300,
@@ -1287,7 +3762,20 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/lib/graphviz/libgdtclft.0.dylib",
-      "sha256": "2793a91afc09aa4e18c7025391664db3a75d6e3b0099a11d8449d37c3cb97f1a"
+      "sha256": "2793a91afc09aa4e18c7025391664db3a75d6e3b0099a11d8449d37c3cb97f1a",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/X11/lib/libfreetype.6.dylib",
+            "/usr/X11/lib/libpng12.0.dylib",
+            "/usr/lib/libz.1.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/local/lib/graphviz/libgdtclft.0.dylib"
+        }
+      ]
     },
     {
       "bytes": 41872,
@@ -1297,7 +3785,17 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/lib/graphviz/libgraph.0.dylib",
-      "sha256": "5561dd771d411e42d44bc2dcf366b036802569c6c5b8a5e1ae1b81a3bb7e3fb8"
+      "sha256": "5561dd771d411e42d44bc2dcf366b036802569c6c5b8a5e1ae1b81a3bb7e3fb8",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libgcc_s.1.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/local/lib/graphviz/libgraph.0.dylib"
+        }
+      ]
     },
     {
       "bytes": 2091868,
@@ -1309,7 +3807,33 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/lib/libnetsnmp.15.1.2.dylib",
-      "sha256": "9be337e6c96d9fd41f008795611e8437c87b825eaff86c36505750724d0529d6"
+      "sha256": "9be337e6c96d9fd41f008795611e8437c87b825eaff86c36505750724d0529d6",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmp.15.dylib"
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmp.15.dylib"
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libcrypto.0.9.8.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmp.15.dylib"
+        }
+      ]
     },
     {
       "bytes": 806764,
@@ -1321,7 +3845,48 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/lib/libnetsnmpagent.15.1.2.dylib",
-      "sha256": "513ead71484879221500e189e18ae540af3e1d85fdbf582d02c94852da212b7d"
+      "sha256": "513ead71484879221500e189e18ae540af3e1d85fdbf582d02c94852da212b7d",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmpagent.15.dylib"
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmpagent.15.dylib"
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmpagent.15.dylib"
+        }
+      ]
     },
     {
       "bytes": 524524,
@@ -1333,7 +3898,36 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/lib/libnetsnmphelpers.15.1.2.dylib",
-      "sha256": "f16dbb61442610a940f46b09dfaf73d82fbefab9ed930d3c7b0513ba4755bcc3"
+      "sha256": "f16dbb61442610a940f46b09dfaf73d82fbefab9ed930d3c7b0513ba4755bcc3",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmphelpers.15.dylib"
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmphelpers.15.dylib"
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmphelpers.15.dylib"
+        }
+      ]
     },
     {
       "bytes": 2549364,
@@ -1345,7 +3939,54 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/lib/libnetsnmpmibs.15.1.2.dylib",
-      "sha256": "cf12fd0a126f16fe5ceb8b0e03717241172059ab7a58fb7024e90d75aba652fc"
+      "sha256": "cf12fd0a126f16fe5ceb8b0e03717241172059ab7a58fb7024e90d75aba652fc",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmpmibs.15.dylib"
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmpmibs.15.dylib"
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+            "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+            "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+            "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices",
+            "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmpmibs.15.dylib"
+        }
+      ]
     },
     {
       "bytes": 153312,
@@ -1357,7 +3998,42 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/lib/libnetsnmptrapd.15.1.2.dylib",
-      "sha256": "b29968be2950f301c4acc55437b93e72f261b02a8b8a55f1c25fc5541d3129c3"
+      "sha256": "b29968be2950f301c4acc55437b93e72f261b02a8b8a55f1c25fc5541d3129c3",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmpmibs.15.dylib",
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmptrapd.15.dylib"
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmpmibs.15.dylib",
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmptrapd.15.dylib"
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libnetsnmpmibs.15.dylib",
+            "/usr/lib/libnetsnmphelpers.15.dylib",
+            "/usr/lib/libnetsnmpagent.15.dylib",
+            "/usr/lib/libnetsnmp.15.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/lib/libnetsnmptrapd.15.dylib"
+        }
+      ]
     },
     {
       "bytes": 18544,
@@ -1367,7 +4043,17 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/lib/graphviz/libpack.0.dylib",
-      "sha256": "e88ecb34f97a1a7dc614654a53c56beeb83215c32033909c4aae8945ce1da871"
+      "sha256": "e88ecb34f97a1a7dc614654a53c56beeb83215c32033909c4aae8945ce1da871",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libgcc_s.1.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/local/lib/graphviz/libpack.0.dylib"
+        }
+      ]
     },
     {
       "bytes": 30108,
@@ -1377,7 +4063,17 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/lib/graphviz/libpathplan.0.dylib",
-      "sha256": "8c6854bbd0312dcc904ab38489445412875aecd9e377204b388920fe8ecb71e3"
+      "sha256": "8c6854bbd0312dcc904ab38489445412875aecd9e377204b388920fe8ecb71e3",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libgcc_s.1.dylib",
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/local/lib/graphviz/libpathplan.0.dylib"
+        }
+      ]
     },
     {
       "bytes": 848272,
@@ -1389,7 +4085,30 @@
       ],
       "magic": "cafebabe",
       "path": "BUILD/usr/lib/gcc/powerpc-apple-darwin10/4.2.1/libstdc++.dylib",
-      "sha256": "1f190569a4a15a3f44626fd764ceec58074f64421b88c1c94fa4bc9dc7747de2"
+      "sha256": "1f190569a4a15a3f44626fd764ceec58074f64421b88c1c94fa4bc9dc7747de2",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 9,
+          "install_name": "/usr/lib/libstdc++.6.dylib"
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 9,
+          "install_name": "/usr/lib/libstdc++.6.dylib"
+        },
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib"
+          ],
+          "filetype": 9,
+          "install_name": "/usr/lib/libstdc++.6.dylib"
+        }
+      ]
     },
     {
       "bytes": 799528,
@@ -1399,7 +4118,21 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/lib/graphviz/libtcldot.0.dylib",
-      "sha256": "dbb7ecbd974712c134ba366c2cf4e5a453b448c5ffadbc0ab22a36ce5ff70720"
+      "sha256": "dbb7ecbd974712c134ba366c2cf4e5a453b448c5ffadbc0ab22a36ce5ff70720",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libexpat.1.dylib",
+            "/usr/X11/lib/libfreetype.6.dylib",
+            "/usr/X11/lib/libpng12.0.dylib",
+            "/usr/lib/libz.1.dylib",
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/local/lib/graphviz/libtcldot.0.dylib"
+        }
+      ]
     },
     {
       "bytes": 48140,
@@ -1409,7 +4142,17 @@
       ],
       "magic": "feedface",
       "path": "BUILD/usr/local/lib/graphviz/libtclplan.0.dylib",
-      "sha256": "5b9adab65d42db386804ed01e51c05174ee048a03cfa0273b30818406e8a5dd9"
+      "sha256": "5b9adab65d42db386804ed01e51c05174ee048a03cfa0273b30818406e8a5dd9",
+      "slice_load_commands": [
+        {
+          "dependencies": [
+            "/usr/lib/libSystem.B.dylib",
+            "/usr/lib/libgcc_s.1.dylib"
+          ],
+          "filetype": 6,
+          "install_name": "/usr/local/lib/graphviz/libtclplan.0.dylib"
+        }
+      ]
     }
   ],
   "tome_sha256": "0121ff2d17ce7492706b00eda1c9fdb04b803f54c0a33e11c1ce6a12a3d727ec"
