@@ -26,6 +26,8 @@ EXPECTED = {
     'src/releases/10.6/kext_tools-177': ('0de81839fd993341ff03e412969f47ff72fa9936', 76),
     'src/releases/10.6.8/kext_tools-180.2.1': ('191e8d87a847864dde821469ffd23b10315e31c2', 77),
     'src/releases/10.6/DirectoryService-621': ('bd53241aacad6a7e39e953a02f8663508bab9ce5', 391),
+    'src/releases/10.6.8/net_snmp-127': ('04dacf06c43ce7f564e8529779d9a76f6d0e3ba4', 32),
+    'src/releases/10.6.8/Libsystem-125.2.11': ('44420cfcf31da8aa56fd3fca740fe8c47b72cd32', 16),
     'src/releases/10.6.8/DirectoryService-621.12': ('f29ae461575b52e3061d6178d9ee34e15cb14acd', 393),
     'historical-vendored/xnu-1228.15.4': ('9d80f9528906753d682f9d65d56a0276bad56b4d', 3156),
     'historical-vendored/xnu-1456.1.26': ('46708ce5a6d4a42164ddb67a90fa6fbc7f986430', 3379),
