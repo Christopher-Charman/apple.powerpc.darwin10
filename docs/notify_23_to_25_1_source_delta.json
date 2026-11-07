@@ -21,6 +21,12 @@
   "decision": "no automatic reversion or patch until header/MIG dependencies and PPC execution verified",
   "left": "src/releases/10.6/notify-23",
   "left_tree": "38946c7473e54cd68bbe85d8b6c907f835ba9d2c",
+  "resolved_dependencies": {
+    "compatibility": "Pair notify-23 with Libnotify-53, notify-25.1 with Libnotify-54.3; do not cross-link until compiled and tested.",
+    "mig_25_1": "Libnotify-54.3/notify_ipc.defs is referenced by Xcode project for private header installation; notify-25.1 reads $(SDKROOT)/usr/local/include/notify_ipc.defs",
+    "notify_23": "Libnotify-53: _notify_lib_notify_state_new(uint32_t flags); fixed internal tables of 8192",
+    "notify_25_1": "Libnotify-54.3: _notify_lib_notify_state_new(uint32_t flags, uint32_t table_size); notifyd passes 1024"
+  },
   "reversion_recommendation": "requires PPC build and runtime evidence",
   "review_findings": [
     {

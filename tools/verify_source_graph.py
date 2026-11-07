@@ -20,6 +20,8 @@ EXPECTED = {
     'src/releases/10.5.8/notify-16': ('bdf9bfe291059e6e8d3958b653e88d9da8728407', 24),
     'src/releases/10.6/notify-23': ('38946c7473e54cd68bbe85d8b6c907f835ba9d2c', 22),
     'src/releases/10.6.8/notify-25.1': ('11e89af8448d664497294015b8f128878b16b4de', 21),
+    'src/releases/10.6/Libnotify-53': ('f403157be8da7e5a737a0d218f02683731737800', 22),
+    'src/releases/10.6.8/Libnotify-54.3': ('7e626c25a337eeebdddd3a2f6640354f304b5cb6', 23),
     'historical-vendored/xnu-1228.15.4': ('9d80f9528906753d682f9d65d56a0276bad56b4d', 3156),
     'historical-vendored/xnu-1456.1.26': ('46708ce5a6d4a42164ddb67a90fa6fbc7f986430', 3379),
     'historical-vendored/xnu-1504.15.3': ('0ffff24afe52ed47d20c5a06f07a10200f89f32b', 3386),
