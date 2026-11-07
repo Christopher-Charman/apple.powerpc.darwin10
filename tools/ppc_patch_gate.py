@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RELEASE = re.compile(r'^src/releases/10\.(?:5|6)(?:\.8)?/[A-Za-z0-9_.-]+/.+')
+RELEASE = re.compile(r'^src/releases/10\.(?:5|6)(?:\.[0-8])?/[A-Za-z0-9_.-]+/.+')
 DENIED = ('src/apple-distributions-macos11/', 'src/xnu/', 'toolchains/darwin-xtools/')
 
 
@@ -23,10 +23,10 @@ def inspect(manifest):
         if not isinstance(data.get(key), str) or not data[key].strip():
             raise ValueError('missing/invalid field: ' + key)
     target = data['source_tree'].rstrip('/')
-    if not re.match(r'^src/releases/10\.(?:5|6)(?:\.8)?/[A-Za-z0-9_.-]+$', target):
+    if not re.match(r'^src/releases/10\.(?:5|6)(?:\.[0-8])?/[A-Za-z0-9_.-]+$', target):
         raise ValueError('source tree outside Darwin 9/10 release namespace')
     family = target.split('/')[2]
-    if data['target'] != family and not (family == '10.6.8' and data['target'].startswith('10.6.8')):
+    if data['target'] != family:
         raise ValueError('target and source release mismatch')
     component_tag = target.rsplit('/', 1)[-1]
     if '-' not in component_tag:

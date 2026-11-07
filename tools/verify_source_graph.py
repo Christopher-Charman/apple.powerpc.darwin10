@@ -59,7 +59,8 @@ def verify():
     pin = run('ls-tree', 'HEAD', SNOW + 'xnu').strip()
     if not pin.startswith('160000 commit 99c11f3f90a18f35d3692ea77444b51fd972a4f4\t'):
         raise ValueError('10.6.8 XNU pin mismatch')
-    print('PASS: 353 Snow Leopard + 14 historical source pins; six verified XNU snapshots; modern whole-tree exclusions')
+    xnu = sum('/xnu-' in path for path in EXPECTED)
+    print('PASS: 353 Snow Leopard + 14 historical source pins; {} verified XNU snapshots; modern whole-tree exclusions'.format(xnu))
 
 
 if __name__ == '__main__':
