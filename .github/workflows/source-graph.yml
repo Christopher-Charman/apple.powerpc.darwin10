@@ -19,6 +19,8 @@ on:
       - 'tools/inspect_build_zip.py'
       - 'tests/test_build_zip_inventory.py'
       - 'tests/test_build_macho_load_commands.py'
+      - 'tools/verify_ppc_dependency_sources.py'
+      - 'tests/test_ppc_dependency_sources.py'
       - 'docs/build_zip_direct_binary_inventory.json'
       - 'tests/test_ppc_artifact_manifest.py'
       - 'tests/test_inspect_ppc_macho.py'
@@ -51,3 +53,4 @@ jobs:
           python3 -m unittest discover -s tests -p "test_ppc_artifact_manifest.py" -v
           python3 -m unittest discover -s tests -p "test_build_zip_inventory.py" -v
           python3 -m unittest discover -s tests -p "test_build_macho_load_commands.py" -v
+          python3 -m unittest discover -s tests -p "test_ppc_dependency_sources.py" -v
