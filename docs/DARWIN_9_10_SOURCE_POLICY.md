@@ -12,7 +12,7 @@
 | 10.6.x | `src/releases/10.6/Libc-594.9.1/` | `Libc-594.9.1` | `f7af6c31cc3078243c2d2e320e6af30e2de9813d` |
 | 10.6.8-era kernel candidate | `src/releases/10.6.8/xnu-1504.15.3/` | `xnu-1504.15.3` | `99c11f3f90a18f35d3692ea77444b51fd972a4f4` |
 
-The separately maintained `historical/SOURCE_LOCK.json` indexes **additional upstream components** as pinned gitlinks, including Libsystem, cctools, dyld, ld64, XNU and a different 10.6 Libc patch version. Those gitlinks are not full source snapshots. Preserve their exact revisions and reconcile candidate release membership with the real target build before promotion.
+The pinned `src/apple-darwin-10.6.8/` source superproject contains **353 Apple OSS gitlinks**, with root `.gitmodules` mappings restored for selective component checkout. These references are not all downloaded source bytes, and exact 10.6.8/A5 image membership remains unproven. The separately maintained `historical/SOURCE_LOCK.json` indexes **additional upstream components** as pinned gitlinks, including Libsystem, cctools, dyld, ld64, XNU and a different 10.6 Libc patch version. Those gitlinks are not full source snapshots. Preserve their exact revisions and reconcile candidate release membership with the real target build before promotion.
 
 ## Post-10.7 retention rule
 
