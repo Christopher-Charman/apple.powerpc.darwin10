@@ -1,0 +1,51 @@
+{
+  "changed_files": 10,
+  "changes": [
+    {
+      "path": "archhack.c",
+      "status": "A"
+    },
+    {
+      "path": "kext_tools.xcodeproj/project.pbxproj",
+      "status": "M"
+    },
+    {
+      "path": "kextcache_main.c",
+      "status": "M"
+    },
+    {
+      "path": "kextcache_main.h",
+      "status": "M"
+    },
+    {
+      "path": "kextd_main.c",
+      "status": "M"
+    },
+    {
+      "path": "kextd_request.c",
+      "status": "M"
+    },
+    {
+      "path": "kextload_main.c",
+      "status": "M"
+    },
+    {
+      "path": "kextload_main.h",
+      "status": "M"
+    },
+    {
+      "path": "kextsymboltool.c",
+      "status": "M"
+    },
+    {
+      "path": "kextutil_main.h",
+      "status": "M"
+    }
+  ],
+  "left": "src/releases/10.6/kext_tools-177",
+  "left_tree": "0de81839fd993341ff03e412969f47ff72fa9936",
+  "reversion_recommendation": "requires PPC build and runtime evidence",
+  "right": "src/releases/10.6.8/kext_tools-180.2.1",
+  "right_tree": "191e8d87a847864dde821469ffd23b10315e31c2",
+  "runtime_parity": "not_assessed"
+}
