@@ -28,6 +28,17 @@ def inspect(manifest):
     family = target.split('/')[2]
     if data['target'] != family and not (family == '10.6.8' and data['target'].startswith('10.6.8')):
         raise ValueError('target and source release mismatch')
+    component_tag = target.rsplit('/', 1)[-1]
+    if '-' not in component_tag:
+        raise ValueError('source tree missing component tag')
+    component = component_tag.split('-', 1)[0]
+    release = data['target']
+    release_file = ROOT / 'source-releases' / (release + '.json')
+    if release_file.is_file():
+        projects = json.loads(release_file.read_text(encoding='utf-8')).get('projects', [])
+        published = {p['project']: p['tag'] for p in projects}
+        if component in published and published[component] != component_tag and not data.get('historical_override'):
+            raise ValueError('source tag not in official release; explicit historical_override required')
     if not re.fullmatch(r'[0-9a-f]{40}', data['source_tree_sha']):
         raise ValueError('invalid pinned source tree SHA')
     current = git('rev-parse', 'HEAD:' + target)
