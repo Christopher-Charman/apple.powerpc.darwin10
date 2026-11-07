@@ -6,6 +6,7 @@ import json
 import struct
 from inspect_ppc_macho import _validate_slice
 import subprocess
+import tempfile
 from pathlib import Path
 
 
@@ -32,9 +33,14 @@ def main():
     parser.add_argument('--output-dir', type=Path, required=True)
     args = parser.parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    source = args.output_dir / 'ppc-abi.s'
-    assembled = args.output_dir / 'ppc-abi.o'
-    linked = args.output_dir / 'ppc-abi-linked.o'
+    with tempfile.TemporaryDirectory(prefix='ppc-macho-', dir=args.output_dir) as run:
+        return qualify(args, Path(run))
+
+
+def qualify(args, run):
+    source = run / 'ppc-abi.s'
+    assembled = run / 'ppc-abi.o'
+    linked = run / 'ppc-abi-linked.o'
     source.write_text('.text\n.globl _ppc_abi_probe\n_ppc_abi_probe:\n li r3, 7\n blr\n', encoding='ascii')
     subprocess.run([str(args.assembler), '-o', str(assembled), str(source)], check=True)
     first = check(assembled)
