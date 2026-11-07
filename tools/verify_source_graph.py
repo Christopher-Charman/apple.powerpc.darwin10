@@ -12,7 +12,7 @@ XNU_COMMIT = "99c11f3f90a18f35d3692ea77444b51fd972a4f4"
 
 
 def run(*args):
-    return subprocess.check_output(["git", *args], text=True)
+    return subprocess.check_output(["git", *args], universal_newlines=True)
 
 
 def verify():
