@@ -2,8 +2,10 @@ import importlib.util
 import struct
 import unittest
 from pathlib import Path
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'tools'))
 spec = importlib.util.spec_from_file_location('inspect_build_zip', str(ROOT / 'tools/inspect_build_zip.py'))
 module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(module)

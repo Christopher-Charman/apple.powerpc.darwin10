@@ -3,6 +3,7 @@
 import ctypes
 import hashlib
 import io
+from inspect_ppc_macho import _validate_slice
 import json
 import struct
 import sys
@@ -144,10 +145,12 @@ def inventory(outer):
                         inner_endian = '>' if bytes(embedded[:4]) in (b'\xfe\xed\xfa\xce', b'\xfe\xed\xfa\xcf') else '<'
                         if struct.unpack(inner_endian + 'I', embedded[4:8])[0] != cpus[i]:
                             raise ValueError('FAT CPU mismatch: ' + name)
+                        _validate_slice(io.BytesIO(candidate_bytes), start, length, cpus[i])
                         metadata.append(macho_load_commands(candidate_bytes, start, length))
                 else:
                     endian = '>' if magic in (b'\xfe\xed\xfa\xce', b'\xfe\xed\xfa\xcf') else '<'
                     cpus = [struct.unpack(endian + 'I', prefix[4:8])[0]]
+                    _validate_slice(io.BytesIO(candidate_bytes), 0, size)
                     metadata = [macho_load_commands(candidate_bytes, 0, size)]
                 matches.append({'path': name, 'bytes': size, 'sha256': digest.hexdigest(),
                                 'magic': magic.hex(), 'cpu_types': cpus, 'slice_load_commands': metadata,
@@ -156,7 +159,7 @@ def inventory(outer):
         lib.archive_read_free(handle)
     return {'archive_sha256': ARCHIVE_HASH, 'tome_sha256': TOME_HASH,
             'entries': count, 'macho_magic_candidates': matches,
-            'binary_architecture_verification': 'FAT bounds, overlap and embedded Mach-O CPU headers verified'}
+            'binary_architecture_verification': 'FAT bounds, complete embedded Mach-O headers, load commands and CPU identity verified'}
 
 
 if __name__ == '__main__':

@@ -14,6 +14,44 @@ THIN = {b'\xfe\xed\xfa\xce': '>', b'\xce\xfa\xed\xfe': '<',
         b'\xfe\xed\xfa\xcf': '>', b'\xcf\xfa\xed\xfe': '<'}
 
 
+def _validate_slice(stream, offset, length, declared_cpu=None):
+    """Verify the embedded Mach-O header and bounded load-command sequence."""
+    stream.seek(offset)
+    prefix = stream.read(4)
+    if prefix not in THIN:
+        raise ValueError('FAT slice is not a Mach-O object')
+    endian = THIN[prefix]
+    wide = prefix in (b'\xfe\xed\xfa\xcf', b'\xcf\xfa\xed\xfe')
+    header_size = 32 if wide else 28
+    if length < header_size:
+        raise ValueError('truncated Mach-O header')
+    header = stream.read(header_size - 4)
+    if len(header) != header_size - 4:
+        raise ValueError('truncated Mach-O header')
+    cpu, subtype, filetype, ncmds, sizeofcmds, flags = struct.unpack(endian + 'IIIIII', header[:24])
+    if declared_cpu is not None and cpu != declared_cpu:
+        raise ValueError('FAT architecture does not match embedded CPU')
+    if cpu in (18, 0x01000012) and endian != '>':
+        raise ValueError('PowerPC Mach-O must be big-endian')
+    if not 1 <= filetype <= 12:
+        raise ValueError('invalid Mach-O file type')
+    if sizeofcmds > length - header_size or ncmds > sizeofcmds // 8:
+        raise ValueError('invalid Mach-O load-command bounds')
+    consumed = 0
+    for _ in range(ncmds):
+        raw = stream.read(8)
+        if len(raw) != 8:
+            raise ValueError('truncated Mach-O load command')
+        _cmd, cmdsize = struct.unpack(endian + 'II', raw)
+        if cmdsize < 8 or cmdsize > sizeofcmds - consumed:
+            raise ValueError('invalid Mach-O load command size')
+        consumed += cmdsize
+        stream.seek(cmdsize - 8, 1)
+    if consumed != sizeofcmds:
+        raise ValueError('Mach-O load-command size mismatch')
+    return cpu, subtype, filetype
+
+
 def inspect(path):
     path = Path(path)
     size = path.stat().st_size
@@ -40,27 +78,19 @@ def inspect(path):
                 if not length or offset < 8 + n * entry_size or offset + length > size:
                     raise ValueError('invalid FAT slice bounds')
                 slices.append({'cpu': CPU.get(cpu, 'unknown:' + str(cpu)), 'subtype': subtype,
-                               'offset': offset, 'size': length})
+                               'offset': offset, 'size': length, 'cpu_number': cpu})
             for i, a in enumerate(slices):
                 for b in slices[i + 1:]:
                     if a['offset'] < b['offset'] + b['size'] and b['offset'] < a['offset'] + a['size']:
                         raise ValueError('overlapping FAT slices')
             # A FAT table alone is insufficient: inspect each embedded Mach-O header.
             for item in slices:
-                stream.seek(item['offset'])
-                raw = stream.read(12)
-                if len(raw) < 12 or raw[:4] not in THIN:
-                    raise ValueError('FAT slice is not a Mach-O object')
-                embedded_cpu = struct.unpack(THIN[raw[:4]] + 'I', raw[4:8])[0]
-                if CPU.get(embedded_cpu, 'unknown:' + str(embedded_cpu)) != item['cpu']:
-                    raise ValueError('FAT architecture does not match embedded CPU')
+                _validate_slice(stream, item['offset'], item['size'], item['cpu_number'])
+            for item in slices:
+                del item['cpu_number']
             kind = 'fat64' if wide else 'fat32'
         elif magic in THIN:
-            stream.seek(4)
-            raw = stream.read(8)
-            if len(raw) != 8:
-                raise ValueError('truncated thin Mach-O CPU fields')
-            cpu, subtype = struct.unpack(THIN[magic] + 'II', raw)
+            cpu, subtype, _filetype = _validate_slice(stream, 0, size)
             kind = 'mach-o'
             slices = [{'cpu': CPU.get(cpu, 'unknown:' + str(cpu)), 'subtype': subtype,
                        'offset': 0, 'size': size}]
