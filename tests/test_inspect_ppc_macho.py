@@ -27,8 +27,15 @@ class MachOTests(unittest.TestCase):
         header = b'\xca\xfe\xba\xbe' + struct.pack('>I', 2)
         header += struct.pack('>IIIII', 18, 0, 48, 16, 0)
         header += struct.pack('>IIIII', 7, 3, 64, 16, 0)
-        result = self.inspect_bytes(header + b'X' * 32)
+        ppc = b'\xfe\xed\xfa\xce' + struct.pack('>II', 18, 0) + b'\0' * 4
+        intel = b'\xce\xfa\xed\xfe' + struct.pack('<II', 7, 3) + b'\0' * 4
+        result = self.inspect_bytes(header + ppc + intel)
         self.assertEqual({x['cpu'] for x in result['architectures']}, {'ppc', 'i386'})
+
+    def test_rejects_fake_fat_slice(self):
+        header = b'\xca\xfe\xba\xbe' + struct.pack('>I', 1) + struct.pack('>IIIII', 18, 0, 28, 16, 0)
+        with self.assertRaisesRegex(ValueError, 'not a Mach-O'):
+            self.inspect_bytes(header + b'X' * 16)
 
     def test_rejects_out_of_bounds(self):
         header = b'\xca\xfe\xba\xbe' + struct.pack('>I', 1) + struct.pack('>IIIII', 18, 0, 999, 20, 0)

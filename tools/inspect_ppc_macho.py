@@ -45,6 +45,15 @@ def inspect(path):
                 for b in slices[i + 1:]:
                     if a['offset'] < b['offset'] + b['size'] and b['offset'] < a['offset'] + a['size']:
                         raise ValueError('overlapping FAT slices')
+            # A FAT table alone is insufficient: inspect each embedded Mach-O header.
+            for item in slices:
+                stream.seek(item['offset'])
+                raw = stream.read(12)
+                if len(raw) < 12 or raw[:4] not in THIN:
+                    raise ValueError('FAT slice is not a Mach-O object')
+                embedded_cpu = struct.unpack(THIN[raw[:4]] + 'I', raw[4:8])[0]
+                if CPU.get(embedded_cpu, 'unknown:' + str(embedded_cpu)) != item['cpu']:
+                    raise ValueError('FAT architecture does not match embedded CPU')
             kind = 'fat64' if wide else 'fat32'
         elif magic in THIN:
             stream.seek(4)
