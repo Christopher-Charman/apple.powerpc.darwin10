@@ -20,6 +20,7 @@ class MachOLoadCommandTests(unittest.TestCase):
         command = struct.pack('>IIIIII', 0xc, 24 + len(name), 24, 0, 0, 0) + name
         data = sample(command)
         self.assertEqual(module.macho_load_commands(data, 0, len(data))['dependencies'], ['/usr/lib/libSystem.B.dylib'])
+        self.assertEqual(module.macho_load_commands(data, 0, len(data))['dylib_versions'][0]['compatibility_version'], 0)
 
     def test_rejects_overflow(self):
         data = sample(struct.pack('>II', 0xc, 999))

@@ -13,6 +13,9 @@ class RecoveredBuildInventoryTests(unittest.TestCase):
         self.assertEqual(data['entries'], 5188)
         self.assertEqual(len(data['macho_magic_candidates']), 126)
         self.assertTrue(all(x['contains_ppc'] for x in data['macho_magic_candidates']))
+        for artifact in data['macho_magic_candidates']:
+            versions = [tuple((d['name'], d['current_version'], d['compatibility_version']) for d in item['dylib_versions']) for item in artifact['slice_load_commands']]
+            self.assertEqual(len(set(versions)), 1, artifact['path'])
         self.assertEqual(len(set(x['path'] for x in data['macho_magic_candidates'])), 126)
         self.assertTrue(all(len(x['sha256']) == 64 for x in data['macho_magic_candidates']))
 

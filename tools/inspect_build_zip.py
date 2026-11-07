@@ -32,6 +32,7 @@ def macho_load_commands(data, offset, length):
     position = offset + header
     limit = position + sizeofcmds
     deps = []
+    dylib_versions = []
     install_name = None
     for _ in range(ncmds):
         if position + 8 > limit:
@@ -48,12 +49,15 @@ def macho_load_commands(data, offset, length):
                 raise ValueError('invalid dylib install name offset')
             raw = bytes(data[position + name_offset:position + cmdsize]).split(b'\0', 1)[0]
             name = raw.decode('utf-8', 'replace')
+            timestamp, current, compatibility = struct.unpack(endian + 'III', data[position + 12:position + 24])
+            record = {'name': name, 'current_version': current, 'compatibility_version': compatibility, 'command': base_cmd}
             if base_cmd == 0xd:
                 install_name = name
             else:
                 deps.append(name)
+                dylib_versions.append(record)
         position += cmdsize
-    return {'filetype': filetype, 'dependencies': deps, 'install_name': install_name}
+    return {'filetype': filetype, 'dependencies': deps, 'dylib_versions': dylib_versions, 'install_name': install_name}
 
 
 def inventory(outer):
