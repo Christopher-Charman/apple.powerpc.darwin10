@@ -19,16 +19,17 @@ def verify():
     data = Path(".gitmodules").read_text()
     names = re.findall(r'^\[submodule "([^"]+)"\]$', data, re.M)
     paths = re.findall(r"^\s*path\s*=\s*(\S+)", data, re.M)
-    entries = run("ls-tree", "-r", "HEAD", SNOW, LATER).splitlines()
+    entries = run("ls-tree", "-r", "HEAD", SNOW, LATER, "historical/10.5/", "historical/10.6/").splitlines()
     links = [x.split("\t", 1)[1] for x in entries if x.startswith("160000 commit ")]
-    assert len(names) == len(set(names)) == len(paths) == len(links) == 582, "submodule count/name mismatch"
+    assert len(names) == len(set(names)) == len(paths) == len(links) == 596, "submodule count/name mismatch"
     assert set(paths) == set(links), "submodule mapping does not match pinned gitlinks"
     assert sum(x.startswith(SNOW) for x in paths) == 353, "Snow Leopard graph changed"
     assert sum(x.startswith(LATER) for x in paths) == 229, "macOS 11 reference graph changed"
+    assert sum(x.startswith("historical/") for x in paths) == 14, "historical source graph changed"
     assert len(run("ls-tree", "-r", "--name-only", "HEAD", XNU).splitlines()) == 3386, "XNU source snapshot incomplete"
     entry = run("ls-tree", "HEAD", SNOW + "xnu").strip()
     assert entry.startswith("160000 commit " + XNU_COMMIT + "\t"), "Snow Leopard XNU pin changed"
-    print("PASS: release-specific graphs, 582 gitlinks and exact XNU 1504.15.3 source")
+    print("PASS: 353 Snow Leopard, 229 macOS 11 reference and 14 historical gitlinks; exact XNU source")
 
 
 if __name__ == "__main__":
