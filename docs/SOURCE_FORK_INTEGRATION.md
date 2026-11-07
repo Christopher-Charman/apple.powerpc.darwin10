@@ -29,3 +29,17 @@ Do not run a recursive 229-component download by default; select only the depend
 5. Require independent source review and exact target acceptance before merging a component into a build profile.
 
 Historical 10A190, 10A222, 10A432 and 10.6.8 A5 source/release reconstruction remains separately scoped. The owner project's current-build manifest is not established by importing these sources.
+
+## Exact Snow Leopard 10.6.8 source baseline — verified 2026-11-07
+
+The owner's [distribution-macOS-PowerPC](https://github.com/Christopher-Charman/distribution-macOS-PowerPC) fork also contains **`rel/macOS-10.6`** at `86ab567c039a242214b544439b5f08a8cf012d4a` (commit message: *Mac OS X 10.6.8*). Its source graph has **353 pinned component gitlinks**, imported under `src/apple-darwin-10.6.8/`. The `xnu` gitlink resolves to **`99c11f3f90a18f35d3692ea77444b51fd972a4f4`**, Apple's `xnu-1504.15.3` release commit.
+
+The complete **3,386-file XNU 1504.15.3 source snapshot** from that exact commit is also checked in under `src/xnu-1504.15.3/`, so kernel-source analysis does not depend on a submodule fetch. This is the original Apple source, **not** a verified reconstruction of the community's modified 10.6.8 A5 kernel, image or firmware. Apply and verify PPC changes as separately attributed patches; never silently overwrite the original baseline.
+
+The root `.gitmodules` names are release-qualified (`snowleopard/` and `macos11/`) to prevent collisions for components appearing in both graphs. Both sets preserve their original pinned gitlink commits and upstream URLs. To fetch a single 10.6.8 component, run:
+
+```sh
+git submodule update --init -- src/apple-darwin-10.6.8/Libc
+```
+
+The macOS 11 component graph and the newer XNU fork remain separately retained as reference/porting inputs, not the target build. Build selection must resolve against `src/apple-darwin-10.6.8/` and `src/xnu-1504.15.3/` before examining later branches.
