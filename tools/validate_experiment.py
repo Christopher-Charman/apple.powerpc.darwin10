@@ -70,7 +70,7 @@ def validate(data):
             errors.append("terminal verdict requires at least one observation")
     if data.get("evidence_class") not in {"historical", "source_tested", "live_verified"}:
         errors.append("evidence_class must be historical, source_tested or live_verified")
-    if data.get("evidence_class") == "live_verified" and data.get("results", {}).get("verdict") == "planned":
+    if data.get("evidence_class") == "live_verified" and isinstance(results, dict) and results.get("verdict") == "planned":
         errors.append("planned experiment cannot be live_verified")
     return errors
 
