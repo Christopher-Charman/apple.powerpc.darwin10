@@ -1,0 +1,26 @@
+name: Darwin source graph integrity
+
+on:
+  pull_request:
+    paths:
+      - '.gitmodules'
+      - 'src/apple-darwin-10.6.8/**'
+      - 'src/apple-distributions-macos11/**'
+      - 'src/xnu-1504.15.3/**'
+      - 'tools/verify_source_graph.py'
+      - '.github/workflows/source-graph.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-graph:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify exact release source mappings
+        run: python3 tools/verify_source_graph.py

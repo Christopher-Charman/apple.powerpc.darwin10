@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "purpose": "Historical Darwin 9 and Darwin 10 Apple open-source candidates; not complete build/image manifests",
+  "sources": [
+    {
+      "path": "historical/10.5/Libc/Libc-498.1.7",
+      "release_family": "10.5",
+      "component": "Libc",
+      "tag": "Libc-498.1.7",
+      "commit": "7198b93dbba0617e5927ff5a5e783f0e54ff957b",
+      "url": "https://github.com/apple-oss-distributions/Libc.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    },
+    {
+      "path": "historical/10.5/Libsystem/Libsystem-111.1.1",
+      "release_family": "10.5",
+      "component": "Libsystem",
+      "tag": "Libsystem-111.1.1",
+      "commit": "1686ad5a386a978fe2e6b114cdc103b9ed3df222",
+      "url": "https://github.com/apple-oss-distributions/Libsystem.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    },
+    {
+      "path": "historical/10.5/cctools/cctools-667.8.0",
+      "release_family": "10.5",
+      "component": "cctools",
+      "tag": "cctools-667.8.0",
+      "commit": "878eed75d31257235bfcabda5357130eaa63f41e",
+      "url": "https://github.com/apple-oss-distributions/cctools.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    },
+    {
+      "path": "historical/10.5/dyld/dyld-95.3",
+      "release_family": "10.5",
+      "component": "dyld",
+      "tag": "dyld-95.3",
+      "commit": "f4dc02de978a63fed65eb6d67b11216b5763e13a",
+      "url": "https://github.com/apple-oss-distributions/dyld.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    },
+    {
+      "path": "historical/10.5/ld64/ld64-77.1",
+      "release_family": "10.5",
+      "component": "ld64",
+      "tag": "ld64-77.1",
+      "commit": "04aeff43a8d44df83322d8899785a985951e4e3a",
+      "url": "https://github.com/apple-oss-distributions/ld64.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    },
+    {
+      "path": "historical/10.5/xnu/xnu-1228.15.4",
+      "release_family": "10.5",
+      "component": "xnu",
+      "tag": "xnu-1228.15.4",
+      "commit": "083332250d12f1d698a5c3282a18fee46847ec92",
+      "url": "https://github.com/apple-oss-distributions/xnu.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    },
+    {
+      "path": "historical/10.6/Libc/Libc-594.9.5",
+      "release_family": "10.6",
+      "component": "Libc",
+      "tag": "Libc-594.9.5",
+      "commit": "7380dc7cf0fc04550c72f34d38088b4db8668f40",
+      "url": "https://github.com/apple-oss-distributions/Libc.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    },
+    {
+      "path": "historical/10.6/Libsystem/Libsystem-125.2.11",
+      "release_family": "10.6",
+      "component": "Libsystem",
+      "tag": "Libsystem-125.2.11",
+      "commit": "185ae48d0fa4491ccbb2c37f53f2afa1d0328b27",
+      "url": "https://github.com/apple-oss-distributions/Libsystem.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    },
+    {
+      "path": "historical/10.6/cctools/cctools-773",
+      "release_family": "10.6",
+      "component": "cctools",
+      "tag": "cctools-773",
+      "commit": "55972faec6168c2b999e1c1cdad3c4b3773e9098",
+      "url": "https://github.com/apple-oss-distributions/cctools.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    },
+    {
+      "path": "historical/10.6/dyld/dyld-132.13",
+      "release_family": "10.6",
+      "component": "dyld",
+      "tag": "dyld-132.13",
+      "commit": "aa1d7f7a6fb257f393648940bfc32c06fa886458",
+      "url": "https://github.com/apple-oss-distributions/dyld.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    },
+    {
+      "path": "historical/10.6/ld64/ld64-97.17",
+      "release_family": "10.6",
+      "component": "ld64",
+      "tag": "ld64-97.17",
+      "commit": "e1ceb41a8180ae39e1395432bb4829f2e80b1fd5",
+      "url": "https://github.com/apple-oss-distributions/ld64.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    },
+    {
+      "path": "historical/10.6/xnu/xnu-1456.1.26",
+      "release_family": "10.6",
+      "component": "xnu",
+      "tag": "xnu-1456.1.26",
+      "commit": "3ca3bd5593ac4736fb236ffd68a7ccb91ee6c0f0",
+      "url": "https://github.com/apple-oss-distributions/xnu.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    },
+    {
+      "path": "historical/10.6/xnu/xnu-1504.15.3",
+      "release_family": "10.6",
+      "component": "xnu",
+      "tag": "xnu-1504.15.3",
+      "commit": "99c11f3f90a18f35d3692ea77444b51fd972a4f4",
+      "url": "https://github.com/apple-oss-distributions/xnu.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    },
+    {
+      "path": "historical/10.6/xnu/xnu-1504.3.12",
+      "release_family": "10.6",
+      "component": "xnu",
+      "tag": "xnu-1504.3.12",
+      "commit": "902cc0cd840e5c2a7b111bc1781e3c0625ebff5c",
+      "url": "https://github.com/apple-oss-distributions/xnu.git",
+      "evidence": "Apple OSS upstream tag, not validated image/build membership"
+    }
+  ]
+}
