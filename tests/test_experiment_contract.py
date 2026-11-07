@@ -51,6 +51,16 @@ class ExperimentContractTests(unittest.TestCase):
         x["evidence_class"] = "live_verified"
         self.assertIn("results must be an object", validate(x))
 
+    def test_reject_unhashable_verdict(self):
+        x = receipt()
+        x["results"]["verdict"] = []
+        self.assertTrue(validate(x))
+
+    def test_reject_unhashable_evidence_class(self):
+        x = receipt()
+        x["evidence_class"] = []
+        self.assertTrue(validate(x))
+
     def test_reject_boolean_ram(self):
         x = receipt()
         x["hardware"]["ram_bytes"] = True
