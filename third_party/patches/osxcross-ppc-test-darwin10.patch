@@ -1,0 +1,13 @@
+diff --git a/build.sh b/build.sh
+index df803d8..5c609c1 100755
+--- a/build.sh
++++ b/build.sh
+@@ -84,7 +84,7 @@ APPLY_LD64_ADD_PPC_SUPPORT_PATCH=0
+ case $SDK_VERSION in
+   10.4*) TARGET=darwin8; APPLY_LD64_ADD_PPC_SUPPORT_PATCH=1; ;;
+   10.5*) TARGET=darwin9; APPLY_LD64_ADD_PPC_SUPPORT_PATCH=1; ;;
+-  10.6*) TARGET=darwin10 ;;
++  10.6*) TARGET=darwin10; APPLY_LD64_ADD_PPC_SUPPORT_PATCH=1; ;;
+   10.7*) TARGET=darwin11 ;;
+   10.8*) TARGET=darwin12; X86_64H_SUPPORTED=1; ;;
+   10.9*) TARGET=darwin13; X86_64H_SUPPORTED=1; ;;
