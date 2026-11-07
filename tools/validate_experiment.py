@@ -54,7 +54,7 @@ def validate(data):
         errors.append("results must be an object")
     else:
         verdict = results.get("verdict")
-        if verdict not in VERDICTS:
+        if not isinstance(verdict, str) or verdict not in VERDICTS:
             errors.append("results.verdict must be one of " + ", ".join(sorted(VERDICTS)))
         observations = results.get("observations")
         artifacts = results.get("artifacts")
@@ -68,7 +68,7 @@ def validate(data):
                     errors.append(f"results.artifacts[{i}] requires path and lowercase sha256")
         if verdict != "planned" and not observations:
             errors.append("terminal verdict requires at least one observation")
-    if data.get("evidence_class") not in {"historical", "source_tested", "live_verified"}:
+    if not isinstance(data.get("evidence_class"), str) or data.get("evidence_class") not in {"historical", "source_tested", "live_verified"}:
         errors.append("evidence_class must be historical, source_tested or live_verified")
     if data.get("evidence_class") == "live_verified" and isinstance(results, dict) and results.get("verdict") == "planned":
         errors.append("planned experiment cannot be live_verified")
