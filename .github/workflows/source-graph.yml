@@ -14,6 +14,8 @@ on:
       - 'tools/verify_release_parity.py'
       - 'tools/verify_notify_contract.py'
       - 'tools/compare_ppc_sources.py'
+      - 'tools/inspect_ppc_macho.py'
+      - 'tests/test_inspect_ppc_macho.py'
       - 'tests/test_release_source_contracts.py'
       - 'source-releases/**'
       - 'tools/verify_source_graph.py'
@@ -39,3 +41,4 @@ jobs:
           python3 tools/verify_notify_contract.py
           python3 -m unittest discover -s tests -p "test_ppc_patch_gate.py" -v
           python3 -m unittest discover -s tests -p "test_release_source_contracts.py" -v
+          python3 -m unittest discover -s tests -p "test_inspect_ppc_macho.py" -v
