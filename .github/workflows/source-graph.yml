@@ -5,8 +5,12 @@ on:
     paths:
       - '.gitmodules'
       - 'src/apple-darwin-10.6.8/**'
-      - 'src/apple-distributions-macos11/**'
-      - 'src/xnu-1504.15.3/**'
+      - 'src/releases/**'
+      - 'historical/**'
+      - 'historical-vendored/**'
+      - 'patches/**'
+      - 'tools/ppc_patch_gate.py'
+      - 'tools/verify_historical_sources.py'
       - 'tools/verify_source_graph.py'
       - '.github/workflows/source-graph.yml'
   workflow_dispatch:
@@ -23,4 +27,7 @@ jobs:
         with:
           submodules: false
       - name: Verify exact release source mappings
-        run: python3 tools/verify_source_graph.py
+        run: |
+          python3 tools/verify_source_graph.py
+          python3 tools/verify_historical_sources.py
+          python3 -m unittest discover -s tests -p "test_ppc_patch_gate.py" -v
