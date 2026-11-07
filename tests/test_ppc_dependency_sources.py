@@ -16,6 +16,7 @@ class SourceDependencyTests(unittest.TestCase):
         self.assertTrue(any('Libsystem-125.2.11' in x['official_source_tags'] for x in result['dependencies']))
         self.assertTrue(any('net_snmp-127' in x['official_source_tags'] for x in result['dependencies']))
         self.assertTrue(any(x['source_availability'] == 'external_or_closed_source' for x in result['dependencies']))
+        self.assertTrue(all(x['source_availability'] == 'release_exact_vendored' for x in result['dependencies'] if x['official_source_tags']))
 
     def test_unclassified_dependency_rejected(self):
         release = json.loads((ROOT / 'source-releases/10.6.8.json').read_text(encoding='utf-8'))

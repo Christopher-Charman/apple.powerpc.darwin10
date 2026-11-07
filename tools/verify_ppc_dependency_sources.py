@@ -58,9 +58,12 @@ def resolve(inventory, release):
         missing = [family for family in families if family not in manifest]
         if missing:
             raise ValueError('source family missing from official release: ' + str(missing))
+        for tag in (manifest[family] for family in families):
+            if not (ROOT / 'src/releases/10.6.8' / tag).is_dir():
+                raise ValueError('release source not vendored: ' + tag)
         result.append({'install_name': name, 'ppc_references': count,
                        'official_source_tags': [manifest[family] for family in families],
-                       'source_availability': 'official_manifest' if families else 'external_or_closed_source'})
+                       'source_availability': 'release_exact_vendored' if families else 'external_or_closed_source'})
     return {'release': release['release'], 'dependencies': result,
             'abi_parity': 'not_assessed', 'runtime_parity': 'not_assessed'}
 
@@ -70,7 +73,7 @@ def main():
     release = json.loads((ROOT / 'source-releases/10.6.8.json').read_text(encoding='utf-8'))
     result = resolve(inventory, release)
     assert len(result['dependencies']) == 26, 'unexpected recovered PPC dependency set'
-    print('PASS: {} recovered PowerPC dependencies mapped to official 10.6.8 source availability'.format(len(result['dependencies'])))
+    print('PASS: {} recovered PowerPC dependencies mapped to vendored official 10.6.8 source families'.format(len(result['dependencies'])))
     return result
 
 
