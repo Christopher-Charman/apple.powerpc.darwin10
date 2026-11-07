@@ -35,3 +35,7 @@ Other project-era components such as BootX, 10.6PPC KEXT donors, `OSInstall_10A1
 ## Official release membership and toolchain parity
 
 The `source-releases/` directory contains Apple's first-party `release.json` records for **all 10.5.1–10.5.8 and 10.6.0–10.6.8**. `python3 tools/verify_release_parity.py` compares these 17 manifests against pinned historical candidates. Candidate source tags that are not a member of the relevant first-party release must remain separately labelled; the 10.6.8 published toolchain is **cctools-750 and ld64-95.2.12**, not cctools-773/ld64-97.17. The exact 10.6.8 `Libc-594.9.5`, `cctools-750`, and `ld64-95.2.12` source trees are now fully vendored under `src/releases/10.6.8/`. This is a reproducible source baseline, not proof of a PPC-built runtime.
+
+## XNU regression-comparison checkpoints
+
+Additional complete official XNU snapshots are available at `src/releases/10.6.2/xnu-1486.2.11/` and `src/releases/10.6.3/xnu-1504.3.12/`. These permit direct, release-specific source comparison of the early Snow Leopard XNU transition before the 10.6.8 A5-associated baseline. A source delta alone is not evidence of PPC runtime regression or a justified reversion.

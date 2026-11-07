@@ -15,6 +15,8 @@ EXPECTED = {
     'src/releases/10.6.8/cctools-750': ('fd5088e19976086ee468e14f7ac9d99aea9feb67', 434),
     'src/releases/10.6.8/ld64-95.2.12': ('6eddbd84730dc25fb0e273d21dc60b484cb2a6a1', 757),
     'src/releases/10.6.8/Libc-594.9.5': ('c577656a4766b334a0c8e0d6bc8dbd68c2bb4ae0', 2737),
+    'src/releases/10.6.2/xnu-1486.2.11': ('1b4d746adf265f0459a9a3a87dcb9d483f085208', 3379),
+    'src/releases/10.6.3/xnu-1504.3.12': ('c1c00d94faad04b56ded4d40e21a1724898c3e13', 3386),
     'historical-vendored/xnu-1228.15.4': ('9d80f9528906753d682f9d65d56a0276bad56b4d', 3156),
     'historical-vendored/xnu-1456.1.26': ('46708ce5a6d4a42164ddb67a90fa6fbc7f986430', 3379),
     'historical-vendored/xnu-1504.15.3': ('0ffff24afe52ed47d20c5a06f07a10200f89f32b', 3386),
