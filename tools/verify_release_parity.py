@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSIONS = ('10.5.1',) + tuple('10.6.' + str(i) for i in range(1, 9)) + ('10.6',)
+VERSIONS = tuple('10.5.' + str(i) for i in range(1, 9)) + ('10.6',) + tuple('10.6.' + str(i) for i in range(1, 9))
 
 
 def run(*args):
