@@ -1,0 +1,25 @@
+name: Historical PPC source lock
+
+on:
+  pull_request:
+    paths:
+      - '.gitmodules'
+      - 'historical/**'
+      - 'historical-vendored/**'
+      - 'tools/verify_historical_sources.py'
+      - '.github/workflows/historical-source-lock.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-source-lock:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify historical Apple source gitlinks and lock
+        run: python3 tools/verify_historical_sources.py

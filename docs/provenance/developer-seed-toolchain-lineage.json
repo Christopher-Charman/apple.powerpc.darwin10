@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "purpose": "Non-retail developer-seed and developer-tool provenance must not be inferred from official release manifests",
+  "developer_seeds": [
+    {"build": "10A096", "aliases": ["10A96"], "role": "early PowerPC-bootable developer preview", "artifact_state": "historical references; local image bytes not verified"},
+    {"build": "10A190", "role": "PowerPC-bootable developer preview and historical native build environment", "artifact_state": "historical references; local image bytes not verified"},
+    {"build": "10A222", "role": "intermediate kernel and userspace patch experiments; modified images vary", "artifact_state": "historical references; local image bytes not verified"},
+    {"build": "10A261", "role": "intermediate developer seed and linker compatibility comparison", "artifact_state": "historical references; local image bytes not verified"},
+    {"build": "10A286", "role": "intermediate developer seed; reported single-user boot experiments", "artifact_state": "historical references; local image bytes not verified"},
+    {"build": "10A314", "role": "intermediate developer seed", "artifact_state": "historical references; local image bytes not verified"},
+    {"build": "10A354", "role": "later developer seed, May 2009", "artifact_state": "historical references; local image bytes not verified"},
+    {"build": "10A432", "role": "10.6.0 GM-era source and independent PPC kernel reconstruction", "artifact_state": "Apple source vendored separately; image bytes not verified"},
+    {"build": "10B504", "role": "10.6.1 source and hybrid PPC testing", "artifact_state": "Apple source manifest and Darwinbuild index present"},
+    {"build": "10K540", "role": "10.6.8 and Alpha 5 reconstruction target", "artifact_state": "Apple source manifest and Darwinbuild index present; image parity not verified"}
+  ],
+  "developer_tools": [
+    {"environment": "10A190 Xcode 3.2", "linker_generation": "ld64-87.3.1", "role": "historical native PowerPC seed toolchain", "binary_state": "not byte-verified"},
+    {"environment": "10A222 Xcode 3.2", "linker_generation": "ld64-91", "role": "intermediate linker transition", "binary_state": "not byte-verified"},
+    {"environment": "10A261 Xcode 3.2", "linker_generation": "ld64-95.2", "role": "intermediate linker transition", "binary_state": "not byte-verified"},
+    {"environment": "10A286 Xcode 3.2", "linker_generation": "ld64-95.2.3", "role": "intermediate linker transition", "binary_state": "not byte-verified"},
+    {"environment": "Xcode 3.2.6", "linker_generation": "ld64-97.17", "role": "PPC repair path with sl-ld64, Apple make and darwin-xtools", "binary_state": "historically recovered package reported; archive bytes not verified in this checkout"},
+    {"environment": "Xcode 4.2 Snow Leopard", "linker_generation": "ld64-127.2", "role": "later Intel-oriented comparison, not a default PPC replacement", "binary_state": "not byte-verified"}
+  ],
+  "additional_source_tracks": [
+    {"name": "Educovas PPC XNU and graphics compatibility work", "kind": "independent community patches and binaries", "rule": "retain author attribution and distinguish source, installed binaries, and runtime tests"},
+    {"name": "Julian Fairfax and parrotgeek1 10.6 PPC.sh", "kind": "community installer/patch script", "rule": "do not assert recovered exact script bytes without checksum"},
+    {"name": "Jazzzny repaired Xcode 3.2.6 tools", "kind": "community toolchain repairs", "rule": "retain independent provenance for other tools.zip and gcc.tar.xz.zip"},
+    {"name": "barracuda156 native toolchain packages", "kind": "community build tooling", "rule": "distinguish sl-ld64-97.17, sl-make-3.81, darwin-developer-tools-1.1.0"},
+    {"name": "Apple 10A432 KDK PPC RELEASE/DEBUG kernels", "kind": "Apple developer-kit binary evidence", "rule": "reported xnu-1456.1.25~1 differs from published xnu-1456.1.26; compare actual bytes before equivalence"},
+    {"name": "Darwinbuild Roots and Patches", "kind": "historical build outputs and source transformations", "rule": "Roots are not shipping image or original BUILD.zip"}
+  ],
+  "source_references": [
+    "docs/history/",
+    "docs/HISTORICAL_RELEASE_SOURCES.md",
+    "https://forums.macrumors.com/threads/10-6-snow-leopard-powerpc-development.2439769/",
+    "https://forums.macrumors.com/threads/snow-leopard-on-unsupported-powerpc-macs.2232031/"
+  ]
+}
