@@ -1,0 +1,17 @@
+--- a/src/releases/10.6.8/IOStorageFamily-116.1.41/IOStorageFamily.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/IOStorageFamily-116.1.41/IOStorageFamily.xcodeproj/project.pbxproj
+@@ -602,12 +602,14 @@
+ 		60CD8A3808A7E7F300DC31BD /* Debug */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 			};
+ 			name = Debug;
+ 		};
+ 		60CD8A3908A7E7F300DC31BD /* Release */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 			};
+ 			name = Release;
+ 		};

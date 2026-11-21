@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOStorageFamily-116.1.41",
+  "source_tree_sha": "c04a62175aea17a0c46a086ab91fa3e8aeab4cc5",
+  "patch": "patches/IOStorageFamily-116.1.41-ppc-arch.patch",
+  "rationale": "Set PPC architecture only in the two empty project-wide Debug and Release configurations, preserving embedded target-specific settings.",
+  "reviewer": "pending independent source review"
+}
