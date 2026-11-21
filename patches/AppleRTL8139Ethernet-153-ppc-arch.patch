@@ -1,0 +1,24 @@
+--- a/src/releases/10.6.8/AppleRTL8139Ethernet-153/AppleRTL8139Ethernet.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/AppleRTL8139Ethernet-153/AppleRTL8139Ethernet.xcodeproj/project.pbxproj
+@@ -278,18 +278,21 @@
+ 		727F2D460AAF869E00ED4464 /* Development */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 			};
+ 			name = Development;
+ 		};
+ 		727F2D470AAF869E00ED4464 /* Deployment */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 			};
+ 			name = Deployment;
+ 		};
+ 		727F2D480AAF869E00ED4464 /* Default */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 			};
+ 			name = Default;
+ 		};
