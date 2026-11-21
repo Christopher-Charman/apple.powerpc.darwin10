@@ -1,0 +1,33 @@
+name: Missing source or dependency
+description: Track a 10.6.8 project, historical donor, Root, tool or generated header
+title: "[Source] "
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Project or missing artifact
+    validations:
+      required: true
+  - type: input
+    id: consumer
+    attributes:
+      label: Exact consuming component and build
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Candidate source and provenance
+      description: Apple release/tag, separately published archive, historical donor, URL, hash and license. Do not assume candidates are verified dependencies.
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: Evidence of dependency and first failing step
+    validations:
+      required: true
+  - type: textarea
+    id: resolution
+    attributes:
+      label: Proposed PowerPC adaptation and verification
