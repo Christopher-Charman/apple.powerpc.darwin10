@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IONetworkingFamily-65.2.1",
+  "source_tree_sha": "2598ea2ba9141b0cf50be229f1fa739fd0c98c30",
+  "patch": "patches/IONetworkingFamily-65.2.1-ppc-arch.patch",
+  "rationale": "Set PPC architecture in three empty project-wide Xcode build configurations for IONetworkingFamily-65.2.1.",
+  "reviewer": "pending independent source review"
+}
