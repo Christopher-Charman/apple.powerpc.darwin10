@@ -1,0 +1,3 @@
+# IOPCIFamily-144 PowerPC build selection
+
+Source: official 10.6.8 release `src/releases/10.6.8/IOPCIFamily-144/`. Its project-wide Development, Deployment and Default Xcode configurations have empty build settings. The patch sets `ARCHS = ppc` in those three configurations, retaining the upstream tree and all target settings unchanged. The historical PowerPC IOPCIFamily kernel-extension ABI and the target-specific AppleSamplePCI example require separate validation against the 10.5 PPC source, Xcode 3.2-era SDK and hardware. This patch is architecture selection only, not evidence of a bootable kernel extension.
