@@ -1310,7 +1310,7 @@
 			buildSettings = {
 				INSTALL_PATH = /usr/sbin;
 				PRODUCT_NAME = amt;
-				VALID_ARCHS = "armv6 i386 x86_64";
+				VALID_ARCHS = "ppc ppc64 armv6 i386 x86_64";
 			};
 			name = Release;
 		};
