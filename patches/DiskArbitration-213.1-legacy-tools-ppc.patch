@@ -1,0 +1,38 @@
+--- a/src/powerpc/DiskArbitration-213.1/DiskArbitration.xcodeproj/project.pbxproj
++++ b/src/powerpc/DiskArbitration-213.1/DiskArbitration.xcodeproj/project.pbxproj
+@@ -832,7 +832,7 @@
+ 				COPY_PHASE_STRIP = NO;
+ 				INSTALL_PATH = /sbin;
+ 				PRODUCT_NAME = autodiskmount;
+-				VALID_ARCHS = i386;
++				VALID_ARCHS = "ppc i386";
+ 				WARNING_CFLAGS = "-Wall";
+ 			};
+ 			name = Debug;
+@@ -843,7 +843,7 @@
+ 				COPY_PHASE_STRIP = YES;
+ 				INSTALL_PATH = /sbin;
+ 				PRODUCT_NAME = autodiskmount;
+-				VALID_ARCHS = i386;
++				VALID_ARCHS = "ppc i386";
+ 				WARNING_CFLAGS = "-Wall";
+ 			};
+ 			name = Release;
+@@ -876,7 +876,7 @@
+ 				COPY_PHASE_STRIP = NO;
+ 				INSTALL_PATH = /usr/sbin;
+ 				PRODUCT_NAME = disktool;
+-				VALID_ARCHS = i386;
++				VALID_ARCHS = "ppc i386";
+ 				WARNING_CFLAGS = "-Wall";
+ 			};
+ 			name = Debug;
+@@ -887,7 +887,7 @@
+ 				COPY_PHASE_STRIP = YES;
+ 				INSTALL_PATH = /usr/sbin;
+ 				PRODUCT_NAME = disktool;
+-				VALID_ARCHS = i386;
++				VALID_ARCHS = "ppc i386";
+ 				WARNING_CFLAGS = "-Wall";
+ 			};
+ 			name = Release;

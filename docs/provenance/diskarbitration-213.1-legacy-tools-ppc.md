@@ -1,0 +1,3 @@
+# DiskArbitration-213.1 legacy tools PPC architecture
+
+The official 10.6.8 DiskArbitration project restricts the legacy `autodiskmount` and `disktool` utilities to `VALID_ARCHS = i386` in Debug and Release, while its other targets do not share that restriction. This working-source patch restores `ppc` to the valid architectures for those two utility targets in four configurations. It preserves Intel support, does not alter `diskarbitrationd` or framework targets, and leaves the pristine source snapshot unchanged. Runtime and API compatibility remain to be validated separately; no compilation on PowerPC-Darwin.org.
