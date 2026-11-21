@@ -1,0 +1,29 @@
+--- a/src/powerpc/IOFireWireSerialBusProtocolTransport-210.0.0/IOFireWireSerialBusProtocolTransport.xcodeproj/project.pbxproj
++++ b/src/powerpc/IOFireWireSerialBusProtocolTransport-210.0.0/IOFireWireSerialBusProtocolTransport.xcodeproj/project.pbxproj
+@@ -316,7 +316,7 @@
+ 		ACBBA9B20D4FDAA300E75387 /* Development */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
++				ARCHS = ppc;
+ 				BUILD_SETTING = "";
+ 				COPY_PHASE_STRIP = YES;
+ 				GCC_DYNAMIC_NO_PIC = NO;
+@@ -350,7 +350,7 @@
+ 		ACBBA9B30D4FDAA300E75387 /* Deployment */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
++				ARCHS = ppc;
+ 				BUILD_SETTING = "";
+ 				COPY_PHASE_STRIP = YES;
+ 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+@@ -381,7 +381,7 @@
+ 		ACBBA9B40D4FDAA300E75387 /* Default */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
++				ARCHS = ppc;
+ 				BUILD_SETTING = "";
+ 				COPY_PHASE_STRIP = YES;
+ 				INFOPLIST_FILE = "Info-IOFireWireSerialBusProtocolTransport.plist";
