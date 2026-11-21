@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOSCSIParallelFamily-211.0.0",
+  "source_tree_sha": "6a25deee6a351df57f1920beaf47dfe984c6b422",
+  "patch": "patches/IOSCSIParallelFamily-211.0.0-ppc-arch.patch",
+  "rationale": "Explicit PPC architecture selection for three empty project-wide Xcode configurations.",
+  "reviewer": "pending independent source review"
+}
