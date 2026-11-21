@@ -1,0 +1,3 @@
+# Standalone USBTracer PowerPC architecture restoration
+
+Official release: IOUSBFamily-424.4.1. The separately tracked `USBProberV2/USBTracer/USBTracer.xcodeproj` project uses `ARCHS_STANDARD_32_64_BIT` with `VALID_ARCHS = "i386 x86_64"` in Debug and Release. Unlike the parent IOUSBFamily project, this project would continue to exclude PPC after the parent usbtracer patch. The isolated patch selects `ARCHS = ppc` and adds `ppc` to valid architectures in both configurations. Preserve the official source as the reference. Native compiler, tracer dependencies, USB hardware behavior and kernel trace ABI remain unverified.
