@@ -1,0 +1,29 @@
+--- a/src/releases/10.6.8/DSTools-134/DSTools.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/DSTools-134/DSTools.xcodeproj/project.pbxproj
+@@ -1978,7 +1978,7 @@
+ 				GCC_OPTIMIZATION_LEVEL = 0;
+ 				INSTALL_PATH = /usr/bin;
+ 				PRODUCT_NAME = dscl;
+-				VALID_ARCHS = "x86_64 i386";
++				VALID_ARCHS = "x86_64 i386 ppc";
+ 				WARNING_CFLAGS = (
+ 					"-Wmost",
+ 					"-Wno-four-char-constants",
+@@ -1995,7 +1995,7 @@
+ 				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
+ 				INSTALL_PATH = /usr/bin;
+ 				PRODUCT_NAME = dscl;
+-				VALID_ARCHS = "x86_64 i386";
++				VALID_ARCHS = "x86_64 i386 ppc";
+ 				WARNING_CFLAGS = (
+ 					"-Wmost",
+ 					"-Wno-four-char-constants",
+@@ -2012,7 +2012,7 @@
+ 				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
+ 				INSTALL_PATH = /usr/bin;
+ 				PRODUCT_NAME = dscl;
+-				VALID_ARCHS = "x86_64 i386";
++				VALID_ARCHS = "x86_64 i386 ppc";
+ 				WARNING_CFLAGS = (
+ 					"-Wmost",
+ 					"-Wno-four-char-constants",
