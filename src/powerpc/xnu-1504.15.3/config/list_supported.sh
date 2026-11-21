@@ -39,6 +39,21 @@ if [ "$#" -ne 3 ] || [ -z "$CONFIG_DIR" ] || [ -z "$ARCH" ] || [ -z "$TARGET_FIL
     exit 2
 fi
 
+# Preflight every required architecture-specific export list before replacing
+# an existing SupportedKPIs file. Missing PPC inputs must not destroy a
+# previously valid generated artifact.
+for component in "${SUPPORTED_KPI_FILES[@]}"; do
+    if [ "$ARCH" = "ALL" ]; then
+        export_file="${CONFIG_DIR}/${component}.exports"
+    else
+        export_file="${CONFIG_DIR}/${component}.${ARCH}.exports"
+    fi
+    if [ ! -f "$export_file" ]; then
+        echo "Missing KPI export source: $export_file" >&2
+        exit 1
+    fi
+done
+
 : > "$TARGET_FILE" || exit 1
 
 if [ "$ARCH" = "ALL" ]; then
