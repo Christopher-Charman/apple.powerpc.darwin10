@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOPCIFamily-144",
+  "source_tree_sha": "a28234e869540fc69c14f1545a35091ee644a809",
+  "patch": "patches/IOPCIFamily-144-ppc-arch.patch",
+  "rationale": "Restore explicit PPC architecture in three empty project-wide build configurations without changing official IOPCIFamily-144 sources.",
+  "reviewer": "pending independent source review"
+}
