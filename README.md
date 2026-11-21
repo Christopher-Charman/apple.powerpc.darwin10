@@ -2,6 +2,12 @@
 
 Community reconstruction of Mac OS X 10.6.8 / Darwin 10 for PowerPC G4 and G5 Macs. The goal is a **reproducible, fully PowerPC-adapted source tree**, with validated kernel, userland, libraries, services, build tools and supported drivers, leading to a functional, independently tested system.
 
+## Tracked PowerPC development sources
+
+The editable PowerPC source is under [`src/powerpc/`](src/powerpc/), currently containing the complete 326-project official 10.6.8 source baseline with 17 source-bound PPC restoration patches materialized directly into the working files. The unmodified upstream release snapshots remain under [`src/releases/10.6.8/`](src/releases/10.6.8/). See [working source provenance and coverage](docs/PPC_WORKING_SOURCE_TREE.md).
+
+This is a **development baseline, not a completed PowerPC port**: most components still require source-level compatibility work, and separately published dependencies must be reconciled. No compilation is performed on PowerPC-Darwin.org.
+
 **Development branch:** [`PowerPC`](../../tree/PowerPC) is the canonical PowerPC development tree. **`main`** is a repository reference/landing branch, not the completed patched source distribution. See the [development-tree contract](../../blob/PowerPC/docs/POWERPC_DEVELOPMENT_TREE.md) and [Darwin 9–10 source selection policy](../../blob/PowerPC/docs/DARWIN_9_10_SOURCE_POLICY.md).
 
 ## Contributing
