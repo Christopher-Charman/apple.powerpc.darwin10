@@ -1,0 +1,3 @@
+# dyld-132.13 PowerPC Release configuration restoration
+
+Official 10.6.8 `dyld-132.13` source already contains PPC loader support, PPC base address and a Debug configuration explicitly selecting `ppc, i386, x86_64`. Its `dyld` Release configuration instead selects the Intel-oriented `ARCHS_STANDARD_32_64_BIT` macro. Similarly, `update_dyld_shared_cache` Debug permits `ppc i386` but Release restricts `VALID_ARCHS` to `x86_64 i386`. This isolated patch restores the PPC Release architecture choices in those two targets, without changing original Apple source or making any claim of a working PowerPC dyld. No compilation on PowerPC-Darwin.org.
