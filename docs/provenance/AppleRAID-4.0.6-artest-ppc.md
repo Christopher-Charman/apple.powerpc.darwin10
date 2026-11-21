@@ -1,0 +1,7 @@
+# AppleRAID-4.0.6 `artest` PPC eligibility
+
+The exact Mac OS X 10.6.8 Apple OSS member is `AppleRAID-4.0.6`, upstream tag object `ab528cb5a8f427b93ed2a9533cd7e6f677372125`, commit `e54f8e4c22dac38d5b7a5458930a9a5fa44b938b`. Its immutable local comparison tree is `src/releases/10.6.8/AppleRAID-4.0.6/`, Git tree `d5355694430c699c3ef09429917ab3c628330602`. The Apple Public Source License header remains in `artest.c`.
+
+The official Leopard 10.5.8 `AppleRAID-3.0.19` project, tag object `696a5e1140df45d30bad1dd227cf26f84921dabc`, commit `701aab26e0707aec7ee819a98fb5536fa0cfea5c`, admitted `ppc` in all three `artest` configurations. In the 10.6.8 project those configurations allow only `i386 x86_64`, although `artest.c` has no Intel-only architecture guard. Add `ppc` to Development, Deployment and Default for this target in the tracked working project file. The earlier AppleRAID KEXT PPC change remains intact. The exact reviewable change is `patches/AppleRAID-4.0.6-artest-ppc.patch`; the pristine release tree is untouched.
+
+`artest` consumes `AppleRAIDUserLib`, IOKit, CoreFoundation and MediaKit interfaces. MediaKit is not present among the 326 public source members and needs a lawful external SDK/interface acquisition and PPC link check before this target is build-ready. Source comparisons and target mapping were checked through authenticated GitHub API. No compilation, RAID runtime test or hardware validation was performed on this host.

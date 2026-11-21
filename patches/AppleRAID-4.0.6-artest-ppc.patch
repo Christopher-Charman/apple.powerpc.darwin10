@@ -1,0 +1,29 @@
+--- a/src/powerpc/AppleRAID-4.0.6/AppleRAID.xcodeproj/project.pbxproj
++++ b/src/powerpc/AppleRAID-4.0.6/AppleRAID.xcodeproj/project.pbxproj
+@@ -673,7 +673,7 @@
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = artest;
+ 				SECTORDER_FLAGS = "";
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = "-Wmost";
+ 				ZERO_LINK = YES;
+ 			};
+@@ -698,7 +698,7 @@
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = artest;
+ 				SECTORDER_FLAGS = "";
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = "-Wmost";
+ 				ZERO_LINK = NO;
+ 			};
+@@ -721,7 +721,7 @@
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = artest;
+ 				SECTORDER_FLAGS = "";
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = "-Wmost";
+ 			};
+ 			name = Default;
