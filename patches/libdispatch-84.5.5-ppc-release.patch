@@ -1,0 +1,11 @@
+--- a/src/powerpc/libdispatch-84.5.5/libdispatch.xcodeproj/project.pbxproj
++++ b/src/powerpc/libdispatch-84.5.5/libdispatch.xcodeproj/project.pbxproj
+@@ -397,7 +397,7 @@
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+ 				ALWAYS_SEARCH_USER_PATHS = NO;
+-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
++				ARCHS = ppc;
+ 				BUILD_VARIANTS = (
+ 					normal,
+ 					debug,
