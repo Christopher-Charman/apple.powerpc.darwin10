@@ -4,6 +4,10 @@ Community reconstruction of Mac OS X 10.6.8 / Darwin 10 for PowerPC G4 and G5 Ma
 
 **Development branch:** [`PowerPC`](../../tree/PowerPC) is the canonical PowerPC development tree. **`main`** is a repository reference/landing branch, not the completed patched source distribution. See the [development-tree contract](../../blob/PowerPC/docs/POWERPC_DEVELOPMENT_TREE.md) and [Darwin 9–10 source selection policy](../../blob/PowerPC/docs/DARWIN_9_10_SOURCE_POLICY.md).
 
+## Contributing
+
+Contributions from the MacRumors community are welcome. Start with the [contributor guide](../../blob/PowerPC/CONTRIBUTING.md), open a [reproducible issue](../../issues/new/choose), or submit a [Pull Request against `PowerPC`](../../compare/PowerPC...PowerPC). Use the issue forms for PowerPC build/runtime failures and missing Apple OSS sources; use the PR template to record source provenance, patch rationale, PPC toolchain and test evidence. General discussion remains on the [MacRumors development thread](https://forums.macrumors.com/threads/10-6-snow-leopard-powerpc-development.2439769/).
+
 ## Community project and historical releases
 
 The [MacRumors Snow Leopard PowerPC WikiPost and testing hub](https://forums.macrumors.com/threads/10-6-snow-leopard-powerpc-development.2439769/) is the community-facing source for public images, installation guidance, hardware reports, historical engineering, developer tools and known issues. Its posts #1–3 distinguish the testing hub, engineering lineage and Xcode/developer-tools work. The [earlier Developer Preview discussion](https://forums.macrumors.com/threads/snow-leopard-on-unsupported-powerpc-macs.2232031/) covers separate preview investigations.
