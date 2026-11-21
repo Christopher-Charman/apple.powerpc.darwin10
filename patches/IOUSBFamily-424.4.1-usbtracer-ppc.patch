@@ -1,0 +1,29 @@
+--- a/src/releases/10.6.8/IOUSBFamily-424.4.1/IOUSBFamily.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/IOUSBFamily-424.4.1/IOUSBFamily.xcodeproj/project.pbxproj
+@@ -3365,7 +3365,7 @@
+ 				);
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = usbtracer;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 			};
+ 			name = Logging;
+ 		};
+@@ -3386,7 +3386,7 @@
+ 				);
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = usbtracer;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				ZERO_LINK = NO;
+ 			};
+ 			name = Deployment;
+@@ -3407,7 +3407,7 @@
+ 				);
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = usbtracer;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 			};
+ 			name = kprintf;
+ 		};
