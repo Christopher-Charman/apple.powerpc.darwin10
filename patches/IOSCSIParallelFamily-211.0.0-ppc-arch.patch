@@ -1,0 +1,24 @@
+--- a/src/releases/10.6.8/IOSCSIParallelFamily-211.0.0/IOSCSIParallelFamily.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/IOSCSIParallelFamily-211.0.0/IOSCSIParallelFamily.xcodeproj/project.pbxproj
+@@ -307,18 +307,21 @@
+ 		E6B5F37A0A40B2E600F7D6D1 /* Development */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 			};
+ 			name = Development;
+ 		};
+ 		E6B5F37B0A40B2E600F7D6D1 /* Deployment */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 			};
+ 			name = Deployment;
+ 		};
+ 		E6B5F37C0A40B2E600F7D6D1 /* Default */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 			};
+ 			name = Default;
+ 		};
