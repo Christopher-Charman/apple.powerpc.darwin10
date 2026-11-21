@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOGraphics-392.1",
+  "source_tree_sha": "ed07eb1e310d0f0a2ac01946619e0590e37ce60d",
+  "patch": "patches/IOGraphics-392.1-ppc-arch.patch",
+  "rationale": "Restore PowerPC architecture eligibility in original Xcode project build configurations; see docs/provenance for source evidence and test boundaries.",
+  "reviewer": "pending independent source review"
+}
