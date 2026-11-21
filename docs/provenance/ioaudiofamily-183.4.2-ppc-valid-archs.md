@@ -1,0 +1,3 @@
+# IOAudioFamily-183.4.2 PowerPC architecture restoration
+
+Apple 10.6.8 official release project: `src/releases/10.6.8/IOAudioFamily-183.4.2/IOAudioFamily.xcodeproj/project.pbxproj`. The IOAudioFamily target's Development, Deployment and Default configurations explicitly declare `ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc"`, but all three subsequently restrict `VALID_ARCHS` to `x86_64 i386`. The isolated patch restores `ppc` in these three valid-architecture lists while retaining the upstream source and all other settings. Source-level consistency only; no compilation, linking or runtime test has been performed.
