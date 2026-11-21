@@ -1239,8 +1239,19 @@ ExitStatus checkArgs(KextcacheArgs * toolArgs)
             
             addArch(toolArgs, hostArch);
         } else {
-            addArchForName(toolArgs, "i386");
-            addArchForName(toolArgs, "x86_64");
+            const NXArchInfo *hostArch = OSKextGetRunningKernelArchitecture();
+
+            if (!hostArch || hostArch->cputype == CPU_TYPE_ANY) {
+                hostArch = NXGetLocalArchInfo();
+            }
+            if (hostArch && hostArch->cputype == CPU_TYPE_POWERPC) {
+                addArchForName(toolArgs, "ppc");
+            } else if (hostArch && hostArch->cputype == CPU_TYPE_POWERPC64) {
+                addArchForName(toolArgs, "ppc64");
+            } else {
+                addArchForName(toolArgs, "i386");
+                addArchForName(toolArgs, "x86_64");
+            }
         }
     } else {
         /* If they were specified, validate them */
