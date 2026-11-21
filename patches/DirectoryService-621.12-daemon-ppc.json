@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/DirectoryService-621.12",
+  "source_tree_sha": "f29ae461575b52e3061d6178d9ee34e15cb14acd",
+  "patch": "patches/DirectoryService-621.12-daemon-ppc.patch",
+  "rationale": "Restore PPC in ARCHS and VALID_ARCHS for DirectoryService daemon Development, Deployment and Default configurations.",
+  "reviewer": "pending independent source review"
+}
