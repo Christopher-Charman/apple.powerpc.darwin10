@@ -1,0 +1,3 @@
+# AppleUSBCDCDriver-4005.4.2 PowerPC project architecture
+
+The 10.6.8 AppleUSBCDC Xcode project has empty project-wide Development, Deployment and Default build settings. This working-source change selects `ARCHS = ppc` in those three project configurations, covering the generic USB CDC class driver family while preserving all target-specific settings. The official Apple release snapshot remains untouched. Source-only architecture eligibility does not establish PPC compatibility of every class-driver implementation; further code review and hardware testing are required. No compilation on PowerPC-Darwin.org.
