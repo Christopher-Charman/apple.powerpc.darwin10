@@ -1,0 +1,11 @@
+--- a/src/powerpc/ld64-95.2.12/ld64.xcodeproj/project.pbxproj
++++ b/src/powerpc/ld64-95.2.12/ld64.xcodeproj/project.pbxproj
+@@ -726,7 +726,7 @@
+ 		F933D91D09291AC90083EAC8 /* Release */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = x86_64;
++				ARCHS = ppc;
+ 				COPY_PHASE_STRIP = NO;
+ 				CURRENT_PROJECT_VERSION = "$(RC_ProjectSourceVersion)";
+ 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
