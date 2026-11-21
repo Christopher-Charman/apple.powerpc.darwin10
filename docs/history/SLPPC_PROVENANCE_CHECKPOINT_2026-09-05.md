@@ -2,7 +2,7 @@
 
 **Status:** MIGRATED HISTORICAL EVIDENCE — NOT CURRENT BUILD/IMAGE STATE  
 **Project:** PowerPC Apple/Darwin / SLPPC  
-**Source evidence:** Shared Library `SLPPC_CONSOLIDATED_BUILD_PROVENANCE_REPORT_2026-09-05.pdf` and comparative provenance report lineage.
+**Source evidence:** Historical SLPPC build provenance and comparative source/image records.
 
 ## Purpose
 Preserve the high-value provenance conclusions from the September evidence reconstruction in the dedicated PowerPC/Darwin repository so future agents do not have to recover them from old chats or an unindexed PDF before making source/image attribution claims.
