@@ -31,26 +31,37 @@ TARGET_FILE=$3
 SUPPORTED_KPI_FILES=( BSDKernel Mach IOKit Libkern )
 DEPENDENCY_NAMES=( com.apple.kpi.bsd com.apple.kpi.mach com.apple.kpi.iokit com.apple.kpi.libkern )
 
-rm -f $TARGET_FILE
-
-if [ ${ARCH} == "ALL" ]
-then 
-	echo "The following symbols are considered sustainable KPI on all architectures." >> $TARGET_FILE
-	echo "Note that symbols may be exported by some (or all) architectures individually." >> $TARGET_FILE
-else
-	echo "The following symbols are considered sustainable KPI on architecture ${ARCH}." >> $TARGET_FILE
+# Preserve the generated KPI file location even when build roots contain spaces.
+# The caller supplies a lower-case architecture (ppc, i386, x86_64, ...),
+# or ALL for the architecture-independent export set.
+if [ "$#" -ne 3 ] || [ -z "$CONFIG_DIR" ] || [ -z "$ARCH" ] || [ -z "$TARGET_FILE" ]; then
+    echo "Usage: $0 <exports directory> <architecture|ALL> <output file>" >&2
+    exit 2
 fi
-echo  >> $TARGET_FILE
+
+: > "$TARGET_FILE" || exit 1
+
+if [ "$ARCH" = "ALL" ]; then
+    echo "The following symbols are considered sustainable KPI on all architectures." >> "$TARGET_FILE"
+    echo "Note that symbols may be exported by some (or all) architectures individually." >> "$TARGET_FILE"
+else
+    echo "The following symbols are considered sustainable KPI on architecture ${ARCH}." >> "$TARGET_FILE"
+fi
+echo >> "$TARGET_FILE"
 
 for (( i = 0 ; i < ${#SUPPORTED_KPI_FILES[@]} ; i++ ))
 do
-	echo "Exported by ${DEPENDENCY_NAMES[i]}:" >> $TARGET_FILE
-	echo >> $TARGET_FILE
-	if [  $ARCH == "ALL" ]
-	then
-		cat "${CONFIG_DIR}/${SUPPORTED_KPI_FILES[i]}.exports" | sed "s/^_//" | sed "s/:.*//" | sort >> $TARGET_FILE
-	else
-		cat "${CONFIG_DIR}/${SUPPORTED_KPI_FILES[i]}.${ARCH}.exports" | sed "s/^_//" | sed "s/:.*//" | sort  >> $TARGET_FILE
-	fi
-	echo >> $TARGET_FILE
+    echo "Exported by ${DEPENDENCY_NAMES[i]}:" >> "$TARGET_FILE"
+    echo >> "$TARGET_FILE"
+    if [ "$ARCH" = "ALL" ]; then
+        export_file="${CONFIG_DIR}/${SUPPORTED_KPI_FILES[i]}.exports"
+    else
+        export_file="${CONFIG_DIR}/${SUPPORTED_KPI_FILES[i]}.${ARCH}.exports"
+    fi
+    if [ ! -f "$export_file" ]; then
+        echo "Missing KPI export source: $export_file" >&2
+        exit 1
+    fi
+    sed 's/^_//; s/:.*//' "$export_file" | sort >> "$TARGET_FILE" || exit 1
+    echo >> "$TARGET_FILE"
 done
