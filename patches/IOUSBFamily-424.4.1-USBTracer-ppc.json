@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOUSBFamily-424.4.1",
+  "source_tree_sha": "e32592374f0a601b680edc764cb84c1f5a845100",
+  "patch": "patches/IOUSBFamily-424.4.1-USBTracer-ppc.patch",
+  "rationale": "Replace Intel-only standard architecture macro with explicit ppc and include ppc in VALID_ARCHS for standalone usbtracer Debug and Release configurations.",
+  "reviewer": "pending independent source review"
+}
