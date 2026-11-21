@@ -20,15 +20,17 @@
  * @APPLE_LICENSE_HEADER_END@
  */
 
-#if defined( __i386__ ) || defined( __x86_64__ )
-
 #include <IOKit/IOTypes.h>
-#include <architecture/i386/pio.h>  // x86 IN/OUT inline asm
 #include "IOATARegI386.h"
 
+// Abstract register classes are shared with the PowerPC ATA controller.
 OSDefineMetaClassAndAbstractStructors( IOATAReg8,  OSObject )
 OSDefineMetaClassAndAbstractStructors( IOATAReg16, OSObject )
 OSDefineMetaClassAndAbstractStructors( IOATAReg32, OSObject )
+
+#if defined( __i386__ ) || defined( __x86_64__ )
+
+#include <architecture/i386/pio.h>  // x86 IN/OUT inline asm
 
 OSDefineMetaClassAndStructors( IOATAIOReg8,  IOATAReg8  )
 OSDefineMetaClassAndStructors( IOATAIOReg16, IOATAReg16 )
