@@ -1,0 +1,35 @@
+--- a/src/releases/10.6.8/IOUSBFamily-424.4.1/USBProberV2/USBTracer/USBTracer.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/IOUSBFamily-424.4.1/USBProberV2/USBTracer/USBTracer.xcodeproj/project.pbxproj
+@@ -165,28 +165,28 @@
+ 		1DEB923608733DC60010E9CD /* Debug */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
++				ARCHS = ppc;
+ 				COPY_PHASE_STRIP = NO;
+ 				DEBUG_INFORMATION_FORMAT = dwarf;
+ 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+ 				GCC_WARN_UNUSED_VARIABLE = YES;
+ 				ONLY_ACTIVE_ARCH = NO;
+ 				PREBINDING = NO;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 			};
+ 			name = Debug;
+ 		};
+ 		1DEB923708733DC60010E9CD /* Release */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
++				ARCHS = ppc;
+ 				COPY_PHASE_STRIP = NO;
+ 				DEBUG_INFORMATION_FORMAT = dwarf;
+ 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+ 				GCC_WARN_UNUSED_VARIABLE = YES;
+ 				ONLY_ACTIVE_ARCH = NO;
+ 				PREBINDING = NO;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 			};
+ 			name = Release;
+ 		};
