@@ -1,0 +1,29 @@
+--- a/src/releases/10.6.8/AppleRAID-4.0.6/AppleRAID.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/AppleRAID-4.0.6/AppleRAID.xcodeproj/project.pbxproj
+@@ -505,7 +505,7 @@
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = AppleRAID;
+ 				SECTORDER_FLAGS = "";
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = "-Wall";
+ 				WRAPPER_EXTENSION = kext;
+ 				ZERO_LINK = YES;
+@@ -540,7 +540,7 @@
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = AppleRAID;
+ 				SECTORDER_FLAGS = "";
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = "-Wall";
+ 				WRAPPER_EXTENSION = kext;
+ 				ZERO_LINK = NO;
+@@ -573,7 +573,7 @@
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = AppleRAID;
+ 				SECTORDER_FLAGS = "";
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = "-Wall";
+ 				WRAPPER_EXTENSION = kext;
+ 			};
