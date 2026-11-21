@@ -1,0 +1,71 @@
+--- a/src/powerpc/IOATAFamily-251.0.1/IOATAFamily.xcodeproj/project.pbxproj
++++ b/src/powerpc/IOATAFamily-251.0.1/IOATAFamily.xcodeproj/project.pbxproj
+@@ -311,14 +311,14 @@
+ 			isa = XCBuildConfiguration;
+ 			baseConfigurationReference = 2A923B4F0E8CBDD800ED2357 /* AspenSDK.xcconfig */;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH)";
++				ARCHS = ppc;
+ 			};
+ 			name = Embedded;
+ 		};
+ 		2A923B510E8CBDED00ED2357 /* Embedded */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
++				ARCHS = ppc;
+ 				COPY_PHASE_STRIP = NO;
+ 				FRAMEWORK_SEARCH_PATHS = "";
+ 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+@@ -349,7 +349,7 @@
+ 		52C1FFB40DAD2D87006889B7 /* Development */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
++				ARCHS = ppc;
+ 				COPY_PHASE_STRIP = NO;
+ 				FRAMEWORK_SEARCH_PATHS = "";
+ 				GCC_DYNAMIC_NO_PIC = NO;
+@@ -383,7 +383,7 @@
+ 		52C1FFB50DAD2D87006889B7 /* Deployment */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
++				ARCHS = ppc;
+ 				COPY_PHASE_STRIP = YES;
+ 				FRAMEWORK_SEARCH_PATHS = "";
+ 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+@@ -414,7 +414,7 @@
+ 		52C1FFB60DAD2D87006889B7 /* Default */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
++				ARCHS = ppc;
+ 				FRAMEWORK_SEARCH_PATHS = "";
+ 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+ 				HEADER_SEARCH_PATHS = "";
+@@ -442,21 +442,21 @@
+ 		A5EDE05E09660D8400EFBE07 /* Development */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH)";
++				ARCHS = ppc;
+ 			};
+ 			name = Development;
+ 		};
+ 		A5EDE05F09660D8400EFBE07 /* Deployment */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH)";
++				ARCHS = ppc;
+ 			};
+ 			name = Deployment;
+ 		};
+ 		A5EDE06009660D8400EFBE07 /* Default */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH)";
++				ARCHS = ppc;
+ 			};
+ 			name = Default;
+ 		};
