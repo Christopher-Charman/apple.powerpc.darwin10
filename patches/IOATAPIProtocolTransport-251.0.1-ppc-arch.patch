@@ -1,0 +1,27 @@
+--- a/src/powerpc/IOATAPIProtocolTransport-251.0.1/IOATAPIProtocolTransport.xcodeproj/project.pbxproj
++++ b/src/powerpc/IOATAPIProtocolTransport-251.0.1/IOATAPIProtocolTransport.xcodeproj/project.pbxproj
+@@ -242,21 +242,21 @@
+ 		5253CE970D5AAB030041AE31 /* Development */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
++				ARCHS = ppc;
+ 			};
+ 			name = Development;
+ 		};
+ 		5253CE980D5AAB030041AE31 /* Deployment */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
++				ARCHS = ppc;
+ 			};
+ 			name = Deployment;
+ 		};
+ 		5253CE990D5AAB030041AE31 /* Default */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
++				ARCHS = ppc;
+ 			};
+ 			name = Default;
+ 		};
