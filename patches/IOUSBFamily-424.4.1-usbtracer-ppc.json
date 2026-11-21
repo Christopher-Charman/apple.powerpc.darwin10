@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOUSBFamily-424.4.1",
+  "source_tree_sha": "e32592374f0a601b680edc764cb84c1f5a845100",
+  "patch": "patches/IOUSBFamily-424.4.1-usbtracer-ppc.patch",
+  "rationale": "Restore PowerPC architecture eligibility in original Xcode project build configurations; see docs/provenance for source evidence and test boundaries.",
+  "reviewer": "pending independent source review"
+}
