@@ -1925,18 +1925,21 @@
 		973C88030897FD9100B1007D /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = ppc;
 			};
 			name = Development;
 		};
 		973C88040897FD9100B1007D /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = ppc;
 			};
 			name = Deployment;
 		};
 		973C88050897FD9100B1007D /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = ppc;
 			};
 			name = Default;
 		};
