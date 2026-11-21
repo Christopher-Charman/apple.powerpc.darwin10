@@ -1,0 +1,50 @@
+--- a/src/powerpc/kext_tools-180.2.1/kextcache_main.c
++++ b/src/powerpc/kext_tools-180.2.1/kextcache_main.c
+@@ -1239,8 +1239,16 @@
+             
+             addArch(toolArgs, hostArch);
+         } else {
+-            addArchForName(toolArgs, "i386");
+-            addArchForName(toolArgs, "x86_64");
++            const NXArchInfo *hostArch = OSKextGetRunningKernelArchitecture();
++
++            if (hostArch && hostArch->cputype == CPU_TYPE_POWERPC) {
++                addArchForName(toolArgs, "ppc");
++            } else if (hostArch && hostArch->cputype == CPU_TYPE_POWERPC64) {
++                addArchForName(toolArgs, "ppc64");
++            } else {
++                addArchForName(toolArgs, "i386");
++                addArchForName(toolArgs, "x86_64");
++            }
+         }
+     } else {
+         /* If they were specified, validate them */
+--- a/src/powerpc/kext_tools-180.2.1/kext_tools.xcodeproj/project.pbxproj
++++ b/src/powerpc/kext_tools-180.2.1/kext_tools.xcodeproj/project.pbxproj
+@@ -2040,7 +2040,7 @@
+ 				);
+ 				PRIVATE_HEADERS_FOLDER_PATH = /usr/local/include;
+ 				STRIP_STYLE = all;
+-				VALID_ARCHS = "armv6 i386 x86_64";
++				VALID_ARCHS = "ppc ppc64 armv6 i386 x86_64";
+ 				WARNING_CFLAGS = "-Wall";
+ 			};
+ 			name = Development;
+@@ -2060,7 +2060,7 @@
+ 					"-D__MigTypeCheck=1",
+ 				);
+ 				STRIP_STYLE = all;
+-				VALID_ARCHS = "armv6 i386 x86_64";
++				VALID_ARCHS = "ppc ppc64 armv6 i386 x86_64";
+ 				WARNING_CFLAGS = "-Wall";
+ 			};
+ 			name = Deployment;
+@@ -2080,7 +2080,7 @@
+ 					"-D__MigTypeCheck=1",
+ 				);
+ 				STRIP_STYLE = all;
+-				VALID_ARCHS = "armv6 i386 x86_64";
++				VALID_ARCHS = "ppc ppc64 armv6 i386 x86_64";
+ 				WARNING_CFLAGS = "-Wall";
+ 			};
+ 			name = Default;
