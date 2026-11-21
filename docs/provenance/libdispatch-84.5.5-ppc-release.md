@@ -1,0 +1,3 @@
+# libdispatch-84.5.5 PowerPC Release configuration
+
+The official 10.6.8 libdispatch Release project configuration selects `ARCHS_STANDARD_32_64_BIT`, which does not select PowerPC. The working-source patch sets `ARCHS = ppc` in that configuration. The source's `src/hw_shims.h` provides a non-x86 fallback for atomic barriers through `__sync_synchronize()`; this is evidence of an existing non-x86 path, **not** evidence that the full implementation is PPC-compatible. The untouched official source remains under `src/releases/10.6.8/`. PPC atomic, thread-specific-storage and dispatch runtime behavior require further source review and testing. No compilation on PowerPC-Darwin.org.
