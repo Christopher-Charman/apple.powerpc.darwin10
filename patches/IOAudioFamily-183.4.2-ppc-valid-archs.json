@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOAudioFamily-183.4.2",
+  "source_tree_sha": "703741f7622df17bb30d594ce9035d28910ee9f5",
+  "patch": "patches/IOAudioFamily-183.4.2-ppc-valid-archs.patch",
+  "rationale": "Re-enable PPC architecture in three IOAudioFamily target valid-architecture lists, consistent with their existing x86_64 i386 ppc architecture macro.",
+  "reviewer": "pending independent source review"
+}
