@@ -1701,7 +1701,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = /usr/sbin;
 				PRODUCT_NAME = dsconfigldap;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1717,7 +1717,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = /usr/sbin;
 				PRODUCT_NAME = dsconfigldap;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1733,7 +1733,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = /usr/sbin;
 				PRODUCT_NAME = dsconfigldap;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1749,7 +1749,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = /usr/sbin;
 				PRODUCT_NAME = dseditgroup;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1765,7 +1765,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = /usr/sbin;
 				PRODUCT_NAME = dseditgroup;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1781,7 +1781,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = /usr/sbin;
 				PRODUCT_NAME = dseditgroup;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1802,7 +1802,7 @@
 				);
 				INSTALL_PATH = /usr/sbin;
 				PRODUCT_NAME = dsenableroot;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1823,7 +1823,7 @@
 				);
 				INSTALL_PATH = /usr/sbin;
 				PRODUCT_NAME = dsenableroot;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1844,7 +1844,7 @@
 				);
 				INSTALL_PATH = /usr/sbin;
 				PRODUCT_NAME = dsenableroot;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1865,7 +1865,7 @@
 				);
 				INSTALL_PATH = /usr/bin;
 				PRODUCT_NAME = dsperfmonitor;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1886,7 +1886,7 @@
 				);
 				INSTALL_PATH = /usr/bin;
 				PRODUCT_NAME = dsperfmonitor;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1907,7 +1907,7 @@
 				);
 				INSTALL_PATH = /usr/bin;
 				PRODUCT_NAME = dsperfmonitor;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1924,7 +1924,7 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = dirt;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1941,7 +1941,7 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = dirt;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -1958,7 +1958,7 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = dirt;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -2123,7 +2123,7 @@
 				INFOPLIST_FILE = "DSCacheInspector/DSCacheInspector-Info.plist";
 				INSTALL_PATH = /AppleInternal/Applications;
 				PRODUCT_NAME = DSCacheInspector;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "ppc x86_64 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Development;
@@ -2138,7 +2138,7 @@
 				INFOPLIST_FILE = "DSCacheInspector/DSCacheInspector-Info.plist";
 				INSTALL_PATH = /AppleInternal/Applications;
 				PRODUCT_NAME = DSCacheInspector;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "ppc x86_64 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Deployment;
@@ -2153,7 +2153,7 @@
 				INFOPLIST_FILE = "DSCacheInspector/DSCacheInspector-Info.plist";
 				INSTALL_PATH = /AppleInternal/Applications;
 				PRODUCT_NAME = DSCacheInspector;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "ppc x86_64 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Default;
@@ -2166,7 +2166,7 @@
 				GCC_ENABLE_OBJC_GC = YES;
 				INSTALL_PATH = /usr/bin;
 				PRODUCT_NAME = dscacheutil;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 			};
 			name = Development;
 		};
@@ -2178,7 +2178,7 @@
 				GCC_ENABLE_OBJC_GC = YES;
 				INSTALL_PATH = /usr/bin;
 				PRODUCT_NAME = dscacheutil;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 			};
 			name = Deployment;
 		};
@@ -2190,7 +2190,7 @@
 				GCC_ENABLE_OBJC_GC = YES;
 				INSTALL_PATH = /usr/bin;
 				PRODUCT_NAME = dscacheutil;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 			};
 			name = Default;
 		};
@@ -2201,7 +2201,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = /usr/bin/;
 				PRODUCT_NAME = dserr;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -2217,7 +2217,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = /usr/bin/;
 				PRODUCT_NAME = dserr;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -2233,7 +2233,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = /usr/bin/;
 				PRODUCT_NAME = dserr;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -2249,7 +2249,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = /usr/bin;
 				PRODUCT_NAME = dsmemberutil;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -2265,7 +2265,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = /usr/bin;
 				PRODUCT_NAME = dsmemberutil;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -2281,7 +2281,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = /usr/bin;
 				PRODUCT_NAME = dsmemberutil;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -2378,7 +2378,7 @@
 				);
 				INSTALL_PATH = /usr/bin;
 				PRODUCT_NAME = pwpolicy;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 			};
 			name = Development;
 		};
@@ -2393,7 +2393,7 @@
 				);
 				INSTALL_PATH = /usr/bin;
 				PRODUCT_NAME = pwpolicy;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 			};
 			name = Deployment;
 		};
@@ -2408,7 +2408,7 @@
 				);
 				INSTALL_PATH = /usr/bin;
 				PRODUCT_NAME = pwpolicy;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 			};
 			name = Default;
 		};
