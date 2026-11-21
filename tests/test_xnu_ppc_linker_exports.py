@@ -17,7 +17,8 @@ class XnuLinkerExportTests(unittest.TestCase):
             ppc.write_text('_ppc_only\n_symbol:__target\n')
             result=subprocess.run(['sh',str(SCRIPT),str(out),str(common),str(ppc)],capture_output=True,text=True)
             self.assertEqual(result.returncode,0,result.stderr)
-            self.assertEqual(out.read_text().splitlines(),sorted({'_shared','__target','_ppc_only'}))
+            self.assertEqual(set(out.read_text().splitlines()), {'_shared','__target','_ppc_only'})
+            self.assertEqual(len(out.read_text().splitlines()),3)
     def test_missing_ppc_input_preserves_previous_output(self):
         with tempfile.TemporaryDirectory() as t:
             directory=Path(t)
