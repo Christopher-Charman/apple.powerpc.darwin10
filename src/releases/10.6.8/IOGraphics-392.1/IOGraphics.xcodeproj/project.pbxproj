@@ -735,21 +735,18 @@
 		A68335490D450E1000307FE3 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = ppc;
 			};
 			name = Development;
 		};
 		A683354A0D450E1000307FE3 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = ppc;
 			};
 			name = Deployment;
 		};
 		A683354B0D450E1000307FE3 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = ppc;
 			};
 			name = Default;
 		};
