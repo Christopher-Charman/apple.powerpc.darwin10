@@ -6,7 +6,7 @@ Community reconstruction of Mac OS X 10.6.8 / Darwin 10 for PowerPC G4 and G5 Ma
 
 ## Contributing
 
-Contributions from the MacRumors community are welcome. Start with the [contributor guide](../../blob/PowerPC/CONTRIBUTING.md), open a [reproducible issue](../../issues/new/choose), or submit a [Pull Request against `PowerPC`](../../compare/PowerPC...PowerPC). Use the issue forms for PowerPC build/runtime failures and missing Apple OSS sources; use the PR template to record source provenance, patch rationale, PPC toolchain and test evidence. General discussion remains on the [MacRumors development thread](https://forums.macrumors.com/threads/10-6-snow-leopard-powerpc-development.2439769/).
+Contributions from the MacRumors community are welcome. Start with the [contributor guide](../../blob/PowerPC/CONTRIBUTING.md), open a [reproducible issue](../../issues/new/choose), or submit a [Pull Request targeting `PowerPC`](../../pulls). Use the issue forms for PowerPC build/runtime failures and missing Apple OSS sources; use the PR template to record source provenance, patch rationale, PPC toolchain and test evidence. General discussion remains on the [MacRumors development thread](https://forums.macrumors.com/threads/10-6-snow-leopard-powerpc-development.2439769/).
 
 ## Community project and historical releases
 
