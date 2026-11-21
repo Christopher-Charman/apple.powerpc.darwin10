@@ -1,0 +1,18 @@
+--- a/src/releases/10.6.8/IODVDStorageFamily-30/IODVDStorageFamily.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/IODVDStorageFamily-30/IODVDStorageFamily.xcodeproj/project.pbxproj
+@@ -354,6 +354,7 @@
+ 		60FD67F30D4026D7000D088D /* Debug */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 				INSTALLHDRS_COPY_PHASE = YES;
+ 				PRODUCT_NAME = "IODVDStorageFamily Headers";
+ 			};
+@@ -362,6 +363,7 @@
+ 		60FD67F40D4026D7000D088D /* Release */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 				INSTALLHDRS_COPY_PHASE = YES;
+ 				PRODUCT_NAME = "IODVDStorageFamily Headers";
+ 			};
