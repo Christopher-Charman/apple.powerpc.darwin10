@@ -2,43 +2,11 @@ name: Darwin source graph integrity
 
 on:
   pull_request:
-    paths:
-      - '.gitmodules'
-      - 'src/apple-darwin-10.6.8/**'
-      - 'src/releases/**'
-      - 'historical/**'
-      - 'historical-vendored/**'
-      - 'patches/**'
-      - 'tools/ppc_patch_gate.py'
-      - 'tools/verify_historical_sources.py'
-      - 'tools/verify_release_parity.py'
-      - 'tools/verify_notify_contract.py'
-      - 'tools/compare_ppc_sources.py'
-      - 'tools/inspect_ppc_macho.py'
-      - 'tools/verify_ppc_artifact_manifest.py'
-      - 'tools/inspect_build_zip.py'
-      - 'tests/test_build_zip_inventory.py'
-      - 'tests/test_build_macho_load_commands.py'
-      - 'tools/verify_ppc_dependency_sources.py'
-      - 'tools/verify_darwinbuild_context.py'
-      - 'tools/verify_ppc_historical_context.py'
-      - 'docs/provenance/**'
-      - 'tools/verify_developer_seed_lineage.py'
-      - 'tests/test_developer_seed_lineage.py'
-      - 'tools/scan_ppc_source_guards.py'
-      - 'tools/qualify_ppc_cross_compile.py'
-      - 'tests/test_ppc_cross_compile.py'
-      - 'tests/test_ppc_source_guards.py'
-      - 'tests/test_darwinbuild_context.py'
-      - 'tooling/darwinbuild/**'
-      - 'tests/test_ppc_dependency_sources.py'
-      - 'docs/build_zip_direct_binary_inventory.json'
-      - 'tests/test_ppc_artifact_manifest.py'
-      - 'tests/test_inspect_ppc_macho.py'
-      - 'tests/test_release_source_contracts.py'
-      - 'source-releases/**'
-      - 'tools/verify_source_graph.py'
-      - '.github/workflows/source-graph.yml'
+    branches:
+      - PowerPC
+  push:
+    branches:
+      - PowerPC
   workflow_dispatch:
 
 permissions:
