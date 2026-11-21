@@ -1,0 +1,3 @@
+# DSTools-134 dscl PPC architecture restoration
+
+Official Apple 10.6.8 DSTools-134 Xcode project: `src/releases/10.6.8/DSTools-134/DSTools.xcodeproj/project.pbxproj`. The `dscl` command-line target's Development, Deployment and Default configurations restrict `VALID_ARCHS` to `x86_64 i386`, while the adjacent `DSObjCWrappers` framework target explicitly includes `ppc` in its architectures and valid architectures. This limited patch adds PPC to the three `dscl` valid-architecture lists without changing other DSTools targets or the pristine release source. Dependencies and actual PPC behavior are not verified; no compilation on PowerPC-Darwin.org.
