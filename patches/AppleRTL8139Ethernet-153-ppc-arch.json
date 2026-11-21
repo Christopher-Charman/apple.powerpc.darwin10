@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/AppleRTL8139Ethernet-153",
+  "source_tree_sha": "bb467d1ca8fe283974a678f9afe08703adcb6020",
+  "patch": "patches/AppleRTL8139Ethernet-153-ppc-arch.patch",
+  "rationale": "Explicit PPC architecture in three empty project-wide configurations; preserve target and Apple release settings.",
+  "reviewer": "pending independent source review"
+}
