@@ -1,0 +1,20 @@
+--- a/src/powerpc/Apple16X50Serial-24/Apple16X50Serial.xcodeproj/project.pbxproj
++++ b/src/powerpc/Apple16X50Serial-24/Apple16X50Serial.xcodeproj/project.pbxproj
+@@ -544,7 +544,7 @@
+ 		C1D77DC10DD4BCB4001E21DB /* Development */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
++				ARCHS = ppc;
+ 				COPY_PHASE_STRIP = NO;
+ 				FRAMEWORK_SEARCH_PATHS = "";
+ 				GCC_DYNAMIC_NO_PIC = NO;
+@@ -578,7 +578,7 @@
+ 		C1D77DC20DD4BCB4001E21DB /* Deployment */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
++				ARCHS = ppc;
+ 				COPY_PHASE_STRIP = YES;
+ 				FRAMEWORK_SEARCH_PATHS = "";
+ 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
