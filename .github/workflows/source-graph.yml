@@ -38,6 +38,7 @@ jobs:
           python3 tools/verify_developer_seed_lineage.py
           python3 -m unittest discover -s tests -p "test_developer_seed_lineage.py" -v
           python3 -m unittest discover -s tests -p "test_ppc_source_guards.py" -v
+          python3 -m unittest discover -s tests -p "test_xnu_ppc_kpi_list.py" -v
           python3 -m unittest discover -s tests -p "test_dyld_ppc_assembly_abi.py" -v
           python3 -m unittest discover -s tests -p "test_libsystem_ppc_linker.py" -v
           python3 -m unittest discover -s tests -p "test_dyld_ppc_static_arch.py" -v
