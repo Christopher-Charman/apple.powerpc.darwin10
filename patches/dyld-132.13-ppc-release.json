@@ -1,8 +1,0 @@
-{
-  "target": "10.6.8",
-  "source_tree": "src/releases/10.6.8/dyld-132.13",
-  "source_tree_sha": "24bbd98dada6742b194fbf0b9f236ce93e80ee69",
-  "patch": "patches/dyld-132.13-ppc-release.patch",
-  "rationale": "Restore PPC to dyld Release ARCHS and update_dyld_shared_cache Release VALID_ARCHS, aligning with existing PPC Debug settings and PPC loader base address.",
-  "reviewer": "pending independent source review"
-}
