@@ -1,0 +1,26 @@
+--- a/src/releases/10.6.8/IONetworkingFamily-65.2.1/IONetworkingFamily.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/IONetworkingFamily-65.2.1/IONetworkingFamily.xcodeproj/project.pbxproj
+@@ -811,6 +811,7 @@
+ 		DAD9E1F009D4A8C0006678D2 /* Development */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 				COPY_PHASE_STRIP = NO;
+ 				STRIP_INSTALLED_PRODUCT = NO;
+ 			};
+@@ -819,6 +820,7 @@
+ 		DAD9E1F109D4A8C0006678D2 /* Deployment */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 				COPY_PHASE_STRIP = NO;
+ 				STRIP_INSTALLED_PRODUCT = NO;
+ 			};
+@@ -827,6 +829,7 @@
+ 		DAD9E1F209D4A8C0006678D2 /* Default */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 				COPY_PHASE_STRIP = NO;
+ 				STRIP_INSTALLED_PRODUCT = NO;
+ 			};
