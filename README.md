@@ -25,6 +25,17 @@ For each component:
 
 Source inventory, compatibility probes and historical boot logs are useful evidence, but are **not** proof that all 10.6.8 sources have been patched or that a new bootable release exists.
 
+
+## Complete 10.6.8 project and dependency coverage
+
+The PowerPC development tree must cover **all source projects needed to reconstruct and build the target 10.6.8 PowerPC system**, not merely the members of Apple's public 10.6.8 OSS release manifest. The release manifest is a baseline, not an exhaustive build dependency closure.
+
+Include and pin separately published Apple Developer Tools sources and components from other appropriate Apple OSS releases when the 10.6.8 build requires them; account for DarwinBuild Roots and patches, generated/private headers, SDK interfaces, static build libraries, build-host executables, toolchain stages, BootX and supported PowerPC drivers where redistributable source exists. Distinguish exact 10.6.8 release members, same-era separately released projects, earlier PowerPC-compatible donor implementations, community patches, and unavailable/proprietary inputs. Never silently substitute a different source generation.
+
+For every source project, resolve the transitive **build-time and runtime** dependency graph, including circular/staged header production, and preserve source URL, release/tag/commit, license, architecture, producer/consumer relationships and verification evidence. Source absent from Apple's public 10.6.8 release must not be treated as optional solely for that reason. Source that cannot lawfully be redistributed must be represented by a documented external acquisition/build interface rather than copied into Git.
+
+Keep the original upstream snapshots immutable and perform PowerPC adaptations in complete tracked working component trees. A gitlink, manifest entry, downloaded archive, or passing source inventory check does not satisfy patched-tree integration. See [PowerPC development-tree contract](../../blob/PowerPC/docs/POWERPC_DEVELOPMENT_TREE.md), [source selection policy](../../blob/PowerPC/docs/DARWIN_9_10_SOURCE_POLICY.md), and the [MacRumors developer wiki](https://forums.macrumors.com/threads/10-6-snow-leopard-powerpc-development.2439769/).
+
 ## Build and testing evidence
 
 The [historical source inventory](../../blob/PowerPC/docs/HISTORICAL_RELEASE_SOURCES.md), [source integration record](../../blob/PowerPC/docs/SOURCE_FORK_INTEGRATION.md) and [native PowerPC CI guidance](../../blob/PowerPC/docs/NATIVE_POWERPC_CI.md) provide current starting points. Validate the historical source lock with `python3 tools/verify_historical_sources.py` and official release membership with `python3 tools/verify_release_parity.py` from the `PowerPC` checkout.
