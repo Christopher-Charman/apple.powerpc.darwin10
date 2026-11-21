@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/AppleFileSystemDriver-13",
+  "source_tree_sha": "e740bf3ee6bf3f3945d1bddd55f199be89de55f8",
+  "patch": "patches/AppleFileSystemDriver-13-ppc-arch.patch",
+  "rationale": "Replace Intel-only ARCHS_STANDARD_32_64_BIT project architecture macro with PPC in project-wide Debug and Release.",
+  "reviewer": "pending independent source review"
+}
