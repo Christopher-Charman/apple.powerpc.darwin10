@@ -1,0 +1,11 @@
+--- a/src/powerpc/Libnotify-54.3/Libnotify.xcodeproj/project.pbxproj
++++ b/src/powerpc/Libnotify-54.3/Libnotify.xcodeproj/project.pbxproj
+@@ -272,7 +272,7 @@
+ 		1DEB91F108733DB70010E9CD /* Release */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
+-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
++				ARCHS = ppc;
+ 				BUILD_VARIANTS = (
+ 					normal,
+ 					debug,
