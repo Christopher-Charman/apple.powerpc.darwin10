@@ -1,0 +1,24 @@
+--- a/src/releases/10.6.8/IOPCIFamily-144/IOPCIFamily.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/IOPCIFamily-144/IOPCIFamily.xcodeproj/project.pbxproj
+@@ -403,18 +403,21 @@
+ 		1590525309368A190010639A /* Development */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 			};
+ 			name = Development;
+ 		};
+ 		1590525409368A190010639A /* Deployment */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 			};
+ 			name = Deployment;
+ 		};
+ 		1590525509368A190010639A /* Default */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 			};
+ 			name = Default;
+ 		};
