@@ -50,4 +50,4 @@ For reproducible reports include exact source and image revisions/checksums, mac
 
 Public experimental disk images may damage data or fail to boot. Use a spare disk/partition and backups; do not indiscriminately apply ordinary Apple updates. Follow the WikiPost's restore instructions and hardware-specific cautions. Preserve Apple and third-party licensing and attribution. Do not commit unauthorized proprietary system binaries, private archives or credentials.
 
-This repository is the source-development owner; it is separate from the `powerpc-darwin.org` hosting/runtime service. [Project history and evidence](docs/OWNED_ARCHITECTURE_CONTEXT.md) provide historical context, not a live build certificate.
+This repository is dedicated exclusively to Snow Leopard PowerPC source development, build reproduction and hardware validation.
