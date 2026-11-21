@@ -1,0 +1,29 @@
+--- a/src/releases/10.6.8/IOAudioFamily-183.4.2/IOAudioFamily.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/IOAudioFamily-183.4.2/IOAudioFamily.xcodeproj/project.pbxproj
+@@ -551,7 +551,7 @@
+ 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+ 				SECTORDER_FLAGS = "";
+ 				UNSTRIPPED_PRODUCT = YES;
+-				VALID_ARCHS = "x86_64 i386";
++				VALID_ARCHS = "x86_64 i386 ppc";
+ 				WARNING_CFLAGS = (
+ 					"-Wmost",
+ 					"-Wno-four-char-constants",
+@@ -596,7 +596,7 @@
+ 				PRODUCT_NAME = IOAudioFamily;
+ 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+ 				SECTORDER_FLAGS = "";
+-				VALID_ARCHS = "x86_64 i386";
++				VALID_ARCHS = "x86_64 i386 ppc";
+ 				WARNING_CFLAGS = (
+ 					"-Wmost",
+ 					"-Wno-four-char-constants",
+@@ -637,7 +637,7 @@
+ 				PRODUCT_NAME = IOAudioFamily;
+ 				SDKROOT = "";
+ 				SECTORDER_FLAGS = "";
+-				VALID_ARCHS = "x86_64 i386";
++				VALID_ARCHS = "x86_64 i386 ppc";
+ 				WARNING_CFLAGS = (
+ 					"-Wmost",
+ 					"-Wno-four-char-constants",
