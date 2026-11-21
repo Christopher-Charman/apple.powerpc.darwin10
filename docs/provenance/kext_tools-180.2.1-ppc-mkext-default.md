@@ -9,12 +9,12 @@
 
 ## Working-source mutation
 
-`src/powerpc/kext_tools-180.2.1/kextcache_main.c` previously selected only `i386` and `x86_64` for an mkext without explicit `-arch`, even on a PPC host. Its existing mkext path already has PPC filtering and an Open Firmware size guard, but those paths were unreachable by default. The change selects the generic `ppc` slice on a PPC32 kernel and `ppc64` on a PPC64 kernel. The existing Intel default and explicit `-arch` behavior remain as written.
+`src/powerpc/kext_tools-180.2.1/kextcache_main.c` previously selected only `i386` and `x86_64` for an mkext without explicit `-arch`, even on a PPC host. Its existing mkext path already has PPC filtering and an Open Firmware size guard, but those paths were unreachable by default. The change selects the generic `ppc` slice on a PPC32 kernel and `ppc64` on a PPC64 kernel. If the IOKit registry query returns an unknown architecture, the code falls back to `NXGetLocalArchInfo()`, the host architecture API used by the Leopard donor. The existing Intel default and explicit `-arch` behavior remain as written.
 
 The project-wide `VALID_ARCHS` in `src/powerpc/kext_tools-180.2.1/kext_tools.xcodeproj/project.pbxproj` excluded both PPC architectures in Development, Deployment and Default. These three settings now admit `ppc` and `ppc64`; target-specific architecture lists still determine which products are requested. The exact source edits are in `patches/kext_tools-180.2.1-ppc-mkext-default.patch`. The release snapshot remains untouched.
 
 ## Dependency and evidence boundary
 
-`kextcache` consumes the `OSKextGetRunningKernelArchitecture` interface from `IOKitUser-514.16.50`, Mach CPU types from the XNU/SDK headers, and Mach-O architecture metadata from `cctools-750`; its mkext is consumed by the boot path and kernel extension loader. Those interfaces and the full dependency closure still need PPC32/PPC64 build, link and hardware checks.
+`kextcache` consumes the `OSKextGetRunningKernelArchitecture` interface from `IOKitUser-514.16.50` (whose source may return an unknown architecture record on registry lookup failure), Mach CPU types from the XNU/SDK headers, and Mach-O architecture metadata from `cctools-750`; its mkext is consumed by the boot path and kernel extension loader. Those interfaces and the full dependency closure still need PPC32/PPC64 build, link and hardware checks.
 
 Source-only checks: the working files exactly matched their immutable release counterparts before this edit; one architecture-default branch and three project-level architecture settings were changed. The donor and exact release tag were inspected through authenticated GitHub API. No compilation or boot validation was performed on this host.

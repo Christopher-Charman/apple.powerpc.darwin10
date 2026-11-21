@@ -1241,6 +1241,9 @@ ExitStatus checkArgs(KextcacheArgs * toolArgs)
         } else {
             const NXArchInfo *hostArch = OSKextGetRunningKernelArchitecture();
 
+            if (!hostArch || hostArch->cputype == CPU_TYPE_ANY) {
+                hostArch = NXGetLocalArchInfo();
+            }
             if (hostArch && hostArch->cputype == CPU_TYPE_POWERPC) {
                 addArchForName(toolArgs, "ppc");
             } else if (hostArch && hostArch->cputype == CPU_TYPE_POWERPC64) {

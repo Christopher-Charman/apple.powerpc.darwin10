@@ -1,6 +1,6 @@
 --- a/src/powerpc/kext_tools-180.2.1/kextcache_main.c
 +++ b/src/powerpc/kext_tools-180.2.1/kextcache_main.c
-@@ -1239,8 +1239,16 @@
+@@ -1239,8 +1239,19 @@
              
              addArch(toolArgs, hostArch);
          } else {
@@ -8,6 +8,9 @@
 -            addArchForName(toolArgs, "x86_64");
 +            const NXArchInfo *hostArch = OSKextGetRunningKernelArchitecture();
 +
++            if (!hostArch || hostArch->cputype == CPU_TYPE_ANY) {
++                hostArch = NXGetLocalArchInfo();
++            }
 +            if (hostArch && hostArch->cputype == CPU_TYPE_POWERPC) {
 +                addArchForName(toolArgs, "ppc");
 +            } else if (hostArch && hostArch->cputype == CPU_TYPE_POWERPC64) {
