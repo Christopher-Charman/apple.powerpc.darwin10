@@ -80,7 +80,7 @@ LINKDYLIB-$(F)-$(A) = $(MYCC) -dynamiclib -arch $(A) -pipe $(SDKROOTLDFLAGS) \
 	-install_name /usr/lib/$(NAME)$(SUFFIX$(F)).dylib \
 	-nodefaultlibs -all_load -multi_module -Wl,-search_paths_first \
 	-segcreate __DATA __commpage $(OBJROOT)/$(A)/CommPageSymbols.o \
-	$(ORDERFILES) $(SKDROOTLDFLAGS) $(OBJS-$(A)) \
+	$(ORDERFILES) $(OBJS-$(A)) \
 	-L$(DSTROOT)/usr/local/lib/system -L$(LIBSYS) $(LIBMATHCOMMON$(F)) \
 	$(LIBS:C/$/$(SUFFIX$(F))/) $(LIBSCONDITIONAL:C/$/$(SUFFIX$(F))/)
 
