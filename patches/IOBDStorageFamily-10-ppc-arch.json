@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOBDStorageFamily-10",
+  "source_tree_sha": "d28973d37ae0d69aa778bbf9f9dd0d8224c6ce90",
+  "patch": "patches/IOBDStorageFamily-10-ppc-arch.patch",
+  "rationale": "Set explicit PPC architecture in project-wide Debug and Release configurations; keep original Apple optical storage release source unchanged.",
+  "reviewer": "pending independent source review"
+}

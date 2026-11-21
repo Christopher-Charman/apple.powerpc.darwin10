@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IODVDStorageFamily-30",
+  "source_tree_sha": "eba4e4057e42c9e8eea7bc0edf3297def613a207",
+  "patch": "patches/IODVDStorageFamily-30-ppc-arch.patch",
+  "rationale": "Set explicit PPC architecture in project-wide Debug and Release configurations; keep original Apple optical storage release source unchanged.",
+  "reviewer": "pending independent source review"
+}

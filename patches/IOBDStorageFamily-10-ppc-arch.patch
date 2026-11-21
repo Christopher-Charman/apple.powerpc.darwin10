@@ -1,0 +1,18 @@
+--- a/src/releases/10.6.8/IOBDStorageFamily-10/IOBDStorageFamily.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/IOBDStorageFamily-10/IOBDStorageFamily.xcodeproj/project.pbxproj
+@@ -326,6 +326,7 @@
+ 		60FD67900D3FF41A000D088D /* Debug */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 				INSTALLHDRS_COPY_PHASE = YES;
+ 				PRODUCT_NAME = "IOBDStorageFamily Headers";
+ 			};
+@@ -334,6 +335,7 @@
+ 		60FD67910D3FF41A000D088D /* Release */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 				INSTALLHDRS_COPY_PHASE = YES;
+ 				PRODUCT_NAME = "IOBDStorageFamily Headers";
+ 			};

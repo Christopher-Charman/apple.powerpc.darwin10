@@ -1,0 +1,18 @@
+--- a/src/releases/10.6.8/IOCDStorageFamily-47.1/IOCDStorageFamily.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/IOCDStorageFamily-47.1/IOCDStorageFamily.xcodeproj/project.pbxproj
+@@ -338,6 +338,7 @@
+ 		60FD68270D40299C000D088D /* Debug */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 				INSTALLHDRS_COPY_PHASE = YES;
+ 				PRODUCT_NAME = "IOCDStorageFamily Headers";
+ 			};
+@@ -346,6 +347,7 @@
+ 		60FD68280D40299C000D088D /* Release */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 				INSTALLHDRS_COPY_PHASE = YES;
+ 				PRODUCT_NAME = "IOCDStorageFamily Headers";
+ 			};
