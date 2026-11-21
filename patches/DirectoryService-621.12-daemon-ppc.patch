@@ -1,0 +1,53 @@
+--- a/src/releases/10.6.8/DirectoryService-621.12/DirectoryService.xcodeproj/project.pbxproj
++++ b/src/releases/10.6.8/DirectoryService-621.12/DirectoryService.xcodeproj/project.pbxproj
+@@ -3661,6 +3661,7 @@
+ 				ARCHS = (
+ 					x86_64,
+ 					i386,
++					ppc,
+ 				);
+ 				CODE_SIGN_IDENTITY = "-";
+ 				COPY_PHASE_STRIP = NO;
+@@ -3728,7 +3729,7 @@
+ 				);
+ 				STRIPFLAGS = "-urS";
+ 				USER_HEADER_SEARCH_PATHS = "${OBJROOT}";
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "i386 x86_64 ppc";
+ 				WARNING_CFLAGS = (
+ 					"-Wmost",
+ 					"-Wno-four-char-constants",
+@@ -3744,6 +3745,7 @@
+ 				ARCHS = (
+ 					x86_64,
+ 					i386,
++					ppc,
+ 				);
+ 				CODE_SIGN_IDENTITY = "-";
+ 				COPY_PHASE_STRIP = YES;
+@@ -3794,7 +3796,7 @@
+ 				);
+ 				STRIPFLAGS = "-urS";
+ 				USER_HEADER_SEARCH_PATHS = "${OBJROOT}";
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "i386 x86_64 ppc";
+ 				WARNING_CFLAGS = (
+ 					"-Wmost",
+ 					"-Wno-four-char-constants",
+@@ -3807,6 +3809,7 @@
+ 		6195752808D09448004DC9A3 /* Default */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 				CODE_SIGN_IDENTITY = "-";
+ 				COPY_PHASE_STRIP = NO;
+ 				DEAD_CODE_STRIPPING = YES;
+@@ -3853,7 +3856,7 @@
+ 				);
+ 				STRIPFLAGS = "-urS";
+ 				USER_HEADER_SEARCH_PATHS = "${OBJROOT}";
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "i386 x86_64 ppc";
+ 				WARNING_CFLAGS = (
+ 					"-Wmost",
+ 					"-Wno-four-char-constants",
