@@ -36,6 +36,10 @@ For every source project, resolve the transitive **build-time and runtime** depe
 
 Keep the original upstream snapshots immutable and perform PowerPC adaptations in complete tracked working component trees. A gitlink, manifest entry, downloaded archive, or passing source inventory check does not satisfy patched-tree integration. See [PowerPC development-tree contract](../../blob/PowerPC/docs/POWERPC_DEVELOPMENT_TREE.md), [source selection policy](../../blob/PowerPC/docs/DARWIN_9_10_SOURCE_POLICY.md), and the [MacRumors developer wiki](https://forums.macrumors.com/threads/10-6-snow-leopard-powerpc-development.2439769/).
 
+## Historical source candidate discovery
+
+Run `python3 tools/discover_missing_release_candidates.py --output /tmp/darwin10-donor-candidates.json` to enumerate projects present in the archived 10.5.x/10.6.x Apple release manifests but absent from the 10.6.8 manifest. This is **candidate discovery only**: entries are not automatically required dependencies, patched source, or validated builds. Separately published Developer Tools, DarwinBuild Roots, generated/private headers, proprietary interfaces and the full producer/consumer dependency closure still require independent reconciliation. Promote a candidate only after establishing its actual 10.6.8 consumer and a compatible pinned source version.
+
 ## Build and testing evidence
 
 The [historical source inventory](../../blob/PowerPC/docs/HISTORICAL_RELEASE_SOURCES.md), [source integration record](../../blob/PowerPC/docs/SOURCE_FORK_INTEGRATION.md) and [native PowerPC CI guidance](../../blob/PowerPC/docs/NATIVE_POWERPC_CI.md) provide current starting points. Validate the historical source lock with `python3 tools/verify_historical_sources.py` and official release membership with `python3 tools/verify_release_parity.py` from the `PowerPC` checkout.
