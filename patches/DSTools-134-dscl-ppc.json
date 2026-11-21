@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/DSTools-134",
+  "source_tree_sha": "bedc2b39650e6a49565ec918f5b18b38e39f3370",
+  "patch": "patches/DSTools-134-dscl-ppc.patch",
+  "rationale": "Restore PPC in dscl CLI target valid architectures; companion DSObjCWrappers framework already explicitly supports PPC.",
+  "reviewer": "pending independent source review"
+}
