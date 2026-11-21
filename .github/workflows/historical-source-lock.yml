@@ -2,12 +2,11 @@ name: Historical PPC source lock
 
 on:
   pull_request:
-    paths:
-      - '.gitmodules'
-      - 'historical/**'
-      - 'historical-vendored/**'
-      - 'tools/verify_historical_sources.py'
-      - '.github/workflows/historical-source-lock.yml'
+    branches:
+      - PowerPC
+  push:
+    branches:
+      - PowerPC
   workflow_dispatch:
 
 permissions:
