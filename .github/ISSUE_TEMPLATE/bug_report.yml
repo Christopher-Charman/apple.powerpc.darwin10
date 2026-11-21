@@ -1,0 +1,53 @@
+name: PowerPC compatibility or build failure
+description: Report a reproducible source, build, boot or runtime defect
+title: "[Bug] "
+labels: []
+body:
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Failing layer
+      options:
+        - Source or dependency
+        - Build host or toolchain
+        - PPC compile or link
+        - Kernel or boot
+        - KEXT or hardware
+        - Userland or application
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: Exact OS image and build
+      placeholder: "10.6.8 A5 / kernel build / checksum"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Hardware, toolchain and changed components
+      description: Include model identifier, CPU, GPU/controller, source revision, SDK and tools as applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Provide exact commands or a repeatable user workflow.
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Expected and actual results
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Control test, first error and evidence
+      description: Logs, hashes, Mach-O/symbol results, and links. Remove secrets and private data.
+    validations:
+      required: true
