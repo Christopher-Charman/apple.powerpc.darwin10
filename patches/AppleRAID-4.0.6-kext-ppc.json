@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/AppleRAID-4.0.6",
+  "source_tree_sha": "d5355694430c699c3ef09429917ab3c628330602",
+  "patch": "patches/AppleRAID-4.0.6-kext-ppc.patch",
+  "rationale": "Restore PPC to the three AppleRAIDKext VALID_ARCHS lists; companion AppleRAIDLib already permits PPC.",
+  "reviewer": "pending independent source review"
+}
