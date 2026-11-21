@@ -19,3 +19,11 @@ A component is integrated only when its actual patched source is tracked on `Pow
 ## Baseline recovery
 
 On 2026-11-21 `PowerPC` was fast-forwarded from `d1874f14bc2bf84f54c2a8d606d4ab0eb752ba9e` to `c8581a47125b4c2f885e7026a89f20982da17949` (139 existing commits), restoring the combined integration, release source inventories and qualification tooling. This operation did not itself apply new PowerPC patches to every component. The source integration objective remains active.
+
+## 10.6.8 dependency-closure requirement
+
+The first-party 10.6.8 release manifest is necessary but not sufficient. Build a complete source and dependency graph that includes separately released Apple Developer Tools projects, other era-appropriate Apple OSS releases, DarwinBuild Roots/patches, SDK and generated/private headers, host tools, staged static libraries, BootX and redistributable PowerPC driver sources when required. Traverse transitive build-time and runtime edges; do not exclude a required project because it is missing from the 10.6.8 Apple public branch.
+
+Each component must carry a source provenance class (exact 10.6.8 release member, separately released contemporary source, earlier compatible donor, community modification, or unavailable/proprietary), pinned version/commit, license, consumers/producers, PowerPC adaptation and validation state. Earlier source is a donor only after API/ABI and compatibility review; an absent source is an explicit unresolved dependency, not a silently completed component. Preserve proprietary artifacts outside the public repository and record lawful acquisition boundaries.
+
+Acceptance of a complete development tree requires both **release membership parity** and **dependency closure**, followed by full tracked PowerPC-patched sources, reproducible builds and target hardware verification. Existing release-parity checks alone do not establish dependency closure.
