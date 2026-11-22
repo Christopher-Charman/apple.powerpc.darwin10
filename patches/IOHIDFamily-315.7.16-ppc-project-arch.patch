@@ -1,0 +1,10 @@
+--- a/src/powerpc/IOHIDFamily-315.7.16/IOHIDFamily/IOHIDFamily.xcconfig
++++ b/src/powerpc/IOHIDFamily-315.7.16/IOHIDFamily/IOHIDFamily.xcconfig
+@@ -21,5 +21,5 @@
+ 
+ #include "IOHIDFamily-Version.xcconfig"
+ 
+-ARCHS = i386 x86_64
+-VALID_ARCHS = armv6 i386 x86_64
++ARCHS = ppc i386 x86_64
++VALID_ARCHS = ppc armv6 i386 x86_64
