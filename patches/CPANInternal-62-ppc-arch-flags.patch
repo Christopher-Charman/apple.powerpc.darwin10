@@ -1,0 +1,17 @@
+--- a/src/powerpc/CPANInternal-62/Makefile
++++ b/src/powerpc/CPANInternal-62/Makefile
+@@ -238,6 +238,14 @@
+ # This is a list of dirs to add to @INC, so that the building  modules can see other built modules
+ INCARGS= -I$(INSTALLSITEARCH) -I$(INSTALLSITELIB)
+ 
++# Match perl-63: derive architecture flags when ReleaseControl supplies only RC_ARCHS.
++# Explicit RC_CFLAGS still takes precedence.  XS module scripts read it from the environment.
++ifndef RC_ARCHS
++export RC_ARCHS = $(shell arch)
++endif
++ifndef RC_CFLAGS
++export RC_CFLAGS = $(foreach A,$(RC_ARCHS),-arch $(A)) $(RC_NONARCH_CFLAGS)
++endif
+ 
+ # set up ARCHFLAGS as per rdar://problem/5402242
+ ifeq ($(SNOWLEOPARD),YES)
