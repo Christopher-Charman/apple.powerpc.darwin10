@@ -1,0 +1,12 @@
+--- a/src/powerpc/BootCache-64.2/kext.c
++++ b/src/powerpc/BootCache-64.2/kext.c
+@@ -1636,7 +1636,8 @@
+ {
+ 	u_int32_t blksize;
+ 	u_int64_t blkcount;
+-	int error, max_byte_count;
++	int error;
++	u_int64_t max_byte_count;
+ 	unsigned int boot_arg;
+ 	thread_t rthread;
+ 

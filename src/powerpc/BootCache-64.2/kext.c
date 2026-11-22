@@ -1636,7 +1636,8 @@ BC_init_cache(size_t length, user_addr_t uptr, u_int64_t blocksize)
 {
 	u_int32_t blksize;
 	u_int64_t blkcount;
-	int error, max_byte_count;
+	int error;
+	u_int64_t max_byte_count;
 	unsigned int boot_arg;
 	thread_t rthread;
 
