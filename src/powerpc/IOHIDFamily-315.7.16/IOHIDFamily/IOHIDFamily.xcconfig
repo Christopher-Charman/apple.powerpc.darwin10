@@ -21,5 +21,5 @@
 
 #include "IOHIDFamily-Version.xcconfig"
 
-ARCHS = i386 x86_64
-VALID_ARCHS = armv6 i386 x86_64
+ARCHS = ppc i386 x86_64
+VALID_ARCHS = ppc armv6 i386 x86_64
