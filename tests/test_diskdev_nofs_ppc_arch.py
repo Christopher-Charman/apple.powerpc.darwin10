@@ -17,6 +17,12 @@ class DiskdevNofsPowerPCArchitectureTests(unittest.TestCase):
         target = WORKING.read_text()
         self.assertEqual(re.findall(r'^RC_ARCHS\s*=\s*(.*)$', target, re.M), ['ppc i386 x86_64'])
         self.assertIn('include $(MAKEFILEPATH)/CoreOS/ReleaseControl/BSDCommon.make', target)
+        makefiles = ROOT / 'src/powerpc/CoreOSMakefiles-63/ReleaseControl'
+        bsd = (makefiles / 'BSDCommon.make').read_text()
+        common = (makefiles / 'Common.make').read_text()
+        self.assertIn('include $(MAKEFILEPATH)/CoreOS/ReleaseControl/Common.make', bsd)
+        self.assertIn('CC_Archs      = $(RC_ARCHS:%=-arch %)', common)
+        self.assertIn('$(RC_ARCHS:ppc=powerpc)', common)
 
     def test_exact_official_release_delta(self):
         upstream = UPSTREAM.read_text()
