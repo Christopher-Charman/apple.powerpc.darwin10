@@ -1348,6 +1348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
+					ppc,
 					x86_64,
 					i386,
 				);
@@ -1366,6 +1367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
+					ppc,
 					x86_64,
 					i386,
 				);
@@ -1511,6 +1513,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
+					ppc,
 					i386,
 					x86_64,
 				);
@@ -1540,6 +1543,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
+					ppc,
 					i386,
 					x86_64,
 				);
