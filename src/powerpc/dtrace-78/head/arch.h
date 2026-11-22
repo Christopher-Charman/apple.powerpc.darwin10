@@ -25,6 +25,8 @@
 
 #include <mach/machine.h>
 
+#define PPC_STRING		"ppc"
+#define PPC64_STRING		"ppc64"
 #define I386_STRING		"i386"
 #define X86_64_STRING		"x86_64"
 #define ANY_CPU_STRING		"any"
@@ -33,6 +35,10 @@ static inline char*
 string_for_arch(cpu_type_t arch)
 {
 	switch(arch) {
+		case CPU_TYPE_POWERPC:
+			return PPC_STRING;
+		case CPU_TYPE_POWERPC64:
+			return PPC64_STRING;
 		case CPU_TYPE_I386:
 			return I386_STRING;
 		case CPU_TYPE_X86_64:
@@ -47,7 +53,11 @@ string_for_arch(cpu_type_t arch)
 static inline cpu_type_t
 arch_for_string(const char* string)
 {
-	if(!strcmp(string, I386_STRING))
+	if(!strcmp(string, PPC_STRING))
+		return CPU_TYPE_POWERPC;
+	else if(!strcmp(string, PPC64_STRING))
+		return CPU_TYPE_POWERPC64;
+	else if(!strcmp(string, I386_STRING))
 		return CPU_TYPE_I386;
 	else if(!strcmp(string, X86_64_STRING))
 		return CPU_TYPE_X86_64;
@@ -77,7 +87,11 @@ static inline int needs_swapping(cpu_type_t a, cpu_type_t b)
 	return 0;
 }
 
-#if defined(__i386__)
+#if defined(__ppc64__)
+#define host_arch CPU_TYPE_POWERPC64
+#elif defined(__ppc__)
+#define host_arch CPU_TYPE_POWERPC
+#elif defined(__i386__)
 #define host_arch CPU_TYPE_I386
 #elif defined(__x86_64__)
 #define host_arch CPU_TYPE_X86_64
