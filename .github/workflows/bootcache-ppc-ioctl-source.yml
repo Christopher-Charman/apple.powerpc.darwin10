@@ -1,0 +1,37 @@
+name: BootCache PPC ioctl width source regression
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/BootCache-64.2/kext.c
+      - src/releases/10.6.8/BootCache-64.2/kext.c
+      - src/releases/10.6.8/xnu-1504.15.3/bsd/sys/disk.h
+      - patches/BootCache-64.2-ppc-ioctl-width.patch
+      - tests/test_bootcache_ppc_ioctl_width.py
+      - .github/workflows/bootcache-ppc-ioctl-source.yml
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/BootCache-64.2/kext.c
+      - src/releases/10.6.8/BootCache-64.2/kext.c
+      - src/releases/10.6.8/xnu-1504.15.3/bsd/sys/disk.h
+      - patches/BootCache-64.2-ppc-ioctl-width.patch
+      - tests/test_bootcache_ppc_ioctl_width.py
+      - .github/workflows/bootcache-ppc-ioctl-source.yml
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify BootCache PowerPC ioctl storage and exact patch
+        run: python3 -m unittest discover -s tests -p 'test_bootcache_ppc_ioctl_width.py' -v

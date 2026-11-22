@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/BootCache-64.2",
+  "source_tree_sha": "4defb3ff35c438f4bfa1592910e410243fd50d9c",
+  "patch": "patches/BootCache-64.2-ppc-ioctl-width.patch",
+  "rationale": "Use the uint64_t result width specified by XNU DKIOCGETMAXBYTECOUNTREAD, preserving the device read limit on big-endian PowerPC; see docs/provenance/bootcache-64.2-ppc-ioctl-width.md.",
+  "reviewer": "pending independent source review"
+}
