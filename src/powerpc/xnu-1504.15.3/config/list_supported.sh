@@ -83,7 +83,9 @@ do
         echo "Missing KPI export source: $export_file" >&2
         exit 1
     fi
-    sed 's/^_//; s/:.*//' "$export_file" | sort >> "$temporary" || exit 1
+    # A plain sed|sort pipeline masks source-read errors. Use bash pipefail
+    # so missing/unreadable PPC KPI data cannot replace a valid report.
+    ( set -o pipefail; sed 's/^_//; s/:.*//' "$export_file" | sort ) >> "$temporary" || exit 1
     echo >> "$temporary"
 done
 
