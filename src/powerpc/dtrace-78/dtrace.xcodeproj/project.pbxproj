@@ -2864,7 +2864,7 @@
 					"-lSystem",
 				);
 				PRODUCT_NAME = dtrace;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 				ZERO_LINK = NO;
 			};
 			name = Debug;
@@ -2891,7 +2891,7 @@
 					"-lSystem",
 				);
 				PRODUCT_NAME = dtrace;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -2905,7 +2905,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = "";
 				PREBINDING = NO;
-				VALID_ARCHS = "armv6 i386 x86_64";
+				VALID_ARCHS = "ppc armv6 i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -2922,7 +2922,7 @@
 					"-DNS_BLOCK_ASSERTIONS",
 				);
 				PREBINDING = NO;
-				VALID_ARCHS = "armv6 i386 x86_64";
+				VALID_ARCHS = "ppc armv6 i386 x86_64";
 			};
 			name = Release;
 		};
@@ -2944,7 +2944,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = ctf;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 			};
 			name = Debug;
 		};
@@ -2965,7 +2965,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = ctf;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 			};
 			name = Release;
 		};
@@ -2986,7 +2986,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = elf;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 			};
 			name = Debug;
 		};
@@ -3006,7 +3006,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = elf;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 			};
 			name = Release;
 		};
@@ -3056,7 +3056,7 @@
 				PRIVATE_HEADERS_FOLDER_PATH = /usr/include;
 				PRODUCT_NAME = libdtrace;
 				PUBLIC_HEADERS_FOLDER_PATH = /usr/include;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 			};
 			name = Debug;
 		};
@@ -3106,7 +3106,7 @@
 				PRIVATE_HEADERS_FOLDER_PATH = /usr/include;
 				PRODUCT_NAME = libdtrace;
 				PUBLIC_HEADERS_FOLDER_PATH = /usr/include;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 			};
 			name = Release;
 		};
@@ -3138,7 +3138,7 @@
 					"-liberty",
 				);
 				PRODUCT_NAME = plockstat;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 				ZERO_LINK = NO;
 			};
 			name = Debug;
@@ -3168,7 +3168,7 @@
 					"-liberty",
 				);
 				PRODUCT_NAME = plockstat;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -3244,7 +3244,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ctfmerge;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 				ZERO_LINK = NO;
 			};
 			name = Debug;
@@ -3275,7 +3275,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ctfmerge;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -3307,7 +3307,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ctfdump;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 				ZERO_LINK = NO;
 			};
 			name = Debug;
@@ -3337,7 +3337,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ctfdump;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -3355,7 +3355,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = dwarf;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 				ZERO_LINK = YES;
 			};
 			name = Debug;
@@ -3371,7 +3371,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = dwarf;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = "x86_64 i386 ppc";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -3404,7 +3404,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ctfconvert;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				ZERO_LINK = NO;
 			};
 			name = Debug;
@@ -3435,7 +3435,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = ctfconvert;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "ppc i386 x86_64";
 				ZERO_LINK = NO;
 			};
 			name = Release;
