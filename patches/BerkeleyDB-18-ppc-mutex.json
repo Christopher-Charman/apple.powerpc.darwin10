@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/BerkeleyDB-18",
+  "source_tree_sha": "81bb3b26d8f03211a522932403c4df958afd2b93",
+  "patch": "patches/BerkeleyDB-18-ppc-mutex.patch",
+  "rationale": "Store the literal lock value and return a pointer-independent acquisition result in the PowerPC test-and-set fallback; see docs/provenance/berkeleydb-18-ppc-mutex.md.",
+  "reviewer": "pending independent source review"
+}
