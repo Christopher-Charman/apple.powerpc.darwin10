@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/AppleUSBCDCDriver-4005.4.2",
+  "source_tree_sha": "7e3465bf5d0300d5e0d8e4716abd95bc2014eb90",
+  "patch": "patches/AppleUSBCDCDriver-4005.4.2-ppc-eem-byteorder.patch",
+  "rationale": "Decode and encode the two-byte USB CDC EEM header in little-endian wire order, avoiding a 16-bit pointer write beyond the local header on PowerPC; see docs/provenance/appleusbcdc-4005.4.2-ppc-eem-byteorder.md.",
+  "reviewer": "pending independent source review"
+}
