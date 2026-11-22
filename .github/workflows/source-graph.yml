@@ -46,6 +46,7 @@ jobs:
           python3 -m unittest discover -s tests -p "test_xnu_ppc_linker_exports.py" -v
           python3 -m unittest discover -s tests -p "test_xnu_ppc_kpi_list.py" -v
           python3 -m unittest discover -s tests -p "test_iohidfamily_ppc_arch.py" -v
+          python3 -m unittest discover -s tests -p "test_autofs_ppc_arch.py" -v
           python3 -m unittest discover -s tests -p "test_dyld_ppc_assembly_abi.py" -v
           python3 -m unittest discover -s tests -p "test_libsystem_ppc_linker.py" -v
           python3 -m unittest discover -s tests -p "test_dyld_ppc_static_arch.py" -v
