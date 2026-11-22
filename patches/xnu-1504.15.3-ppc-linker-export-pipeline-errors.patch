@@ -1,0 +1,21 @@
+--- a/src/powerpc/xnu-1504.15.3/config/generate_linker_exports.sh
++++ b/src/powerpc/xnu-1504.15.3/config/generate_linker_exports.sh
+@@ -30,9 +30,15 @@
+ temporary=$(mktemp "${output_dir}/.${output_name}.XXXXXX") || exit 1
+ trap 'rm -f "$temporary"' EXIT HUP INT TERM
+ 
+-# Preserve the original export normalization. A grep pass with no matches is
+-# valid; actual input errors still cause failure.
+-( grep -h -v ":" "$@" || [ "$?" -eq 1 ]; grep -h ":" "$@" | awk -F: '{print $2}' ) | sort -u > "$temporary" || exit 1
++# Keep normalization and sorting in separate checked stages. The original
++# grep/awk/sort pipeline masked read errors because only sort's status was
++# visible; an unreadable PPC export could otherwise yield a partial ABI list.
++# For colon records, preserve the original second-field extraction.
++normalized="${temporary}.normalized"
++trap 'rm -f "$temporary" "$normalized"' EXIT HUP INT TERM
++awk -F: '{ if (index($0, ":")) print $2; else print $0 }' "$@" > "$normalized" || exit 1
++sort -u "$normalized" > "$temporary" || exit 1
++rm -f "$normalized" || exit 1
+ mv -f "$temporary" "$OUTPUT" || exit 1
+ trap - EXIT HUP INT TERM
+ 
