@@ -1,0 +1,35 @@
+name: CoreOSMakefiles PPC Xcode source regression
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/CoreOSMakefiles-63/Xcode/BSD.xcconfig
+      - src/releases/10.6.8/CoreOSMakefiles-63/Xcode/BSD.xcconfig
+      - patches/CoreOSMakefiles-63-ppc-xcode-arch.patch
+      - tests/test_coreosmakefiles_ppc_xcode_arch.py
+      - .github/workflows/coreosmakefiles-ppc-source.yml
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/CoreOSMakefiles-63/Xcode/BSD.xcconfig
+      - src/releases/10.6.8/CoreOSMakefiles-63/Xcode/BSD.xcconfig
+      - patches/CoreOSMakefiles-63-ppc-xcode-arch.patch
+      - tests/test_coreosmakefiles_ppc_xcode_arch.py
+      - .github/workflows/coreosmakefiles-ppc-source.yml
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify CoreOSMakefiles PowerPC template and exact patch
+        run: python3 -m unittest discover -s tests -p 'test_coreosmakefiles_ppc_xcode_arch.py' -v
