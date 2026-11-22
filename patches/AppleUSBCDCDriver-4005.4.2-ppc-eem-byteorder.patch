@@ -1,0 +1,29 @@
+--- a/src/powerpc/AppleUSBCDCDriver-4005.4.2/AppleUSBCDCEEM/Classes/AppleUSBCDCEEM.cpp
++++ b/src/powerpc/AppleUSBCDCDriver-4005.4.2/AppleUSBCDCEEM/Classes/AppleUSBCDCEEM.cpp
+@@ -331,7 +331,6 @@
+ 	pipeInBuffers	*pipeBuf = (pipeInBuffers *)param;
+ //    UInt32			poolIndx = (UInt32)param;
+ 	UInt16			EEMHeader;
+-	UInt16			*EEMHeaderAddress = &EEMHeader;
+ 	SInt16			actualLen, dataLen, i = 0;
+ 	bool			done = false;
+     
+@@ -344,8 +343,7 @@
+ 		
+ 		while (!done)
+ 		{
+-			EEMHeaderAddress[0] = pipeBuf->pipeInBuffer[i];
+-			EEMHeaderAddress[1] = pipeBuf->pipeInBuffer[i+1];
++			EEMHeader = OSReadLittleInt16(pipeBuf->pipeInBuffer, i);
+ 		
+ 			if (EEMHeader & bmTypeCommand)
+ 			{
+@@ -1958,7 +1956,7 @@
+ 	EEMHeader |= command;
+ 	EEMHeader |= length;
+ 	
+-	bcopy(&EEMHeader, fPipeOutBuff[indx].pipeOutBuffer, sizeof(EEMHeader));
++	OSWriteLittleInt16(fPipeOutBuff[indx].pipeOutBuffer, 0, EEMHeader);
+ 	if (length > 0)
+ 	{
+ 		bcopy(anyData, &fPipeOutBuff[indx].pipeOutBuffer[2], length);

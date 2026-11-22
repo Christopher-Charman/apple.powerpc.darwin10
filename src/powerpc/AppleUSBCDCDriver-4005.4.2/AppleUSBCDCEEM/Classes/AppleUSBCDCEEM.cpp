@@ -331,7 +331,6 @@ void AppleUSBCDCEEM::dataReadComplete(void *obj, void *param, IOReturn rc, UInt3
 	pipeInBuffers	*pipeBuf = (pipeInBuffers *)param;
 //    UInt32			poolIndx = (UInt32)param;
 	UInt16			EEMHeader;
-	UInt16			*EEMHeaderAddress = &EEMHeader;
 	SInt16			actualLen, dataLen, i = 0;
 	bool			done = false;
     
@@ -344,8 +343,7 @@ void AppleUSBCDCEEM::dataReadComplete(void *obj, void *param, IOReturn rc, UInt3
 		
 		while (!done)
 		{
-			EEMHeaderAddress[0] = pipeBuf->pipeInBuffer[i];
-			EEMHeaderAddress[1] = pipeBuf->pipeInBuffer[i+1];
+			EEMHeader = OSReadLittleInt16(pipeBuf->pipeInBuffer, i);
 		
 			if (EEMHeader & bmTypeCommand)
 			{
@@ -1958,7 +1956,7 @@ IOReturn AppleUSBCDCEEM::USBSendCommand(UInt16 command, UInt16 length, UInt8 *an
 	EEMHeader |= command;
 	EEMHeader |= length;
 	
-	bcopy(&EEMHeader, fPipeOutBuff[indx].pipeOutBuffer, sizeof(EEMHeader));
+	OSWriteLittleInt16(fPipeOutBuff[indx].pipeOutBuffer, 0, EEMHeader);
 	if (length > 0)
 	{
 		bcopy(anyData, &fPipeOutBuff[indx].pipeOutBuffer[2], length);
