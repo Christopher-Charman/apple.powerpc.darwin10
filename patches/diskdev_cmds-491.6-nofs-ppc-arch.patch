@@ -1,0 +1,11 @@
+--- a/src/powerpc/diskdev_cmds-491.6/nofs.tproj/Makefile
++++ b/src/powerpc/diskdev_cmds-491.6/nofs.tproj/Makefile
+@@ -10,7 +10,7 @@
+ 
+ include $(MAKEFILEPATH)/CoreOS/ReleaseControl/BSDCommon.make
+ 
+-RC_ARCHS = i386 x86_64
++RC_ARCHS = ppc i386 x86_64
+ 
+ after_install:
+ 	$(INSTALL_DIRECTORY) "$(DSTROOT)$(Install_Dir)"/English.lproj

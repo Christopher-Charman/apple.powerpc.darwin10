@@ -10,7 +10,7 @@ Extra_Frameworks = -framework CoreFoundation -framework DiskArbitration -framewo
 
 include $(MAKEFILEPATH)/CoreOS/ReleaseControl/BSDCommon.make
 
-RC_ARCHS = i386 x86_64
+RC_ARCHS = ppc i386 x86_64
 
 after_install:
 	$(INSTALL_DIRECTORY) "$(DSTROOT)$(Install_Dir)"/English.lproj
