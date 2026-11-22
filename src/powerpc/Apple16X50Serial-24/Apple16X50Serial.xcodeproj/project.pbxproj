@@ -38,13 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C1D77DEF0DD4BCB5001E21DB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1D77DDB0DD4BCB5001E21DB;
-			remoteInfo = "Apple16X50ACPI (Upgraded)";
-		};
 		C1FCFCDB0DD6693E00EEDE4F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
@@ -250,7 +243,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C1D77DF00DD4BCB5001E21DB /* PBXTargetDependency */,
 			);
 			name = Apple16X50Serial;
 			productInstallPath = "$(SYSTEM_LIBRARY_DIR)/Extensions";
@@ -498,11 +490,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C1D77DF00DD4BCB5001E21DB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C1D77DDB0DD4BCB5001E21DB /* Apple16X50ACPI */;
-			targetProxy = C1D77DEF0DD4BCB5001E21DB /* PBXContainerItemProxy */;
-		};
 		C1FCFCDC0DD6693E00EEDE4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C1FCFC5E0DD6692C00EEDE4F /* Apple16X50ACPI_embedded */;
@@ -609,6 +596,7 @@
 		C1D77DC30DD4BCB4001E21DB /* DEBUG */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = ppc;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -638,6 +626,7 @@
 		C1D77DC40DD4BCB4001E21DB /* ASSERT */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = ppc;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -667,6 +656,7 @@
 		C1D77DC50DD4BCB4001E21DB /* DEBUG & ASSERT */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = ppc;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
