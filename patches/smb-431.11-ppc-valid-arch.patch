@@ -1,0 +1,146 @@
+--- a/src/powerpc/smb-431.11/smb.xcodeproj/project.pbxproj
++++ b/src/powerpc/smb-431.11/smb.xcodeproj/project.pbxproj
+@@ -2167,7 +2167,7 @@
+ 				OTHER_LDFLAGS = "-lutil";
+ 				PRODUCT_NAME = mount_smbfs;
+ 				STRIP_STYLE = debugging;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -2236,7 +2236,7 @@
+ 				OTHER_LDFLAGS = "-lutil";
+ 				PRODUCT_NAME = mount_smbfs;
+ 				STRIP_STYLE = debugging;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -2431,7 +2431,7 @@
+ 				OTHER_CFLAGS = "-DSMB_DEBUG=1";
+ 				PRODUCT_NAME = smbutil;
+ 				STRIP_STYLE = debugging;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -2490,7 +2490,7 @@
+ 				OTHER_CFLAGS = "";
+ 				PRODUCT_NAME = smbutil;
+ 				STRIP_STYLE = debugging;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -2832,7 +2832,7 @@
+ 					"-DNAMEDSTREAMS",
+ 				);
+ 				PRODUCT_NAME = smbfs;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -2900,7 +2900,7 @@
+ 				MODULE_VERSION = 1.6.0;
+ 				OTHER_CFLAGS = "-DNAMEDSTREAMS";
+ 				PRODUCT_NAME = smbfs;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -3086,7 +3086,7 @@
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = load_smbfs;
+ 				STRIP_STYLE = debugging;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -3146,7 +3146,7 @@
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = load_smbfs;
+ 				STRIP_STYLE = debugging;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -3535,7 +3535,7 @@
+ 				OTHER_LDFLAGS = "-lutil";
+ 				PRODUCT_NAME = mount_smbfs;
+ 				STRIP_STYLE = debugging;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -3594,7 +3594,7 @@
+ 				OTHER_CFLAGS = "-DSMB_DEBUG=1";
+ 				PRODUCT_NAME = smbutil;
+ 				STRIP_STYLE = debugging;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -3664,7 +3664,7 @@
+ 					"-DNAMEDSTREAMS",
+ 				);
+ 				PRODUCT_NAME = smbfs;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -3743,7 +3743,7 @@
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = load_smbfs;
+ 				STRIP_STYLE = debugging;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -4252,7 +4252,7 @@
+ 				OTHER_LDFLAGS = "-lutil";
+ 				PRODUCT_NAME = mount_smbfs;
+ 				STRIP_STYLE = debugging;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -4311,7 +4311,7 @@
+ 				OTHER_CFLAGS = "";
+ 				PRODUCT_NAME = smbutil;
+ 				STRIP_STYLE = debugging;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -4379,7 +4379,7 @@
+ 				MODULE_VERSION = 1.6.0;
+ 				OTHER_CFLAGS = "-DNAMEDSTREAMS";
+ 				PRODUCT_NAME = smbfs;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
+@@ -4455,7 +4455,7 @@
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = load_smbfs;
+ 				STRIP_STYLE = debugging;
+-				VALID_ARCHS = "i386 x86_64";
++				VALID_ARCHS = "ppc i386 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"-Wmissing-prototypes",
+ 					"-Wall",
