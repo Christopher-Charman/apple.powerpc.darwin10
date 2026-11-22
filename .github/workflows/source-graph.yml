@@ -56,3 +56,4 @@ jobs:
           python3 -m unittest discover -s tests -p "test_ioata_ppc_abstract_registers.py" -v
           python3 -m unittest discover -s tests -p "test_apple16x50serial_ppc_target.py" -v
           python3 -m unittest discover -s tests -p "test_ppc_cross_compile.py" -v
+          python3 -m unittest discover -s tests -p "test_cf_ppc64_halt.py" -v

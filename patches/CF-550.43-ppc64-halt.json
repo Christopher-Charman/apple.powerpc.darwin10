@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/CF-550.43",
+  "source_tree_sha": "979bfb3871fa956cb8b537eda1bea777a663a90c",
+  "patch": "patches/CF-550.43-ppc64-halt.patch",
+  "rationale": "Restore the PPC64 HALT definition used by active CoreFoundation source; see docs/provenance/cf-550.43-ppc64-halt.md.",
+  "reviewer": "pending independent source review"
+}
