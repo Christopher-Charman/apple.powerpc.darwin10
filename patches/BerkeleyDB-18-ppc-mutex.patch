@@ -1,0 +1,37 @@
+--- a/src/powerpc/BerkeleyDB-18/db/dbinc/mutex_int.h
++++ b/src/powerpc/BerkeleyDB-18/db/dbinc/mutex_int.h
+@@ -506,24 +506,24 @@
+  * gcc/ppc: 0 is clear, 1 is set.
+  */
+ static inline int
+-MUTEX_SET(int *tsl)  {
+-        int __r;
++MUTEX_SET(tsl_t *tsl) {
++        int acquired;
+         asm volatile (
+ "0:                             \n\t"
+ "       lwarx   %0,0,%1         \n\t"
+ "       cmpwi   %0,0            \n\t"
+ "       bne-    1f              \n\t"
+-"       stwcx.  %1,0,%1         \n\t"
++"       li      %0,1            \n\t"
++"       stwcx.  %0,0,%1         \n\t"
++"       bne-    0b              \n\t"
+ "       isync                   \n\t"
+-"       beq+    2f              \n\t"
+-"       b       0b              \n\t"
+-"1:                             \n\t"
+-"       li      %1,0            \n\t"
++"       b       2f              \n\t"
++"1:     li      %0,0            \n\t"
+ "2:                             \n\t"
+-         : "=&r" (__r), "+r" (tsl)
+-         :
++         : "=&r" (acquired)
++         : "r" (tsl)
+          : "cr0", "memory");
+-         return (int)tsl;
++        return acquired;
+ }
+ 
+ static inline int
