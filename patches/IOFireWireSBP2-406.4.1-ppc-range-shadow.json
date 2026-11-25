@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOFireWireSBP2-406.4.1",
+  "source_tree_sha": "3c7921ddbe060ea82758334b1ef815224dbd06c8",
+  "patch": "patches/IOFireWireSBP2-406.4.1-ppc-range-shadow.patch",
+  "rationale": "Keep the allocated IOAddressRange array in the outer scope of the 32-bit SBP2 kernel API. The inner declaration shadows a null pointer subsequently indexed, passed to withAddressRanges and tested for cleanup. See docs/provenance/iofirewiresbp2-406.4.1-ppc-range-shadow.md.",
+  "reviewer": "pending independent source review"
+}

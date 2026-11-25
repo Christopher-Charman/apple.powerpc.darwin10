@@ -1,0 +1,11 @@
+--- a/src/powerpc/IOFireWireSBP2-406.4.1/IOFireWireSBP2/IOFireWireSBP2ORB.cpp
++++ b/src/powerpc/IOFireWireSBP2-406.4.1/IOFireWireSBP2/IOFireWireSBP2ORB.cpp
+@@ -1111,7 +1111,7 @@
+ 	IOAddressRange * address_ranges = NULL;
+     if( status == kIOReturnSuccess )
+ 	{
+-		IOAddressRange * address_ranges = IONew( IOAddressRange, withCount );
++		address_ranges = IONew( IOAddressRange, withCount );
+ 		if( address_ranges == NULL )
+ 		{
+ 			status = kIOReturnNoMemory;
