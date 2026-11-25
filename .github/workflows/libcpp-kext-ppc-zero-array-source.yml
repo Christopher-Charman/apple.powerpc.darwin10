@@ -1,0 +1,39 @@
+name: Libcpp kext PPC zero array source regression
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/Libcpp_kext-8/new_opvnt.cc
+      - src/releases/10.6.8/Libcpp_kext-8/new_opvnt.cc
+      - src/releases/10.6.8/xnu-1504.15.3/libkern/c++/OSRuntime.cpp
+      - patches/Libcpp_kext-8-ppc-zero-array.patch
+      - docs/provenance/libcpp-kext-8-ppc-zero-array.md
+      - tests/test_libcpp_kext_ppc_zero_array.py
+      - .github/workflows/libcpp-kext-ppc-zero-array-source.yml
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/Libcpp_kext-8/new_opvnt.cc
+      - src/releases/10.6.8/Libcpp_kext-8/new_opvnt.cc
+      - src/releases/10.6.8/xnu-1504.15.3/libkern/c++/OSRuntime.cpp
+      - patches/Libcpp_kext-8-ppc-zero-array.patch
+      - docs/provenance/libcpp-kext-8-ppc-zero-array.md
+      - tests/test_libcpp_kext_ppc_zero_array.py
+      - .github/workflows/libcpp-kext-ppc-zero-array-source.yml
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Check zero-sized nothrow array allocation source
+        run: python3 -m unittest discover -s tests -p 'test_libcpp_kext_ppc_zero_array.py' -v
