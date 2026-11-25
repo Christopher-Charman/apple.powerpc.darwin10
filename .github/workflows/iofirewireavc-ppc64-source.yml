@@ -1,0 +1,37 @@
+name: IOFireWireAVC PPC64 plugin source regression
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/IOFireWireAVC-406.4.0/IOFireWireAVC.xcode/project.pbxproj
+      - src/releases/10.6.8/IOFireWireAVC-406.4.0/IOFireWireAVC.xcode/project.pbxproj
+      - patches/IOFireWireAVC-406.4.0-ppc64-plugin.patch
+      - patches/IOFireWireAVC-406.4.0-ppc64-plugin.json
+      - tests/test_iofirewireavc_ppc64_plugin.py
+      - .github/workflows/iofirewireavc-ppc64-source.yml
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/IOFireWireAVC-406.4.0/IOFireWireAVC.xcode/project.pbxproj
+      - src/releases/10.6.8/IOFireWireAVC-406.4.0/IOFireWireAVC.xcode/project.pbxproj
+      - patches/IOFireWireAVC-406.4.0-ppc64-plugin.patch
+      - patches/IOFireWireAVC-406.4.0-ppc64-plugin.json
+      - tests/test_iofirewireavc_ppc64_plugin.py
+      - .github/workflows/iofirewireavc-ppc64-source.yml
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify official source delta and plugin architecture settings
+        run: python3 -m unittest discover -s tests -p 'test_iofirewireavc_ppc64_plugin.py' -v
