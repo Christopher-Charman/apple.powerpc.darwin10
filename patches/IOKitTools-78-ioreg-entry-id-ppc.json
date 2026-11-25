@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOKitTools-78",
+  "source_tree_sha": "c684c84aaf15faf330e18f3965376613e66bd9d7",
+  "patch": "patches/IOKitTools-78-ioreg-entry-id-ppc.patch",
+  "rationale": "Guard the registry entry ID output on KERN_SUCCESS in ioreg -s. Apple IOKitTools-82 makes the identical correction; see docs/provenance/iokittools-78-ioreg-entry-id-ppc.md.",
+  "reviewer": "pending independent source review"
+}

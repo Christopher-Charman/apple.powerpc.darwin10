@@ -1,0 +1,37 @@
+name: IOKitTools ioreg PPC source regression
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/IOKitTools-78/ioreg.tproj/ioreg.c
+      - patches/IOKitTools-78-ioreg-entry-id-ppc.patch
+      - patches/IOKitTools-78-ioreg-entry-id-ppc.json
+      - docs/provenance/iokittools-78-ioreg-entry-id-ppc.md
+      - tests/test_iokittools_ppc_entry_id.py
+      - .github/workflows/iokittools-ppc-entry-id-source.yml
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/IOKitTools-78/ioreg.tproj/ioreg.c
+      - patches/IOKitTools-78-ioreg-entry-id-ppc.patch
+      - patches/IOKitTools-78-ioreg-entry-id-ppc.json
+      - docs/provenance/iokittools-78-ioreg-entry-id-ppc.md
+      - tests/test_iokittools_ppc_entry_id.py
+      - .github/workflows/iokittools-ppc-entry-id-source.yml
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify exact ioreg source delta and status guard
+        run: python3 -m unittest discover -s tests -p 'test_iokittools_ppc_entry_id.py' -v

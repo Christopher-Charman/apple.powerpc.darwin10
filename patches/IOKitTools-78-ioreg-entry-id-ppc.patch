@@ -1,0 +1,11 @@
+--- a/src/powerpc/IOKitTools-78/ioreg.tproj/ioreg.c
++++ b/src/powerpc/IOKitTools-78/ioreg.tproj/ioreg.c
+@@ -546,7 +546,7 @@
+ 	uint64_t entryID;
+ 
+         status = IORegistryEntryGetRegistryEntryID(service, &entryID);
+-        if (status == KERN_SUCCESS);
++        if (status == KERN_SUCCESS)
+ 	{
+ 	    print(", id 0x%llx", entryID);
+ 	}
