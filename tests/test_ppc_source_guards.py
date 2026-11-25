@@ -66,5 +66,42 @@ class CPANInternalPowerPCFlagsTests(unittest.TestCase):
         self.assertIn('+    extra_linker_flags => $ENV{RC_CFLAGS}', version)
 
 
+class IOGraphicsClamshellTests(unittest.TestCase):
+    """Source-only PPC PMU result declaration and exact Apple delta."""
+
+    def test_pristine_snapshot_and_exact_working_diff(self):
+        import difflib
+        import hashlib
+
+        relative = Path('IOGraphics-392.1/IOGraphicsFamily/IOFramebuffer.cpp')
+        pristine = (ROOT / 'src/releases/10.6.8' / relative).read_bytes()
+        working = (ROOT / 'src/powerpc' / relative).read_bytes()
+        blob = b'blob ' + str(len(pristine)).encode() + b'\0' + pristine
+        self.assertEqual(hashlib.sha1(blob).hexdigest(),
+                         '61909b23a44d09f5e84a84360e1a3eff5284c94c')
+        old = b'    ret = ApplePMUSendMiscCommand(readExtSwitches, 0, NULL, &iLen, &bootEnvIntData[0]);'
+        new = b'    IOReturn ret = ApplePMUSendMiscCommand(readExtSwitches, 0, NULL, &iLen, &bootEnvIntData[0]);'
+        self.assertEqual(pristine.count(old), 1)
+        self.assertEqual(working, pristine.replace(old, new))
+        path = 'src/powerpc/' + str(relative)
+        expected = ''.join(difflib.unified_diff(
+            pristine.decode().splitlines(keepends=True),
+            working.decode().splitlines(keepends=True),
+            fromfile='a/' + path, tofile='b/' + path))
+        self.assertEqual((ROOT / 'patches/IOGraphics-392.1-ppc-clamshell-ret.patch').read_text(),
+                         expected)
+        self.assertEqual(expected.count('@@ -'), 1)
+
+    def test_ppc_branch_uses_declared_result(self):
+        source = (ROOT / 'src/powerpc/IOGraphics-392.1/IOGraphicsFamily/IOFramebuffer.cpp').read_text()
+        function = source.split('void IOFramebuffer::readClamshellState()', 1)[1].split(
+            'extern "C" IOReturn\nIOGetHardwareClamshellState', 1)[0]
+        ppc = function.split('#if __ppc__', 1)[1].split('#elif defined(__i386__) || defined(__x86_64__)', 1)[0]
+        self.assertIn('IOReturn ret = ApplePMUSendMiscCommand(', ppc)
+        self.assertIn('if (kIOReturnSuccess == ret)', ppc)
+        self.assertLess(ppc.index('IOReturn ret ='), ppc.index('if (kIOReturnSuccess == ret)'))
+        self.assertIn('gIOFBLastClamshellState = bootEnvIntData[0];', ppc)
+
+
 if __name__ == '__main__':
     unittest.main()
