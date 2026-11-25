@@ -1,0 +1,39 @@
+name: Libc PPC64 OSAtomic source regression
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/Libc-594.9.5/ppc/sys/OSAtomic.s
+      - src/powerpc/Libc-594.9.5/ppc64/sys/Makefile.inc
+      - src/releases/10.6.8/Libc-594.9.5/ppc/sys/OSAtomic.s
+      - src/releases/10.5/Libc-498.1.7/ppc/sys/OSAtomic.s
+      - patches/Libc-594.9.5-ppc64-osatomic.patch
+      - tests/test_libc_ppc64_osatomic.py
+      - .github/workflows/libc-ppc64-osatomic-source.yml
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/Libc-594.9.5/ppc/sys/OSAtomic.s
+      - src/powerpc/Libc-594.9.5/ppc64/sys/Makefile.inc
+      - src/releases/10.6.8/Libc-594.9.5/ppc/sys/OSAtomic.s
+      - src/releases/10.5/Libc-498.1.7/ppc/sys/OSAtomic.s
+      - patches/Libc-594.9.5-ppc64-osatomic.patch
+      - tests/test_libc_ppc64_osatomic.py
+      - .github/workflows/libc-ppc64-osatomic-source.yml
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify Libc PPC64 OSAtomic source and exact patch
+        run: python3 -m unittest discover -s tests -p 'test_libc_ppc64_osatomic.py' -v
