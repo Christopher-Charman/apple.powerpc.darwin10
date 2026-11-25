@@ -53,6 +53,7 @@ jobs:
           python3 -m unittest discover -s tests -p "test_dtrace_ppc_arch.py" -v
           python3 -m unittest discover -s tests -p "test_dyld_ppc_assembly_abi.py" -v
           python3 -m unittest discover -s tests -p "test_libsystem_ppc_linker.py" -v
+          python3 -m unittest discover -s tests -p "test_libinfo_ppc_teredo_prefix.py" -v
           python3 -m unittest discover -s tests -p "test_dyld_ppc_static_arch.py" -v
           python3 -m unittest discover -s tests -p "test_ioata_ppc_abstract_registers.py" -v
           python3 -m unittest discover -s tests -p "test_iopcifamily_ppc_cpuid.py" -v
