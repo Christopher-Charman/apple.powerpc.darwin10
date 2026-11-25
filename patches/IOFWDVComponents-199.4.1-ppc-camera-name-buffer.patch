@@ -1,0 +1,20 @@
+--- a/src/powerpc/IOFWDVComponents-199.4.1/DVIsochComponent.c
++++ b/src/powerpc/IOFWDVComponents-199.4.1/DVIsochComponent.c
+@@ -825,7 +825,7 @@
+ 					
+ 					if ( vendorAndCameraName )
+ 					{
+-						stringFound = CFStringGetPascalString ( vendorAndCameraName, name, sizeof(name), CFStringGetSystemEncoding());
++						stringFound = CFStringGetPascalString ( vendorAndCameraName, name, sizeof(Str255), CFStringGetSystemEncoding());
+ 						CFRelease( vendorAndCameraName );
+ 					}
+ 					
+@@ -839,7 +839,7 @@
+ 
+ 		if(stringFound == false)
+ 		{
+-			CFStringGetPascalString ( CFSTR("DV"), name, sizeof(name), CFStringGetSystemEncoding());
++			CFStringGetPascalString ( CFSTR("DV"), name, sizeof(Str255), CFStringGetSystemEncoding());
+ 		}
+ 
+ 		CFRelease(cameraName);

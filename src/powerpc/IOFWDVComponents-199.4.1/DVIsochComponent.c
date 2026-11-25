@@ -825,7 +825,7 @@ static OSStatus cameraNameLookup(DeviceDescriptionPtr pDeviceDescription, UInt8 
 					
 					if ( vendorAndCameraName )
 					{
-						stringFound = CFStringGetPascalString ( vendorAndCameraName, name, sizeof(name), CFStringGetSystemEncoding());
+						stringFound = CFStringGetPascalString ( vendorAndCameraName, name, sizeof(Str255), CFStringGetSystemEncoding());
 						CFRelease( vendorAndCameraName );
 					}
 					
@@ -839,7 +839,7 @@ static OSStatus cameraNameLookup(DeviceDescriptionPtr pDeviceDescription, UInt8 
 
 		if(stringFound == false)
 		{
-			CFStringGetPascalString ( CFSTR("DV"), name, sizeof(name), CFStringGetSystemEncoding());
+			CFStringGetPascalString ( CFSTR("DV"), name, sizeof(Str255), CFStringGetSystemEncoding());
 		}
 
 		CFRelease(cameraName);
