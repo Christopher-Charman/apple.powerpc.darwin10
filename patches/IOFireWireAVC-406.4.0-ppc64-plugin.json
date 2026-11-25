@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOFireWireAVC-406.4.0",
+  "source_tree_sha": "3b421691f7d11c45d078061e32e109e9bdb4597c",
+  "patch": "patches/IOFireWireAVC-406.4.0-ppc64-plugin.patch",
+  "rationale": "Restore the PPC64 architecture for all four IOFireWireAVCLib user-space plugin configurations, as in the official 10.5.8 PowerPC predecessor. The 10.6.8 plugin otherwise cannot provide a PPC64 slice. See docs/provenance/iofirewireavc-406.4.0-ppc64-plugin.md.",
+  "reviewer": "pending independent source review"
+}

@@ -439,6 +439,7 @@
 			buildSettings = {
 				ARCHS = (
 					ppc,
+					ppc64,
 					i386,
 					x86_64,
 				);
@@ -473,6 +474,7 @@
 			buildSettings = {
 				ARCHS = (
 					ppc,
+					ppc64,
 					i386,
 					x86_64,
 				);
@@ -504,6 +506,7 @@
 			buildSettings = {
 				ARCHS = (
 					ppc,
+					ppc64,
 					i386,
 					x86_64,
 				);
@@ -534,6 +537,7 @@
 			buildSettings = {
 				ARCHS = (
 					ppc,
+					ppc64,
 					i386,
 					x86_64,
 				);
