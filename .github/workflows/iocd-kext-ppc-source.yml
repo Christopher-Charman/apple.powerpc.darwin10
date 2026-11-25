@@ -1,0 +1,35 @@
+name: IOCD KEXT PPC source regression
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/IOCDStorageFamily-47.1/IOCDStorageFamily.xcodeproj/project.pbxproj
+      - src/releases/10.6.8/IOCDStorageFamily-47.1/IOCDStorageFamily.xcodeproj/project.pbxproj
+      - patches/IOCDStorageFamily-47.1-ppc-kext-arch.patch
+      - tests/test_iocd_kext_ppc_arch.py
+      - .github/workflows/iocd-kext-ppc-source.yml
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/IOCDStorageFamily-47.1/IOCDStorageFamily.xcodeproj/project.pbxproj
+      - src/releases/10.6.8/IOCDStorageFamily-47.1/IOCDStorageFamily.xcodeproj/project.pbxproj
+      - patches/IOCDStorageFamily-47.1-ppc-kext-arch.patch
+      - tests/test_iocd_kext_ppc_arch.py
+      - .github/workflows/iocd-kext-ppc-source.yml
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify PPC target settings and exact source patch
+        run: python3 -m unittest discover -s tests -p 'test_iocd_kext_ppc_arch.py' -v
