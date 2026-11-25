@@ -1689,7 +1689,12 @@ int dkioctl(dev_t dev, u_long cmd, caddr_t data, int flags, proc_t proc)
 
             // Delete unused data from the media.
 
-            if ( request.extents == 0 )  { error = EINVAL;  break; }
+            if ( request.extents == 0 ||
+                 request.extentsCount > 0xFFFFFFFFU / sizeof(IOStorageExtent) )
+            {
+                error = EINVAL;
+                break;
+            }
 
             extents = IONew(IOStorageExtent, request.extentsCount);
 

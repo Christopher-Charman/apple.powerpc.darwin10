@@ -1,0 +1,16 @@
+--- a/src/powerpc/IOStorageFamily-116.1.41/IOMediaBSDClient.cpp
++++ b/src/powerpc/IOStorageFamily-116.1.41/IOMediaBSDClient.cpp
+@@ -1689,7 +1689,12 @@
+ 
+             // Delete unused data from the media.
+ 
+-            if ( request.extents == 0 )  { error = EINVAL;  break; }
++            if ( request.extents == 0 ||
++                 request.extentsCount > 0xFFFFFFFFU / sizeof(IOStorageExtent) )
++            {
++                error = EINVAL;
++                break;
++            }
+ 
+             extents = IONew(IOStorageExtent, request.extentsCount);
+ 
