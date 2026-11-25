@@ -1111,7 +1111,7 @@ IOReturn IOFireWireSBP2ORB::setCommandBuffersAsRanges(  IOVirtualRange * ranges,
 	IOAddressRange * address_ranges = NULL;
     if( status == kIOReturnSuccess )
 	{
-		IOAddressRange * address_ranges = IONew( IOAddressRange, withCount );
+		address_ranges = IONew( IOAddressRange, withCount );
 		if( address_ranges == NULL )
 		{
 			status = kIOReturnNoMemory;
