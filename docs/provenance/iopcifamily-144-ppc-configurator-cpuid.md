@@ -1,0 +1,9 @@
+# IOPCIFamily-144 PowerPC configurator root range
+
+The 10.6.8 release manifest names Apple `IOPCIFamily-144` (annotated tag commit `9782da0dcd06c621eea00415e5cd3dde809a45dc`). The pristine file is `src/releases/10.6.8/IOPCIFamily-144/IOPCIConfigurator.cpp`, Git blob `059bec1d17194bcf822e8d1ca8f2e1c71e0225a8`. The 10.5.8 manifest names the PowerPC-compatible predecessor `IOPCIFamily-110` (tag commit `7c447f8c91ab8b4492b6b9f3e5015046477350be`). Both versions guard x86-only `IOPCIDeviceI386.cpp` and retain `__ppc__` mapped I/O and big-endian PCI address fields. The working `IOPCIFamily-144` tree had only the separately documented project-wide `ARCHS = ppc` change before this patch.
+
+In 144, `IOPCIConfigurator.cpp` includes `<i386/cpuid.h>` only for x86, but `createRoot()` calls `cpuid_info()` unconditionally to reserve a synthetic top-of-physical-address PCI memory range. This is an x86-specific kernel symbol and has no PowerPC declaration. The predecessor did not call it. On PowerPC, `IOPCIBridge::start()` invokes the 144 configurator for a host bridge; the configurator later imports that bridge's reported ranges through `addHostBridge()`. The unconditional call therefore blocks the PowerPC source path before host ranges can be used.
+
+The exact patch is `patches/IOPCIFamily-144-ppc-configurator-cpuid.patch`. It confines the x86 synthetic range and its local variables to the same architecture guard as the x86 header. The PowerPC path keeps the root entry and obtains PCI ranges from the host bridge. x86 range behavior is unchanged. No release snapshot is modified.
+
+Source-only verification: `python3 -m unittest discover -s tests -p 'test_iopcifamily_ppc_cpuid.py' -v`. The test pins the pristine Apple blob, checks the exact patch and checks the guarded call and host range path. No compilation, linking, build, hardware or runtime validation was performed. PPC32/64 kernel ABI and PCI enumeration remain unverified.

@@ -284,9 +284,11 @@ void CLASS::removeFixedRanges(IORegistryEntry * root)
 bool CLASS::createRoot(void)
 {
     IOPCIConfigEntry * root;
+#if defined(__i386__) || defined(__x86_64__)
     IOPCIRange *       range;
     uint64_t           start, size;
-	uint32_t           cpuPhysBits;
+    uint32_t           cpuPhysBits;
+#endif
 
     root = IONew(IOPCIConfigEntry, 1);
     if (!root) return (false);
@@ -298,6 +300,9 @@ bool CLASS::createRoot(void)
 
     root->secBusNum    = 0xff;
 
+#if defined(__i386__) || defined(__x86_64__)
+    // This synthetic top-of-physical-address range is specific to x86.
+    // Other platforms receive their PCI ranges from addHostBridge().
 	cpuPhysBits = cpuid_info()->cpuid_address_bits_physical;
 	start = (1ULL << cpuPhysBits) - PFM64_SIZE;
     size  = PFM64_SIZE;
@@ -307,6 +312,7 @@ bool CLASS::createRoot(void)
     IOPCIRangeInit(range, kIOPCIResourceTypeMemory, start, size, 1);
     range->size = range->proposedSize;
     root->ranges[kIOPCIRangeBridgeMemory] = range;
+#endif
 
     root->deviceState |= kPCIDeviceStateScanned | kPCIDeviceStateConfigurationDone;
 
