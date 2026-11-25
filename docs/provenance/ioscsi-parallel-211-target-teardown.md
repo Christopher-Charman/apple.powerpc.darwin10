@@ -1,0 +1,11 @@
+# IOSCSIParallelFamily 211.0.0 target teardown
+
+- Target: PowerPC Darwin 10.6.8 working source, `src/powerpc/IOSCSIParallelFamily-211.0.0/`.
+- Official source: Apple `IOSCSIParallelFamily-211.0.0`, commit `5dbb3079ef254fe83044f0d27d4b3e616af62529`, APSL 2.0 (`APPLE_LICENSE`). The pristine repository snapshot is `src/releases/10.6.8/IOSCSIParallelFamily-211.0.0/`, tree `6a25deee6a351df57f1920beaf47dfe984c6b422`; its controller blob is `e693f1c8a8d67001807288c9bb750732e50f49e8`.
+- PPC predecessor: Apple `IOSCSIParallelFamily-152.1.1`, commit `caea6808b2d626d1e02116755684b615de5d1838`, listed in Apple's 10.5.8 release manifest. It has the same inclusive target-creation bound and target lookup, but no target-destruction loop in `willTerminate()`. The intervening `201.0.1` source also has no such loop. Apple 211 introduced the loop, with an exclusive bound.
+
+`start()` creates target IDs from zero through `fHighestSupportedDeviceID`, inclusive, when the HBA does not manage devices. An HBA that manages devices can create the highest ID through `CreateTargetForID()`. `GetTargetForID()` explicitly accepts that value. In Apple 211, `willTerminate()` destroys only IDs strictly below it. When a device occupies the final ID, the controller leaves it in the device list and does not call its `DestroyTarget()` and `terminate()` methods through this path. The edge case is immediate when the highest supported ID is zero. `DestroyTargetForID()` already returns safely when an ID has no device (including the initiator ID).
+
+The working-source correction changes that one comparison to `<=`. This is an architecture-neutral lifecycle defect in the 10.6.8 source; correcting it also covers PowerPC HBAs. It preserves the 211 lifecycle changes, release version, interfaces, and the earlier PPC architecture setting. The pristine Apple release tree is unchanged.
+
+Source-only regression: `python3 -m unittest discover -s tests -p 'test_ioscsi_parallel_target_teardown.py' -v`. The test pins the pristine controller blob, checks the exact one-line working-source delta, and checks the creation, lookup, and teardown bounds. No compile, link, build, or hardware validation has been performed; behavior on PPC hardware remains unverified.

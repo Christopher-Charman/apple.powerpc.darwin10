@@ -1,0 +1,39 @@
+name: IOSCSI Parallel target teardown source regression
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/IOSCSIParallelFamily-211.0.0/IOSCSIParallelInterfaceController.cpp
+      - src/releases/10.6.8/IOSCSIParallelFamily-211.0.0/IOSCSIParallelInterfaceController.cpp
+      - patches/IOSCSIParallelFamily-211.0.0-ppc-target-teardown.patch
+      - patches/IOSCSIParallelFamily-211.0.0-ppc-target-teardown.json
+      - docs/provenance/ioscsi-parallel-211-target-teardown.md
+      - tests/test_ioscsi_parallel_target_teardown.py
+      - .github/workflows/ioscsi-parallel-target-teardown-source.yml
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/IOSCSIParallelFamily-211.0.0/IOSCSIParallelInterfaceController.cpp
+      - src/releases/10.6.8/IOSCSIParallelFamily-211.0.0/IOSCSIParallelInterfaceController.cpp
+      - patches/IOSCSIParallelFamily-211.0.0-ppc-target-teardown.patch
+      - patches/IOSCSIParallelFamily-211.0.0-ppc-target-teardown.json
+      - docs/provenance/ioscsi-parallel-211-target-teardown.md
+      - tests/test_ioscsi_parallel_target_teardown.py
+      - .github/workflows/ioscsi-parallel-target-teardown-source.yml
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Check final target teardown source
+        run: python3 -m unittest discover -s tests -p 'test_ioscsi_parallel_target_teardown.py' -v
