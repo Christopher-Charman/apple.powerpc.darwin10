@@ -1,0 +1,37 @@
+name: IOATAPI logger PPC source regression
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/IOATAPIProtocolTransport-251.0.1/ATAPILogger/ATAPILogger.xcodeproj/project.pbxproj
+      - src/powerpc/IOATAPIProtocolTransport-251.0.1/IOATAPIProtocolTransport.xcodeproj/project.pbxproj
+      - src/releases/10.6.8/IOATAPIProtocolTransport-251.0.1/ATAPILogger/ATAPILogger.xcodeproj/project.pbxproj
+      - patches/IOATAPIProtocolTransport-251.0.1-ppc-logger-arch.patch
+      - tests/test_ioatapi_logger_ppc_arch.py
+      - .github/workflows/ioatapi-logger-ppc-source.yml
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/IOATAPIProtocolTransport-251.0.1/ATAPILogger/ATAPILogger.xcodeproj/project.pbxproj
+      - src/powerpc/IOATAPIProtocolTransport-251.0.1/IOATAPIProtocolTransport.xcodeproj/project.pbxproj
+      - src/releases/10.6.8/IOATAPIProtocolTransport-251.0.1/ATAPILogger/ATAPILogger.xcodeproj/project.pbxproj
+      - patches/IOATAPIProtocolTransport-251.0.1-ppc-logger-arch.patch
+      - tests/test_ioatapi_logger_ppc_arch.py
+      - .github/workflows/ioatapi-logger-ppc-source.yml
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify logger PPC architecture and exact source patch
+        run: python3 -m unittest discover -s tests -p 'test_ioatapi_logger_ppc_arch.py' -v
