@@ -1,0 +1,11 @@
+--- a/src/powerpc/Libinfo-330.10/lookup.subproj/si_getaddrinfo.c
++++ b/src/powerpc/Libinfo-330.10/lookup.subproj/si_getaddrinfo.c
+@@ -98,7 +98,7 @@
+ 	if (s == NULL) return NET_TYPE_UNKNOWN;
+ 	else if (s->sa_family == AF_INET) return NET_TYPE_V4;
+ 	else if (s->sa_family != AF_INET6) return NET_TYPE_UNKNOWN;
+-	else if (sa6->sin6_addr.__u6_addr.__u6_addr32[0] == ntohs(TEREDO_PREFIX_32)) return NET_TYPE_TEREDO;
++	else if (sa6->sin6_addr.__u6_addr.__u6_addr32[0] == ntohl(TEREDO_PREFIX_32)) return NET_TYPE_TEREDO;
+ 	else if (sa6->sin6_addr.__u6_addr.__u6_addr16[0] == ntohs(V6TO4_PREFIX_16)) return NET_TYPE_6TO4;
+ 	else if (IN6_IS_ADDR_LINKLOCAL(&(sa6->sin6_addr))) return NET_TYPE_LINKLOCAL;
+ 	else if (IN6_IS_ADDR_SITELOCAL(&(sa6->sin6_addr))) return NET_TYPE_SITELOCAL;
