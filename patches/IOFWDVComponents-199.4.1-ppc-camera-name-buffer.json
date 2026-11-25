@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOFWDVComponents-199.4.1",
+  "source_tree_sha": "99f6d5e6e9923d89e7e4ec969d1de4ab3ba5e887",
+  "patch": "patches/IOFWDVComponents-199.4.1-ppc-camera-name-buffer.patch",
+  "rationale": "Use the caller-owned Str255 capacity for both CFStringGetPascalString calls; sizeof(name) measures a PPC32 pointer and prevents localized FireWire DV camera names. See docs/provenance/iofwdvcomponents-199.4.1-ppc-camera-name-buffer.md.",
+  "reviewer": "pending independent source review"
+}
