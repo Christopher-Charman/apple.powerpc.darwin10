@@ -2476,7 +2476,7 @@ static inline void ConvertHexToBinaryFastWithNtoHL( const char *inHex, int len, 
 	register unsigned char *tptr = outBin;
 
 #if TARGET_RT_BIG_ENDIAN
-	for ( idx = 0; idx < len; idx++ ) {
+	for ( idx = 0; idx < len / 2; idx++ ) {
 		*tptr = nibbleTable[(int)(*inHex++) - 0x30] << 4;
 		*tptr++ |= nibbleTable[(int)(*inHex++) - 0x30];
 	}
