@@ -1,0 +1,12 @@
+--- a/src/releases/10.6.8/Libcpp_kext-8/new_opvnt.cc
++++ b/src/powerpc/Libcpp_kext-8/new_opvnt.cc
+@@ -36,6 +36,9 @@
+ void *
+ operator new[] (unsigned long sz, const std::nothrow_t& /* nothrow */) 
+ {
++  /* PowerPC Darwin 10 restoration, 2026-11-25: kern_os_malloc(0)
++     returns NULL; match the scalar and kernel array operators. */
++  if (sz == 0) sz = 1;
+   return kern_os_malloc(sz);
+ }
+ #endif /* defined(__i386__) || defined(__ppc__) */
