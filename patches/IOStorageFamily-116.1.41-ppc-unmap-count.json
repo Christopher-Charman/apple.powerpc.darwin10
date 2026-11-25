@@ -1,0 +1,10 @@
+{
+  "target": "10.6.8 PowerPC32",
+  "source_tree": "src/releases/10.6.8/IOStorageFamily-116.1.41",
+  "source_tree_sha": "c04a62175aea17a0c46a086ab91fa3e8aeab4cc5",
+  "upstream_tag": "IOStorageFamily-116.1.41",
+  "upstream_commit": "3c028686fe4475bb86f25713bd5f736c7354ecac",
+  "patch": "patches/IOStorageFamily-116.1.41-ppc-unmap-count.patch",
+  "rationale": "Bound the user supplied DKIOCUNMAP extent count before the 32-bit kernel allocation and copy length multiplication; see docs/provenance/iostoragefamily-116.1.41-ppc-unmap-count.md.",
+  "reviewer": "pending independent source review"
+}

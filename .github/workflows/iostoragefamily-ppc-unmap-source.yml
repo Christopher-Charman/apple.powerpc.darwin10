@@ -1,0 +1,41 @@
+name: IOStorageFamily PPC unmap count source regression
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/IOStorageFamily-116.1.41/IOMediaBSDClient.cpp
+      - src/releases/10.6.8/IOStorageFamily-116.1.41/IOMediaBSDClient.cpp
+      - src/releases/10.6.8/IOStorageFamily-116.1.41/IOStorage.h
+      - src/releases/10.6.8/xnu-1504.15.3/bsd/sys/disk.h
+      - src/releases/10.6.8/xnu-1504.15.3/iokit/IOKit/IOLib.h
+      - patches/IOStorageFamily-116.1.41-ppc-unmap-count.patch
+      - tests/test_iostoragefamily_ppc_unmap_count.py
+      - .github/workflows/iostoragefamily-ppc-unmap-source.yml
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/IOStorageFamily-116.1.41/IOMediaBSDClient.cpp
+      - src/releases/10.6.8/IOStorageFamily-116.1.41/IOMediaBSDClient.cpp
+      - src/releases/10.6.8/IOStorageFamily-116.1.41/IOStorage.h
+      - src/releases/10.6.8/xnu-1504.15.3/bsd/sys/disk.h
+      - src/releases/10.6.8/xnu-1504.15.3/iokit/IOKit/IOLib.h
+      - patches/IOStorageFamily-116.1.41-ppc-unmap-count.patch
+      - tests/test_iostoragefamily_ppc_unmap_count.py
+      - .github/workflows/iostoragefamily-ppc-unmap-source.yml
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify IOStorageFamily PPC32 unmap count bound and exact patch
+        run: python3 -m unittest discover -s tests -p 'test_iostoragefamily_ppc_unmap_count.py' -v
