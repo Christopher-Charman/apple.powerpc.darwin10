@@ -502,7 +502,7 @@ IOSCSIParallelInterfaceController::willTerminate (
 	// Prevent any new requests from being sent to the controller.
 	fHBACanAcceptClientRequests = false;
 
-	for ( index = 0; index < fHighestSupportedDeviceID; index++ )
+	for ( index = 0; index <= fHighestSupportedDeviceID; index++ )
 	{		
 		DestroyTargetForID ( index );
 	}

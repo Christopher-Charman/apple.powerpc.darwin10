@@ -1,0 +1,14 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOSCSIParallelFamily-211.0.0",
+  "source_tree_sha": "6a25deee6a351df57f1920beaf47dfe984c6b422",
+  "upstream": "https://github.com/apple-oss-distributions/IOSCSIParallelFamily",
+  "upstream_tag": "IOSCSIParallelFamily-211.0.0",
+  "upstream_commit": "5dbb3079ef254fe83044f0d27d4b3e616af62529",
+  "ppc_predecessor_tag": "IOSCSIParallelFamily-152.1.1",
+  "ppc_predecessor_commit": "caea6808b2d626d1e02116755684b615de5d1838",
+  "source_blob_sha": "e693f1c8a8d67001807288c9bb750732e50f49e8",
+  "patch": "patches/IOSCSIParallelFamily-211.0.0-ppc-target-teardown.patch",
+  "rationale": "The 211.0.0 willTerminate loop excludes fHighestSupportedDeviceID although start creates that ID and GetTargetForID accepts it. Include the final target during teardown for PPC HBA use; the lifecycle defect is architecture-neutral. See docs/provenance/ioscsi-parallel-211-target-teardown.md.",
+  "reviewer": "pending independent source review"
+}
