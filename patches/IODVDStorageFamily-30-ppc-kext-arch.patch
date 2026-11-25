@@ -1,0 +1,18 @@
+--- a/src/powerpc/IODVDStorageFamily-30/IODVDStorageFamily.xcodeproj/project.pbxproj
++++ b/src/powerpc/IODVDStorageFamily-30/IODVDStorageFamily.xcodeproj/project.pbxproj
+@@ -312,6 +312,7 @@
+ 		60218F94095B74720026C3D8 /* Debug */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 				COPY_PHASE_STRIP = NO;
+ 				GCC_OPTIMIZATION_LEVEL = 0;
+ 				INFOPLIST_FILE = Info.plist;
+@@ -328,6 +329,7 @@
+ 		60218F95095B74720026C3D8 /* Release */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = ppc;
+ 				INFOPLIST_FILE = Info.plist;
+ 				INFOPLIST_PREPROCESS = YES;
+ 				INSTALL_PATH = "$(SYSTEM_LIBRARY_DIR)/Extensions";
