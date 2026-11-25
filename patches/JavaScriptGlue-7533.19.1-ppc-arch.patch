@@ -1,0 +1,11 @@
+--- a/src/powerpc/JavaScriptGlue-7533.19.1/Configurations/DebugRelease.xcconfig
++++ b/src/powerpc/JavaScriptGlue-7533.19.1/Configurations/DebugRelease.xcconfig
+@@ -27,7 +27,7 @@
+ ARCHS_ = $(ARCHS_1040);
+ ARCHS_1040 = $(NATIVE_ARCH);
+ ARCHS_1050 = $(NATIVE_ARCH);
+-ARCHS_1060 = $(ARCHS_STANDARD_32_64_BIT);
++ARCHS_1060 = ppc $(ARCHS_STANDARD_32_64_BIT);
+ ARCHS_1070 = $(ARCHS_STANDARD_32_64_BIT);
+ 
+ ONLY_ACTIVE_ARCH = YES;
