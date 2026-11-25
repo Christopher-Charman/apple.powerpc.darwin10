@@ -6866,7 +6866,7 @@ void IOFramebuffer::readClamshellState()
     UInt8 bootEnvIntData[32];
     IOByteCount iLen = sizeof(UInt8);
 
-    ret = ApplePMUSendMiscCommand(readExtSwitches, 0, NULL, &iLen, &bootEnvIntData[0]);
+    IOReturn ret = ApplePMUSendMiscCommand(readExtSwitches, 0, NULL, &iLen, &bootEnvIntData[0]);
     if (kIOReturnSuccess == ret)
     {
 		gIOFBLastClamshellState = bootEnvIntData[0];

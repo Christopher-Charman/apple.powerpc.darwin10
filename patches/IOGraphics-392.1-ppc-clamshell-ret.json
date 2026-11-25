@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOGraphics-392.1",
+  "source_tree_sha": "ed07eb1e310d0f0a2ac01946619e0590e37ce60d",
+  "patch": "patches/IOGraphics-392.1-ppc-clamshell-ret.patch",
+  "rationale": "Declare the PPC-only PMU call result in IOFramebuffer::readClamshellState; the 10.6.8 Apple source uses ret without a declaration after the 10.5.8 function refactor. See docs/provenance/iographics-392.1-ppc-clamshell-ret.md.",
+  "reviewer": "pending independent source review"
+}
