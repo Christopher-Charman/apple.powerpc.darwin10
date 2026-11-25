@@ -1139,6 +1139,7 @@
 				ARCHS = (
 					i386,
 					ppc,
+					ppc64,
 					x86_64,
 				);
 				BUILD_SETTING = "";
@@ -1188,6 +1189,7 @@
 				ARCHS = (
 					i386,
 					ppc,
+					ppc64,
 					x86_64,
 				);
 				BUILD_SETTING = "";
@@ -1234,6 +1236,7 @@
 				ARCHS = (
 					i386,
 					ppc,
+					ppc64,
 					x86_64,
 				);
 				BUILD_SETTING = "";
@@ -1280,6 +1283,7 @@
 				ARCHS = (
 					i386,
 					ppc,
+					ppc64,
 					x86_64,
 				);
 				BUILD_SETTING = "";

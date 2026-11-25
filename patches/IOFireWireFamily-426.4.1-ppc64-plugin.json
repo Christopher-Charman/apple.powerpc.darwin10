@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/IOFireWireFamily-426.4.1",
+  "source_tree_sha": "26cae0d41edc63ce6cd26fd6aedc671711bf78a4",
+  "patch": "patches/IOFireWireFamily-426.4.1-ppc64-plugin.patch",
+  "rationale": "Restore PPC64 in all four IOFireWireLib user-space plugin configurations from the official 10.5.8 PowerPC predecessor. The 10.6.8 project retains PPC32 and 64-bit source paths but otherwise cannot select a PPC64 plugin slice. See docs/provenance/iofirewirefamily-426.4.1-ppc64-plugin.md.",
+  "reviewer": "pending independent source review"
+}
