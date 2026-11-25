@@ -546,7 +546,7 @@ static void show( io_registry_entry_t service,
 	uint64_t entryID;
 
         status = IORegistryEntryGetRegistryEntryID(service, &entryID);
-        if (status == KERN_SUCCESS);
+        if (status == KERN_SUCCESS)
 	{
 	    print(", id 0x%llx", entryID);
 	}
