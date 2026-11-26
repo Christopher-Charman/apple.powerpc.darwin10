@@ -1,0 +1,35 @@
+name: RubyGems PowerPC Darwin 10 source contract
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/RubyGems-17.1/rubygems/lib/rubygems/platform.rb'
+      - 'patches/RubyGems-17.1-ppc-darwin10-platform.patch'
+      - 'tests/test_rubygems_ppc_platform.py'
+      - 'docs/provenance/rubygems-17.1-ppc-darwin10-platform.md'
+      - '.github/workflows/rubygems-ppc-platform-source.yml'
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/RubyGems-17.1/rubygems/lib/rubygems/platform.rb'
+      - 'patches/RubyGems-17.1-ppc-darwin10-platform.patch'
+      - 'tests/test_rubygems_ppc_platform.py'
+      - 'docs/provenance/rubygems-17.1-ppc-darwin10-platform.md'
+      - '.github/workflows/rubygems-ppc-platform-source.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  rubygems-ppc-platform-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify exact patch and Ruby platform matching without a build
+        run: python3 -m unittest discover -s tests -p 'test_rubygems_ppc_platform.py' -v
