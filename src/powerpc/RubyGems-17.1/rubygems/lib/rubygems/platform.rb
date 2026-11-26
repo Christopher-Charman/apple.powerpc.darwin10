@@ -150,9 +150,9 @@ class Gem::Platform
               when 'java', 'jruby'        then [nil,         'java',    nil   ]
               when /mswin32(\_(\d+))?/    then ['x86',       'mswin32', $2    ]
               when 'powerpc-darwin'       then ['powerpc',   'darwin',  nil   ]
-              when /powerpc-darwin(\d)/   then ['powerpc',   'darwin',  $1    ]
+              when /powerpc-darwin(\d+)/   then ['powerpc',   'darwin',  $1    ]
               when /sparc-solaris2.8/     then ['sparc',     'solaris', '2.8' ]
-              when /universal-darwin(\d)/ then ['universal', 'darwin',  $1    ]
+              when /universal-darwin(\d+)/ then ['universal', 'darwin',  $1    ]
               else                             other
               end
 
