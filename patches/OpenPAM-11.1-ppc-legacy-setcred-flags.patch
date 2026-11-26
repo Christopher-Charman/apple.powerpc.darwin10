@@ -1,0 +1,36 @@
+--- a/src/powerpc/OpenPAM-11.1/compat/pam_shim.c
++++ b/src/powerpc/OpenPAM-11.1/compat/pam_shim.c
+@@ -68,7 +68,7 @@
+ 
+ 
+ #define xlate(oldname, oldvalue, newname, newvalue) \
+-    COMPAT_AUTH_##oldname = oldvalue,
++    COMPAT_SETCRED_##oldname = oldvalue,
+ enum {
+ #include "pam_shim_setcred_flags.h"
+ };
+@@ -80,7 +80,7 @@
+ 	int newflags = 0;
+ 
+ #define xlate(oldname, oldvalue, newname, newvalue) \
+-    if (flags & COMPAT_AUTH_##oldname) newflags |= newname;
++    if (flags & COMPAT_SETCRED_##oldname) newflags |= newname;
+ #include "pam_shim_setcred_flags.h"
+ #undef xlate
+ 	return newflags;
+@@ -179,7 +179,7 @@
+ int
+ pam_setcred(pam_handle_t *pamh, int flags)
+ {
+-	int newflags = xlate_pam_shim_authenticate_flags(flags);
++	int newflags = xlate_pam_shim_setcred_flags(flags);
+ 	void *openpam = dlopen(libopenpam, RTLD_LOCAL | RTLD_LAZY | RTLD_FIRST);
+ 	if (NULL == openpam) dlfailure("pam_setcred");
+ 	pam_setcred_func func = dlsym(openpam, "pam_setcred");
+--- a/src/powerpc/OpenPAM-11.1/compat/pam_shim_setcred_flags.h
++++ b/src/powerpc/OpenPAM-11.1/compat/pam_shim_setcred_flags.h
+@@ -1,3 +1,4 @@
++xlate(PAM_SILENT, 0x8000U, PAM_SILENT, (-0x7fffffff - 1))
+ xlate(PAM_ESTABLISH_CRED, 0x0002U, PAM_ESTABLISH_CRED, 0x1)
+ xlate(PAM_DELETE_CRED, 0x0004U, PAM_DELETE_CRED, 0x2)
+ xlate(PAM_REINITIALIZE_CRED, 0x0008U, PAM_REINITIALIZE_CRED, 0x4)
