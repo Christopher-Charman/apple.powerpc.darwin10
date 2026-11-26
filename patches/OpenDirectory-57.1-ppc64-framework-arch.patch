@@ -1,0 +1,55 @@
+--- a/src/powerpc/OpenDirectory-57.1/OpenDirectory.xcodeproj/project.pbxproj
++++ b/src/powerpc/OpenDirectory-57.1/OpenDirectory.xcodeproj/project.pbxproj
+@@ -481,6 +481,7 @@
+ 			buildSettings = {
+ 				ARCHS = (
+ 					ppc,
++					ppc64,
+ 					i386,
+ 					x86_64,
+ 				);
+@@ -519,6 +520,7 @@
+ 			buildSettings = {
+ 				ARCHS = (
+ 					ppc,
++					ppc64,
+ 					i386,
+ 					x86_64,
+ 				);
+@@ -556,6 +558,7 @@
+ 			buildSettings = {
+ 				ARCHS = (
+ 					ppc,
++					ppc64,
+ 					i386,
+ 					x86_64,
+ 				);
+@@ -683,6 +686,7 @@
+ 				ARCHS = (
+ 					i386,
+ 					ppc,
++					ppc64,
+ 					x86_64,
+ 				);
+ 				COPY_PHASE_STRIP = NO;
+@@ -738,6 +742,12 @@
+ 		6B3E4C7208E5866D00BF138E /* Deployment */ = {
+ 			isa = XCBuildConfiguration;
+ 			buildSettings = {
++				ARCHS = (
++					i386,
++					ppc,
++					ppc64,
++					x86_64,
++				);
+ 				COPY_PHASE_STRIP = YES;
+ 				CURRENT_PROJECT_VERSION = 1;
+ 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+@@ -789,6 +799,7 @@
+ 				ARCHS = (
+ 					i386,
+ 					ppc,
++					ppc64,
+ 					x86_64,
+ 				);
+ 				COPY_PHASE_STRIP = NO;
