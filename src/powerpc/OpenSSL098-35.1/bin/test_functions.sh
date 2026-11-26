@@ -21,13 +21,8 @@ make_arch_cache()
 	then
 		for arch in $ARCHS
 		do
-			# Cannot do ppc since there is no /bin/sh for ppc
-			if [ "$arch" != "`echo $arch | sed "s@ppc@@g"`" ]
-			then
-				continue
-			fi
-
-			valid="`arch -${arch} echo YES 2>/dev/null`"
+			# Probe the shell used by the test scripts for this architecture.
+			valid="`arch -${arch} /bin/sh -c 'echo YES' 2>/dev/null`"
 			if [ "$valid" == "YES" ]
 			then
 				echo " $arch" >> "$ARCH_CACHE"
