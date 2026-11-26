@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/OpenSSL098-35.1",
+  "source_tree_sha": "a7a892ee95c12b5d59c947b759fb283982206c97",
+  "patch": "patches/OpenSSL098-35.1-ppc-test-arch.patch",
+  "rationale": "Select a PowerPC OpenSSL test architecture when the host can execute /bin/sh under -ppc, rather than excluding PPC unconditionally. The shell probe retains the official skip on hosts without a PPC shell. See docs/provenance/openssl098-35.1-ppc-test-arch.md.",
+  "reviewer": "pending independent source review"
+}

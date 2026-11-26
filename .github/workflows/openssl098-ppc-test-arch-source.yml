@@ -1,0 +1,35 @@
+name: OpenSSL098 PPC test architecture source regression
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/OpenSSL098-35.1/bin/test_functions.sh'
+      - 'patches/OpenSSL098-35.1-ppc-test-arch.patch'
+      - 'patches/OpenSSL098-35.1-ppc-test-arch.json'
+      - 'tests/test_openssl098_ppc_test_arch.py'
+      - '.github/workflows/openssl098-ppc-test-arch-source.yml'
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/OpenSSL098-35.1/bin/test_functions.sh'
+      - 'patches/OpenSSL098-35.1-ppc-test-arch.patch'
+      - 'patches/OpenSSL098-35.1-ppc-test-arch.json'
+      - 'tests/test_openssl098_ppc_test_arch.py'
+      - '.github/workflows/openssl098-ppc-test-arch-source.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  openssl098-ppc-test-arch-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify exact Apple source delta and PPC shell selection
+        run: python3 -m unittest discover -s tests -p 'test_openssl098_ppc_test_arch.py' -v
