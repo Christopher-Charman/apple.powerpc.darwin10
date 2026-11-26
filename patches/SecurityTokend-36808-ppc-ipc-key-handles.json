@@ -1,0 +1,10 @@
+{
+  "target": "10.6.8 PowerPC32/PowerPC64",
+  "source_tree": "src/releases/10.6.8/SecurityTokend-36808",
+  "source_tree_sha": "84bf32ccb71c46e98aea7040e4703edaf463a415",
+  "upstream_tag": "SecurityTokend-36808",
+  "upstream_commit": "4883b6673ee521f082a7d9c6c3a34f73e596af69",
+  "patch": "patches/SecurityTokend-36808-ppc-ipc-key-handles.patch",
+  "rationale": "Translate the wrapping and base-key IPC handles before native tokend calls; see docs/provenance/securitytokend-36808-ppc-ipc-key-handles.md.",
+  "reviewer": "pending independent source review"
+}
