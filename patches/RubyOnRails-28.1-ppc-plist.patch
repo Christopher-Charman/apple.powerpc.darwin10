@@ -1,0 +1,14 @@
+--- a/src/powerpc/RubyOnRails-28.1/RubyOnRails.plist
++++ b/src/powerpc/RubyOnRails-28.1/RubyOnRails.plist
+@@ -630,3 +630,4 @@
+         </array>
+     </dict>
+ </array>
++</plist>
+--- a/src/powerpc/RubyOnRails-28.1/gen_plist.rb
++++ b/src/powerpc/RubyOnRails-28.1/gen_plist.rb
+@@ -40,3 +40,4 @@
+ end
+ 
+ out "</array>"
++out "</plist>"
