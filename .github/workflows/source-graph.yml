@@ -65,3 +65,4 @@ jobs:
           python3 -m unittest discover -s tests -p "test_javascriptglue_ppc_arch.py" -v
           python3 -m unittest discover -s tests -p "test_libm_ppc64_arch.py" -v
           python3 -m unittest discover -s tests -p "test_mysql55_ppc_config.py" -v
+          python3 -m unittest discover -s tests -p "test_opendirectory_ppc64_framework_arch.py" -v
