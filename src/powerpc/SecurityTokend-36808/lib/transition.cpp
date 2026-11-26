@@ -361,7 +361,8 @@ kern_return_t tokend_server_wrapKey(TOKEND_ARGS, CONTEXT_ARGS,
 	CssmData ddata(DATA(descriptiveData));
 	Return<CssmKey> rKey(wrappedKey, wrappedKeyLength, wrappedKeyBase);
     CSSM_HANDLE keyHandle = TokendHandleObject::findTDHandle(hSubjectKey);
-	CALL(wrapKey, (&context, hWrappingKey, wrappingKey, cred,
+	CSSM_HANDLE wrapKeyHandle = TokendHandleObject::findTDHandle(hWrappingKey);
+	CALL(wrapKey, (&context, wrapKeyHandle, wrappingKey, cred,
 		keyHandle, subjectKey, descriptiveData ? &ddata : NULL, &rKey));
 	END_IPC(CSP)
 }
@@ -414,7 +415,8 @@ kern_return_t tokend_server_deriveKey(TOKEND_ARGS, CONTEXT_ARGS,
 		CssmError::throwMe(CSSMERR_CSP_INVALID_ATTR_ALG_PARAMS);
 	Return<CssmKey> rKey(key, keyLength, keyBase);
     CSSM_HANDLE cssmKeyHandle;
-	CALL(deriveKey, (&context, hBaseKey, baseKey, cred, owner, &paramInput->baseData,
+	CSSM_HANDLE baseKeyHandle = TokendHandleObject::findTDHandle(hBaseKey);
+	CALL(deriveKey, (&context, baseKeyHandle, baseKey, cred, owner, &paramInput->baseData,
 		usage, attrs, &cssmKeyHandle, &rKey));
     *hKey = TokendHandleObject::make(cssmKeyHandle)->ipcHandle();
 	OutputData(paramOutput, paramOutputLength) = paramInput->baseData;
