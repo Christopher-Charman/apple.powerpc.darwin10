@@ -64,9 +64,9 @@ my $SyscallBase = 'libc.syscall';
 # list.
 ##########################################################################
 sub processLibc {
-    my($arch, $dir) = @_;
+    my($arch, $dir, $sufname) = @_;
     local $_;
-    my $file = File::Spec->join($dir, 'libc-partial.a');
+    my $file = File::Spec->join($dir, "libc-partial$sufname.a");
     my $f = IO::File->new("$ENV{NM} -g -arch $arch $file |");
     die "$MyName: $ENV{NM} -g -arch $arch $file: $!\n" unless defined($f);
     while(<$f>) {
@@ -147,7 +147,7 @@ die "$MyName: $form: Unknown form\n" unless defined($suf);
 my($suffix, $sufname) = @$suf;
 readStub($usr_local_lib_system);
 readLibcSyscalls($arch, $usr_local_lib_system);
-processLibc($arch, $usr_local_lib_system);
+processLibc($arch, $usr_local_lib_system, $sufname);
 
 ##########################################################################
 # Invert the Stub hash, so the key will correspond to the file to process.

@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/Libsystem-125.2.11",
+  "source_tree_sha": "44420cfcf31da8aa56fd3fca740fe8c47b72cd32",
+  "patch": "patches/Libsystem-125.2.11-ppc-form-archive.patch",
+  "rationale": "Restore per-form libc-partial archive selection when scanning syscall wrappers for PPC32/PPC64 debug and profile Libsystem outputs. Apple's PPC-compatible Libsystem-111.1.4 passed the form suffix; Libsystem-125.2.11 drops it while retaining form-specific archive inputs. See docs/provenance/Libsystem-125.2.11-ppc-form-archive.md.",
+  "reviewer": "pending independent source review"
+}

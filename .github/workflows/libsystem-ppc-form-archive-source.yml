@@ -1,0 +1,37 @@
+name: Libsystem PowerPC form archive source
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/Libsystem-125.2.11/libsys/build-libc.pl'
+      - 'src/releases/10.6.8/Libsystem-125.2.11/libsys/build-libc.pl'
+      - 'patches/Libsystem-125.2.11-ppc-form-archive.patch'
+      - 'patches/Libsystem-125.2.11-ppc-form-archive.json'
+      - 'tests/test_libsystem_ppc_form_archive.py'
+      - '.github/workflows/libsystem-ppc-form-archive-source.yml'
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/Libsystem-125.2.11/libsys/build-libc.pl'
+      - 'src/releases/10.6.8/Libsystem-125.2.11/libsys/build-libc.pl'
+      - 'patches/Libsystem-125.2.11-ppc-form-archive.patch'
+      - 'patches/Libsystem-125.2.11-ppc-form-archive.json'
+      - 'tests/test_libsystem_ppc_form_archive.py'
+      - '.github/workflows/libsystem-ppc-form-archive-source.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify source and patch only
+        run: python3 -m unittest discover -s tests -p 'test_libsystem_ppc_form_archive.py' -v
