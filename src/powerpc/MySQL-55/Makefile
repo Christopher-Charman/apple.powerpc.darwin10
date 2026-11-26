@@ -375,6 +375,7 @@ libmysqld/ha_innodb.cc \
 sql/ha_innodb.cc
 
 APPLE_PATCH_BASE_DIR	= $(SRCROOT)/patch/apple
+APPLE_PRECONFIG_FILES_TO_PATCH = config.h.in innobase/ib_config.h.in
 GOOGLE_PATCH_BASE_DIR	= $(SRCROOT)/patch/google/5.0.67
 
 configure-do-all: configure-banner configure-do-pre-patch configure-do-config configure-do-post-patch
@@ -393,6 +394,11 @@ configure-do-pre-patch:
 		$(SILENT) $(ECHO) "# `date +%Y/%m/%d\ %H:%M:%S` [MySQL] * applying Google pre-configure patches; arch=$(cur_arch)"; \
 		$(foreach cur_file, $(GOOGLE_PRECONFIG_FILES_TO_PATCH), \
 			$(SILENT) $(CD) $(CUR_ARCH_SRC); $(PATCH) -u $(cur_file) $(GOOGLE_PATCH_BASE_DIR)/$(cur_file).patch; \
+		) \
+	)
+	$(foreach cur_arch, $(MYSQL_ARCHS), \
+		$(foreach cur_file, $(APPLE_PRECONFIG_FILES_TO_PATCH), \
+			$(SILENT) $(CD) $(CUR_ARCH_SRC); $(PATCH) -u $(cur_file) $(APPLE_PATCH_BASE_DIR)/$(cur_file).patch; \
 		) \
 	)
 
