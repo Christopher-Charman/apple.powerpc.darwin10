@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/Libm-315",
+  "source_tree_sha": "f8b70b4fcea0a66c766359cd58f3b50329b90aad",
+  "patch": "patches/Libm-315-ppc64-arch.patch",
+  "rationale": "Restore desktop PPC64 architecture selection and its predecessor per-architecture settings in Libm-315. Apple Libm-292.4 selected PPC64; Libm-315 retains PowerPC sources and PPC64 export lists but removes it from desktop ARCHS and VALID_ARCHS. See docs/provenance/libm-315-ppc64-arch.md.",
+  "reviewer": "pending independent source review"
+}

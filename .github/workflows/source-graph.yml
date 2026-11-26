@@ -63,3 +63,4 @@ jobs:
           python3 -m unittest discover -s tests -p "test_ppc_cross_compile.py" -v
           python3 -m unittest discover -s tests -p "test_cf_ppc64_halt.py" -v
           python3 -m unittest discover -s tests -p "test_javascriptglue_ppc_arch.py" -v
+          python3 -m unittest discover -s tests -p "test_libm_ppc64_arch.py" -v

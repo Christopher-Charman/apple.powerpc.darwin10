@@ -1,0 +1,164 @@
+--- a/src/powerpc/Libm-315/Libm.xcodeproj/project.pbxproj
++++ b/src/powerpc/Libm-315/Libm.xcodeproj/project.pbxproj
+@@ -6878,6 +6878,7 @@
+ 				ARCHS = (
+ 					armv6,
+ 					ppc,
++					ppc64,
+ 					i386,
+ 					x86_64,
+ 				);
+@@ -6932,23 +6933,27 @@
+ 				PER_ARCH_CFLAGS_COMMENT = "Standard Xcode way of setting compile flags on a per architecture basis";
+ 				PER_ARCH_CFLAGS_i386 = "$(USE_SSE3)";
+ 				PER_ARCH_CFLAGS_ppc = "-fdollars-in-identifiers  -mtune=970 -force_cpusubtype_ALL -fsched-interblock -falign-loops=16 -falign-jumps=16 -falign-functions=16 -falign-jumps-max-skip=15 -falign-loops-max-skip=15 -malign-natural";
++				PER_ARCH_CFLAGS_ppc64 = "$(PER_ARCH_CFLAGS_ppc) -mcpu=970 -Wshorten-64-to-32";
+ 				PER_ARCH_CFLAGS_x86_64 = "-Wshorten-64-to-32 -msse3 $(PER_OS_SSSE3_NAME)";
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_COMMENT = "We generally use different exports files for Intel vs. PowerPC. Set these values using PER_ARCH_EXPORTED_SYMBOLS_FILE_(Intel/PowerPC).";
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_Intel = "";
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_PowerPC = "";
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_i386 = "$(PER_ARCH_EXPORTED_SYMBOLS_FILE_Intel)";
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_ppc = "$(PER_ARCH_EXPORTED_SYMBOLS_FILE_PowerPC)";
++				PER_ARCH_EXPORTED_SYMBOLS_FILE_ppc64 = "$(PER_ARCH_EXPORTED_SYMBOLS_FILE_PowerPC)";
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_x86_64 = "$(PER_ARCH_EXPORTED_SYMBOLS_FILE_Intel)";
+ 				PER_ARCH_HEADER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH_$(CURRENT_ARCH)) $(PER_ARCH_SRCROOT)";
+ 				PER_ARCH_HEADER_PATH_COMMENT = "Sets the search path where to find arch-specific headers like fenv.h and math.h. Value shown in PER_ARCH_HEADER_PATH is not accurate.";
+ 				PER_ARCH_HEADER_PATH_i386 = architecture/i386;
+ 				PER_ARCH_HEADER_PATH_ppc = architecture/ppc;
++				PER_ARCH_HEADER_PATH_ppc64 = architecture/ppc;
+ 				PER_ARCH_HEADER_PATH_x86_64 = architecture/i386;
+ 				PER_ARCH_SRCROOT = "$(PER_ARCH_SRCROOT_$(CURRENT_ARCH))";
+ 				PER_ARCH_SRCROOT_COMMENT = "Used by INCLUDED_SOURCE_FILE_NAMES to set which directories per architecture to get source files from. Value shown in PER_ARCH_SRCROOT is not accurate.";
+ 				PER_ARCH_SRCROOT_armv6 = "$(SRCROOT)/Source/ARM";
+ 				PER_ARCH_SRCROOT_i386 = "$(SRCROOT)/Source/Intel";
+ 				PER_ARCH_SRCROOT_ppc = "$(SRCROOT)/Source/PowerPC";
++				PER_ARCH_SRCROOT_ppc64 = "$(SRCROOT)/Source/PowerPC";
+ 				PER_ARCH_SRCROOT_x86_64 = "$(SRCROOT)/Source/Intel";
+ 				PER_OS_SSSE3_NAME = "$(PER_OS_SSSE3_NAME_$(IS_THIS_OS_TIGER))";
+ 				PER_OS_SSSE3_NAME_ = "-mssse3";
+@@ -6962,7 +6967,7 @@
+ 				RC_XBS__RC_FORCE_SSE3_YES = "-msse3";
+ 				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+ 				USE_SSE3 = "$(RC_XBS_$(RC_XBS)_RC_FORCE_SSE3_$(RC_FORCE_SSE3))";
+-				VALID_ARCHS = "ppc i386 x86_64 armv5 armv6 armv7";
++				VALID_ARCHS = "ppc ppc64 i386 x86_64 armv5 armv6 armv7";
+ 				WARNING_CFLAGS = (
+ 					"-Wmost",
+ 					"-Wstrict-prototypes",
+@@ -6982,6 +6987,7 @@
+ 				ARCHS = (
+ 					armv6,
+ 					ppc,
++					ppc64,
+ 					i386,
+ 					x86_64,
+ 				);
+@@ -7039,23 +7045,27 @@
+ 				PER_ARCH_CFLAGS_armv6 = "-DARMLIBM_FENV_SUPPORT";
+ 				PER_ARCH_CFLAGS_i386 = "$(USE_SSE3)";
+ 				PER_ARCH_CFLAGS_ppc = "-fdollars-in-identifiers  -mtune=970 -force_cpusubtype_ALL -fsched-interblock -falign-loops=16 -falign-jumps=16 -falign-functions=16 -falign-jumps-max-skip=15 -falign-loops-max-skip=15 -malign-natural";
++				PER_ARCH_CFLAGS_ppc64 = "$(PER_ARCH_CFLAGS_ppc) -mcpu=970 -Wshorten-64-to-32";
+ 				PER_ARCH_CFLAGS_x86_64 = "-Wshorten-64-to-32 -msse3 $(PER_OS_SSSE3_NAME)";
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_COMMENT = "We generally use different exports files for Intel vs. PowerPC. Set these values using PER_ARCH_EXPORTED_SYMBOLS_FILE_(Intel/PowerPC).";
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_Intel = "";
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_PowerPC = "";
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_i386 = "$(PER_ARCH_EXPORTED_SYMBOLS_FILE_Intel)";
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_ppc = "$(PER_ARCH_EXPORTED_SYMBOLS_FILE_PowerPC)";
++				PER_ARCH_EXPORTED_SYMBOLS_FILE_ppc64 = "$(PER_ARCH_EXPORTED_SYMBOLS_FILE_PowerPC)";
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_x86_64 = "$(PER_ARCH_EXPORTED_SYMBOLS_FILE_Intel)";
+ 				PER_ARCH_HEADER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH_$(CURRENT_ARCH)) $(PER_ARCH_SRCROOT)";
+ 				PER_ARCH_HEADER_PATH_COMMENT = "Sets the search path where to find arch-specific headers like fenv.h and math.h. Value shown in PER_ARCH_HEADER_PATH is not accurate.";
+ 				PER_ARCH_HEADER_PATH_i386 = architecture/i386;
+ 				PER_ARCH_HEADER_PATH_ppc = architecture/ppc;
++				PER_ARCH_HEADER_PATH_ppc64 = architecture/ppc;
+ 				PER_ARCH_HEADER_PATH_x86_64 = architecture/i386;
+ 				PER_ARCH_SRCROOT = "$(PER_ARCH_SRCROOT_$(CURRENT_ARCH))";
+ 				PER_ARCH_SRCROOT_COMMENT = "Used by INCLUDED_SOURCE_FILE_NAMES to set which directories per architecture to get source files from. Value shown in PER_ARCH_SRCROOT is not accurate.";
+ 				PER_ARCH_SRCROOT_armv6 = "$(SRCROOT)/Source/ARM";
+ 				PER_ARCH_SRCROOT_i386 = "$(SRCROOT)/Source/Intel";
+ 				PER_ARCH_SRCROOT_ppc = "$(SRCROOT)/Source/PowerPC";
++				PER_ARCH_SRCROOT_ppc64 = "$(SRCROOT)/Source/PowerPC";
+ 				PER_ARCH_SRCROOT_x86_64 = "$(SRCROOT)/Source/Intel";
+ 				PER_OS_SSSE3_NAME = "$(PER_OS_SSSE3_NAME_$(IS_THIS_OS_TIGER))";
+ 				PER_OS_SSSE3_NAME_ = "-mssse3";
+@@ -7069,7 +7079,7 @@
+ 				RC_XBS__RC_FORCE_SSE3_YES = "-msse3";
+ 				SDKROOT = "";
+ 				USE_SSE3 = "$(RC_XBS_$(RC_XBS)_RC_FORCE_SSE3_$(RC_FORCE_SSE3))";
+-				VALID_ARCHS = "ppc i386 x86_64 armv5 armv6 armv7";
++				VALID_ARCHS = "ppc ppc64 i386 x86_64 armv5 armv6 armv7";
+ 				WARNING_CFLAGS = (
+ 					"-Wmost",
+ 					"-Wstrict-prototypes",
+@@ -7135,7 +7145,7 @@
+ 				SKIP_INSTALL = YES;
+ 				STATIC_INSTALL_PATH = /usr/local/lib/system;
+ 				STATIC_PRODUCT_NAME = libmCommon;
+-				VALID_ARCHS = "i386 ppc x86_64";
++				VALID_ARCHS = "i386 ppc ppc64 x86_64";
+ 			};
+ 			name = Default;
+ 		};
+@@ -7268,7 +7278,7 @@
+ 				SKIP_INSTALL = YES;
+ 				STATIC_INSTALL_PATH = /usr/local/lib/system;
+ 				STATIC_PRODUCT_NAME = libmCommon;
+-				VALID_ARCHS = "i386 ppc x86_64";
++				VALID_ARCHS = "i386 ppc ppc64 x86_64";
+ 			};
+ 			name = Default;
+ 		};
+@@ -7358,7 +7368,7 @@
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = "$(LIBRARY_BASE_NAME).A$(LIBRARY_VERSION_SUFFIX)";
+ 				SKIP_INSTALL = NO;
+-				VALID_ARCHS = "i386 ppc x86_64";
++				VALID_ARCHS = "i386 ppc ppc64 x86_64";
+ 			};
+ 			name = Default;
+ 		};
+@@ -7489,7 +7499,7 @@
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_PowerPC = Exports/libmathCommonPowerPC.exp;
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = "$(LIBRARY_BASE_NAME).A$(LIBRARY_VERSION_SUFFIX)";
+-				VALID_ARCHS = "i386 ppc x86_64";
++				VALID_ARCHS = "i386 ppc ppc64 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"$(WARNING_CFLAGS)",
+ 					"-Wno-unused-function",
+@@ -7528,7 +7538,7 @@
+ 				LIBRARY_VERSION_SUFFIX = "";
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = "libmCommon$(LIBRARY_VERSION_SUFFIX)";
+-				VALID_ARCHS = "i386 ppc x86_64";
++				VALID_ARCHS = "i386 ppc ppc64 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"$(WARNING_CFLAGS)",
+ 					"-Wno-unused-function",
+@@ -7586,7 +7596,7 @@
+ 				PER_ARCH_EXPORTED_SYMBOLS_FILE_PowerPC = Exports/libmathCommonPowerPC.exp;
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = "$(LIBRARY_BASE_NAME).A$(LIBRARY_VERSION_SUFFIX)";
+-				VALID_ARCHS = "i386 ppc x86_64";
++				VALID_ARCHS = "i386 ppc ppc64 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"$(WARNING_CFLAGS)",
+ 					"-Wno-unused-function",
+@@ -7626,7 +7636,7 @@
+ 				LIBRARY_VERSION_SUFFIX = _debug;
+ 				PREBINDING = NO;
+ 				PRODUCT_NAME = "libmCommon$(LIBRARY_VERSION_SUFFIX)";
+-				VALID_ARCHS = "i386 ppc x86_64";
++				VALID_ARCHS = "i386 ppc ppc64 x86_64";
+ 				WARNING_CFLAGS = (
+ 					"$(WARNING_CFLAGS)",
+ 					"-Wno-unused-function",
+@@ -7910,7 +7920,7 @@
+ 				SKIP_INSTALL = YES;
+ 				STATIC_INSTALL_PATH = /usr/local/lib/system;
+ 				STATIC_PRODUCT_NAME = libmCommon;
+-				VALID_ARCHS = "i386 ppc x86_64";
++				VALID_ARCHS = "i386 ppc ppc64 x86_64";
+ 			};
+ 			name = Default;
+ 		};

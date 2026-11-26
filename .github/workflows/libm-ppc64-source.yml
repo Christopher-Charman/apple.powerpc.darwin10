@@ -1,0 +1,37 @@
+name: Libm PPC64 source regression
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/Libm-315/Libm.xcodeproj/project.pbxproj
+      - src/releases/10.6.8/Libm-315/Libm.xcodeproj/project.pbxproj
+      - patches/Libm-315-ppc64-arch.patch
+      - patches/Libm-315-ppc64-arch.json
+      - tests/test_libm_ppc64_arch.py
+      - .github/workflows/libm-ppc64-source.yml
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - src/powerpc/Libm-315/Libm.xcodeproj/project.pbxproj
+      - src/releases/10.6.8/Libm-315/Libm.xcodeproj/project.pbxproj
+      - patches/Libm-315-ppc64-arch.patch
+      - patches/Libm-315-ppc64-arch.json
+      - tests/test_libm_ppc64_arch.py
+      - .github/workflows/libm-ppc64-source.yml
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify official source delta and PPC64 project settings
+        run: python3 -m unittest discover -s tests -p 'test_libm_ppc64_arch.py' -v
