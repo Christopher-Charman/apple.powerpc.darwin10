@@ -1,0 +1,8 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/OpenSSH-142",
+  "source_tree_sha": "61ed67f1e2e434654d7c74323fcbf51074125f62",
+  "patch": "patches/OpenSSH-142-ppc-tun-alignment.patch",
+  "rationale": "Read and write Darwin tunnel address-family words through memcpy and inspect the IP version byte without casting channel byte buffers to aligned integer or struct pointers. This avoids undefined/misaligned 32-bit accesses on strict-alignment PowerPC. See docs/provenance/openssh-142-ppc-tun-alignment.md.",
+  "reviewer": "pending independent source review"
+}

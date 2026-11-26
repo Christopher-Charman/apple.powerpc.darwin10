@@ -204,40 +204,41 @@ sys_tun_infilter(struct Channel *c, char *buf, int len)
 {
 #if defined(SSH_TUN_PREPEND_AF)
 	char rbuf[CHAN_RBUF];
-	struct ip *iph;
 #endif
-	u_int32_t *af;
+	u_int32_t af;
 	char *ptr = buf;
 
 #if defined(SSH_TUN_PREPEND_AF)
-	if (len <= 0 || len > (int)(sizeof(rbuf) - sizeof(*af)))
+	if (len <= 0 || len > (int)(sizeof(rbuf) - sizeof(af)))
 		return (-1);
-	ptr = (char *)&rbuf[0];
-	bcopy(buf, ptr + sizeof(u_int32_t), len);
-	len += sizeof(u_int32_t);
-	af = (u_int32_t *)ptr;
+	ptr = rbuf;
+	bcopy(buf, ptr + sizeof(af), len);
+	len += sizeof(af);
 
-	iph = (struct ip *)(ptr + sizeof(u_int32_t));
-	switch (iph->ip_v) {
+	/* The IP version is the high nibble of the first packet byte. */
+	switch ((u_char)ptr[sizeof(af)] >> 4) {
 	case 6:
-		*af = AF_INET6;
+		af = AF_INET6;
 		break;
 	case 4:
 	default:
-		*af = AF_INET;
+		af = AF_INET;
 		break;
 	}
+	memcpy(ptr, &af, sizeof(af));
 #endif
 
 #if defined(SSH_TUN_COMPAT_AF)
-	if (len < (int)sizeof(u_int32_t))
+	if (len < (int)sizeof(af))
 		return (-1);
 
-	af = (u_int32_t *)ptr;
-	if (*af == htonl(AF_INET6))
-		*af = htonl(OPENBSD_AF_INET6);
+	/* The channel buffer need not be aligned for a 32-bit load. */
+	memcpy(&af, ptr, sizeof(af));
+	if (af == htonl(AF_INET6))
+		af = htonl(OPENBSD_AF_INET6);
 	else
-		*af = htonl(OPENBSD_AF_INET);
+		af = htonl(OPENBSD_AF_INET);
+	memcpy(ptr, &af, sizeof(af));
 #endif
 
 	buffer_put_string(&c->input, ptr, len);

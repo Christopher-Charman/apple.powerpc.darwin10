@@ -1,0 +1,65 @@
+--- a/src/powerpc/OpenSSH-142/openssh/openbsd-compat/port-tun.c
++++ b/src/powerpc/OpenSSH-142/openssh/openbsd-compat/port-tun.c
+@@ -204,40 +204,41 @@
+ {
+ #if defined(SSH_TUN_PREPEND_AF)
+ 	char rbuf[CHAN_RBUF];
+-	struct ip *iph;
+-#endif
+-	u_int32_t *af;
++#endif
++	u_int32_t af;
+ 	char *ptr = buf;
+ 
+ #if defined(SSH_TUN_PREPEND_AF)
+-	if (len <= 0 || len > (int)(sizeof(rbuf) - sizeof(*af)))
+-		return (-1);
+-	ptr = (char *)&rbuf[0];
+-	bcopy(buf, ptr + sizeof(u_int32_t), len);
+-	len += sizeof(u_int32_t);
+-	af = (u_int32_t *)ptr;
+-
+-	iph = (struct ip *)(ptr + sizeof(u_int32_t));
+-	switch (iph->ip_v) {
++	if (len <= 0 || len > (int)(sizeof(rbuf) - sizeof(af)))
++		return (-1);
++	ptr = rbuf;
++	bcopy(buf, ptr + sizeof(af), len);
++	len += sizeof(af);
++
++	/* The IP version is the high nibble of the first packet byte. */
++	switch ((u_char)ptr[sizeof(af)] >> 4) {
+ 	case 6:
+-		*af = AF_INET6;
++		af = AF_INET6;
+ 		break;
+ 	case 4:
+ 	default:
+-		*af = AF_INET;
++		af = AF_INET;
+ 		break;
+ 	}
++	memcpy(ptr, &af, sizeof(af));
+ #endif
+ 
+ #if defined(SSH_TUN_COMPAT_AF)
+-	if (len < (int)sizeof(u_int32_t))
+-		return (-1);
+-
+-	af = (u_int32_t *)ptr;
+-	if (*af == htonl(AF_INET6))
+-		*af = htonl(OPENBSD_AF_INET6);
++	if (len < (int)sizeof(af))
++		return (-1);
++
++	/* The channel buffer need not be aligned for a 32-bit load. */
++	memcpy(&af, ptr, sizeof(af));
++	if (af == htonl(AF_INET6))
++		af = htonl(OPENBSD_AF_INET6);
+ 	else
+-		*af = htonl(OPENBSD_AF_INET);
++		af = htonl(OPENBSD_AF_INET);
++	memcpy(ptr, &af, sizeof(af));
+ #endif
+ 
+ 	buffer_put_string(&c->input, ptr, len);
