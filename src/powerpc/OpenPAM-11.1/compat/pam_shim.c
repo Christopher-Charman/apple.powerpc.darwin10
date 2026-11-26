@@ -68,7 +68,7 @@ xlate_pam_shim_session_flags(int flags)
 
 
 #define xlate(oldname, oldvalue, newname, newvalue) \
-    COMPAT_AUTH_##oldname = oldvalue,
+    COMPAT_SETCRED_##oldname = oldvalue,
 enum {
 #include "pam_shim_setcred_flags.h"
 };
@@ -80,7 +80,7 @@ xlate_pam_shim_setcred_flags(int flags)
 	int newflags = 0;
 
 #define xlate(oldname, oldvalue, newname, newvalue) \
-    if (flags & COMPAT_AUTH_##oldname) newflags |= newname;
+    if (flags & COMPAT_SETCRED_##oldname) newflags |= newname;
 #include "pam_shim_setcred_flags.h"
 #undef xlate
 	return newflags;
@@ -179,7 +179,7 @@ typedef int (*pam_setcred_func)(pam_handle_t *, int);
 int
 pam_setcred(pam_handle_t *pamh, int flags)
 {
-	int newflags = xlate_pam_shim_authenticate_flags(flags);
+	int newflags = xlate_pam_shim_setcred_flags(flags);
 	void *openpam = dlopen(libopenpam, RTLD_LOCAL | RTLD_LAZY | RTLD_FIRST);
 	if (NULL == openpam) dlfailure("pam_setcred");
 	pam_setcred_func func = dlsym(openpam, "pam_setcred");

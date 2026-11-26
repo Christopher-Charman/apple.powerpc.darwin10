@@ -1,0 +1,35 @@
+name: OpenPAM legacy setcred source contract
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/OpenPAM-11.1/compat/pam_shim.c'
+      - 'src/powerpc/OpenPAM-11.1/compat/pam_shim_setcred_flags.h'
+      - 'patches/OpenPAM-11.1-ppc-legacy-setcred-flags.patch'
+      - 'tests/test_openpam_ppc_legacy_setcred.py'
+      - '.github/workflows/openpam-ppc-legacy-setcred-source.yml'
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/OpenPAM-11.1/compat/pam_shim.c'
+      - 'src/powerpc/OpenPAM-11.1/compat/pam_shim_setcred_flags.h'
+      - 'patches/OpenPAM-11.1-ppc-legacy-setcred-flags.patch'
+      - 'tests/test_openpam_ppc_legacy_setcred.py'
+      - '.github/workflows/openpam-ppc-legacy-setcred-source.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  openpam-legacy-setcred-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify OpenPAM legacy credential source contract
+        run: python3 -m unittest discover -s tests -p 'test_openpam_ppc_legacy_setcred.py' -v
