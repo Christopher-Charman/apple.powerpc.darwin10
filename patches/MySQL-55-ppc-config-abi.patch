@@ -1,0 +1,124 @@
+diff --git a/src/powerpc/MySQL-55/Makefile b/src/powerpc/MySQL-55/Makefile
+--- a/src/powerpc/MySQL-55/Makefile
++++ b/src/powerpc/MySQL-55/Makefile
+@@ -375,6 +375,7 @@
+ sql/ha_innodb.cc
+ 
+ APPLE_PATCH_BASE_DIR	= $(SRCROOT)/patch/apple
++APPLE_PRECONFIG_FILES_TO_PATCH = config.h.in innobase/ib_config.h.in
+ GOOGLE_PATCH_BASE_DIR	= $(SRCROOT)/patch/google/5.0.67
+ 
+ configure-do-all: configure-banner configure-do-pre-patch configure-do-config configure-do-post-patch
+@@ -393,6 +394,11 @@
+ 		$(SILENT) $(ECHO) "# `date +%Y/%m/%d\ %H:%M:%S` [MySQL] * applying Google pre-configure patches; arch=$(cur_arch)"; \
+ 		$(foreach cur_file, $(GOOGLE_PRECONFIG_FILES_TO_PATCH), \
+ 			$(SILENT) $(CD) $(CUR_ARCH_SRC); $(PATCH) -u $(cur_file) $(GOOGLE_PATCH_BASE_DIR)/$(cur_file).patch; \
++		) \
++	)
++	$(foreach cur_arch, $(MYSQL_ARCHS), \
++		$(foreach cur_file, $(APPLE_PRECONFIG_FILES_TO_PATCH), \
++			$(SILENT) $(CD) $(CUR_ARCH_SRC); $(PATCH) -u $(cur_file) $(APPLE_PATCH_BASE_DIR)/$(cur_file).patch; \
+ 		) \
+ 	)
+ 
+diff --git a/src/powerpc/MySQL-55/patch/apple/config.h.in.patch b/src/powerpc/MySQL-55/patch/apple/config.h.in.patch
+new file mode 100644
+--- /dev/null
++++ b/src/powerpc/MySQL-55/patch/apple/config.h.in.patch
+@@ -0,0 +1,48 @@
++--- a/config.h.in
+++++ b/config.h.in
++@@ -1050,13 +1050,25 @@
++ #undef SIZEOF_CHAR
++ 
++ /* The size of `char*', as computed by sizeof. */
++-#undef SIZEOF_CHARP
+++#if defined(__ppc64__) || defined(__x86_64__)
+++# define SIZEOF_CHARP 8
+++#elif defined(__ppc__) || defined(__i386__)
+++# define SIZEOF_CHARP 4
+++#else
+++# error Unsupported MySQL architecture
+++#endif
++ 
++ /* The size of `int', as computed by sizeof. */
++ #undef SIZEOF_INT
++ 
++ /* The size of `long', as computed by sizeof. */
++-#undef SIZEOF_LONG
+++#if defined(__ppc64__) || defined(__x86_64__)
+++# define SIZEOF_LONG 8
+++#elif defined(__ppc__) || defined(__i386__)
+++# define SIZEOF_LONG 4
+++#else
+++# error Unsupported MySQL architecture
+++#endif
++ 
++ /* The size of `long long', as computed by sizeof. */
++ #undef SIZEOF_LONG_LONG
++@@ -1158,14 +1170,10 @@
++ 
++ /* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
++    significant byte first (like Motorola and SPARC, unlike Intel). */
++-#if defined AC_APPLE_UNIVERSAL_BUILD
++-# if defined __BIG_ENDIAN__
++-#  define WORDS_BIGENDIAN 1
++-# endif
+++#if defined(__BIG_ENDIAN__) && __BIG_ENDIAN__
+++# define WORDS_BIGENDIAN 1
++ #else
++-# ifndef WORDS_BIGENDIAN
++-#  undef WORDS_BIGENDIAN
++-# endif
+++# undef WORDS_BIGENDIAN
++ #endif
++ 
++ /* Number of bits in a file offset, on hosts where this is settable. */
+diff --git a/src/powerpc/MySQL-55/patch/apple/innobase/ib_config.h.in.patch b/src/powerpc/MySQL-55/patch/apple/innobase/ib_config.h.in.patch
+new file mode 100644
+--- /dev/null
++++ b/src/powerpc/MySQL-55/patch/apple/innobase/ib_config.h.in.patch
+@@ -0,0 +1,43 @@
++--- a/innobase/ib_config.h.in
+++++ b/innobase/ib_config.h.in
++@@ -74,10 +74,22 @@
++ #undef SIZEOF_INT
++ 
++ /* The size of `long', as computed by sizeof. */
++-#undef SIZEOF_LONG
+++#if defined(__ppc64__) || defined(__x86_64__)
+++# define SIZEOF_LONG 8
+++#elif defined(__ppc__) || defined(__i386__)
+++# define SIZEOF_LONG 4
+++#else
+++# error Unsupported MySQL architecture
+++#endif
++ 
++ /* The size of `void*', as computed by sizeof. */
++-#undef SIZEOF_VOIDP
+++#if defined(__ppc64__) || defined(__x86_64__)
+++# define SIZEOF_VOIDP 8
+++#elif defined(__ppc__) || defined(__i386__)
+++# define SIZEOF_VOIDP 4
+++#else
+++# error Unsupported MySQL architecture
+++#endif
++ 
++ /* Define to 1 if you have the ANSI C header files. */
++ #undef STDC_HEADERS
++@@ -87,12 +99,8 @@
++ 
++ /* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
++    significant byte first (like Motorola and SPARC, unlike Intel). */
++-#if defined AC_APPLE_UNIVERSAL_BUILD
++-# if defined __BIG_ENDIAN__
++-#  define WORDS_BIGENDIAN 1
++-# endif
+++#if defined(__BIG_ENDIAN__) && __BIG_ENDIAN__
+++# define WORDS_BIGENDIAN 1
++ #else
++-# ifndef WORDS_BIGENDIAN
++-#  undef WORDS_BIGENDIAN
++-# endif
+++# undef WORDS_BIGENDIAN
++ #endif

@@ -1,0 +1,43 @@
+--- a/innobase/ib_config.h.in
++++ b/innobase/ib_config.h.in
+@@ -74,10 +74,22 @@
+ #undef SIZEOF_INT
+ 
+ /* The size of `long', as computed by sizeof. */
+-#undef SIZEOF_LONG
++#if defined(__ppc64__) || defined(__x86_64__)
++# define SIZEOF_LONG 8
++#elif defined(__ppc__) || defined(__i386__)
++# define SIZEOF_LONG 4
++#else
++# error Unsupported MySQL architecture
++#endif
+ 
+ /* The size of `void*', as computed by sizeof. */
+-#undef SIZEOF_VOIDP
++#if defined(__ppc64__) || defined(__x86_64__)
++# define SIZEOF_VOIDP 8
++#elif defined(__ppc__) || defined(__i386__)
++# define SIZEOF_VOIDP 4
++#else
++# error Unsupported MySQL architecture
++#endif
+ 
+ /* Define to 1 if you have the ANSI C header files. */
+ #undef STDC_HEADERS
+@@ -87,12 +99,8 @@
+ 
+ /* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
+    significant byte first (like Motorola and SPARC, unlike Intel). */
+-#if defined AC_APPLE_UNIVERSAL_BUILD
+-# if defined __BIG_ENDIAN__
+-#  define WORDS_BIGENDIAN 1
+-# endif
++#if defined(__BIG_ENDIAN__) && __BIG_ENDIAN__
++# define WORDS_BIGENDIAN 1
+ #else
+-# ifndef WORDS_BIGENDIAN
+-#  undef WORDS_BIGENDIAN
+-# endif
++# undef WORDS_BIGENDIAN
+ #endif

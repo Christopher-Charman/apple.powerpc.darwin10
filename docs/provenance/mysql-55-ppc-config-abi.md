@@ -1,0 +1,9 @@
+# MySQL-55 generated config ABI for PowerPC
+
+The 10.6.8 release member is Apple's `MySQL-55` tag, commit `4282e61a1a08a9ddaabda34414c09f89ac709575`. The unchanged working Makefile and pristine release Makefile had Git blob `31a827b735c95813ce576eabc09d494f327983b7`. The unchanged `mysql-5.0.92-apple.tar.gz` has SHA-256 `80f59a00c127bbb97934cea3616770eff1b9d22fff69478cb4afc1899fd9b856`.
+
+The wrapper configures a separate tree for every `RC_ARCHS` member, but feeds the full `RC_CFLAGS` architecture list to each configure pass. Its generated `config.h` and InnoDB `ib_config.h` can therefore contain one probe result for multiple slices. In particular, `SIZEOF_CHARP`, `SIZEOF_LONG`, `SIZEOF_VOIDP`, and `WORDS_BIGENDIAN` cannot safely be shared between PowerPC and Intel slices. Apple's PPC-era `MySQL-45` tag (`be4951db9336697cc8034b213b3c6d5129d9647e`) applied `config.h.sed` after configure to make these values architecture-dependent. MySQL-55 removed that correction while retaining the universal architecture workflow.
+
+This change applies two reviewable patches to the extracted `config.h.in` templates before configure, after the existing Google InnoDB pre-configure patches. They select 32- or 64-bit widths and endianness from `__ppc__`, `__ppc64__`, `__i386__`, `__x86_64__`, and `__BIG_ENDIAN__`. Keeping the correction in the templates prevents configure from substituting one fixed probe value into all slices. The source archive and `src/releases/10.6.8/` remain pristine. The exact working-tree source diff is `patches/MySQL-55-ppc-config-abi.patch`.
+
+`tests/test_mysql55_ppc_config.py` verifies the pinned archive, exact patch context, Makefile patch ordering, and architecture-sensitive definitions. This is source-only evidence; no configure, compilation, linking, installation, or hardware test was performed.
