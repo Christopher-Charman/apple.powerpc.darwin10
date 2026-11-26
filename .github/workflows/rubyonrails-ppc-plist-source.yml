@@ -1,0 +1,37 @@
+name: RubyOnRails PowerPC plist source contract
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/RubyOnRails-28.1/RubyOnRails.plist'
+      - 'src/powerpc/RubyOnRails-28.1/gen_plist.rb'
+      - 'patches/RubyOnRails-28.1-ppc-plist.patch'
+      - 'tests/test_rubyonrails_ppc_plist.py'
+      - 'docs/provenance/rubyonrails-28.1-ppc-plist.md'
+      - '.github/workflows/rubyonrails-ppc-plist-source.yml'
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/RubyOnRails-28.1/RubyOnRails.plist'
+      - 'src/powerpc/RubyOnRails-28.1/gen_plist.rb'
+      - 'patches/RubyOnRails-28.1-ppc-plist.patch'
+      - 'tests/test_rubyonrails_ppc_plist.py'
+      - 'docs/provenance/rubyonrails-28.1-ppc-plist.md'
+      - '.github/workflows/rubyonrails-ppc-plist-source.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  rubyonrails-ppc-plist-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify exact patch and parse plist with source-script tests
+        run: python3 -m unittest discover -s tests -p 'test_rubyonrails_ppc_plist.py' -v

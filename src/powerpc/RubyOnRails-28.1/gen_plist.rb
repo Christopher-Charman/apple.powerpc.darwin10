@@ -40,3 +40,4 @@ EOS
 end
 
 out "</array>"
+out "</plist>"
