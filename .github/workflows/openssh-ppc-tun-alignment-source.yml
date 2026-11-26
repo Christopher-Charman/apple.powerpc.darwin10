@@ -1,0 +1,35 @@
+name: OpenSSH PPC tunnel alignment source regression
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/OpenSSH-142/openssh/openbsd-compat/port-tun.c'
+      - 'patches/OpenSSH-142-ppc-tun-alignment.patch'
+      - 'patches/OpenSSH-142-ppc-tun-alignment.json'
+      - 'tests/test_openssh_ppc_tun_alignment.py'
+      - '.github/workflows/openssh-ppc-tun-alignment-source.yml'
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/OpenSSH-142/openssh/openbsd-compat/port-tun.c'
+      - 'patches/OpenSSH-142-ppc-tun-alignment.patch'
+      - 'patches/OpenSSH-142-ppc-tun-alignment.json'
+      - 'tests/test_openssh_ppc_tun_alignment.py'
+      - '.github/workflows/openssh-ppc-tun-alignment-source.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  openssh-tun-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify exact Apple source delta and Darwin tunnel filter
+        run: python3 -m unittest discover -s tests -p 'test_openssh_ppc_tun_alignment.py' -v

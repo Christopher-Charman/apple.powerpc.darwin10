@@ -1,0 +1,9 @@
+# OpenSSH-142 PowerPC tunnel filter alignment
+
+The editable `src/powerpc/OpenSSH-142` tree initially matched both the pristine `src/releases/10.6.8/OpenSSH-142` tree and Apple OSS tag [`OpenSSH-142`](https://github.com/apple-oss-distributions/OpenSSH/tree/OpenSSH-142), Git tree `61ed67f1e2e434654d7c74323fcbf51074125f62`. The affected `openssh/openbsd-compat/port-tun.c` blob was `ddc92d0f3f5562bbf36c274d2b86f950025632f7`. Apple's PPC-era [`OpenSSH-95.1.5`](https://github.com/apple-oss-distributions/OpenSSH/tree/OpenSSH-95.1.5) contains that same blob, so the alignment assumption was inherited, not a new 10.6.8 regression.
+
+`configure.ac` selects both `SSH_TUN_PREPEND_AF` and `SSH_TUN_COMPAT_AF` for Darwin. `port-tun.h` enables `SSH_TUN_FILTER`, and client and server channel paths register `sys_tun_infilter`. The filter places a four-byte address-family field before an IP packet in a `char` stack buffer, then formerly read and wrote that field through `u_int32_t *` and read the version through `struct ip *`. A byte buffer supplies no C alignment guarantee for these pointer types; strict-alignment PowerPC may fault or miscompile such accesses. The caller also supplies a `char` channel buffer for configurations using the compatibility filter without prepending.
+
+The working-tree correction reads the IP version from the first packet byte and copies the 32-bit family field through `memcpy`. It retains the existing family values, byte-order conversions, length checks, IPv4 fallback and tunnel framing. It does not enable a tunnel driver, which Darwin does not ship by default. No compiled or hardware behavior is claimed.
+
+The exact delta is `patches/OpenSSH-142-ppc-tun-alignment.patch`, with release and tree pin in the companion JSON manifest. `tests/test_openssh_ppc_tun_alignment.py` verifies the pristine Apple blob, exact patch, source operations and Darwin filter wiring using source text only.
