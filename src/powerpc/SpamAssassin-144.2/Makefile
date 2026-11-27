@@ -61,7 +61,7 @@ installsrc :
 make_sa :
 	$(SILENT) $(ECHO) "----------- Make Spam Assassin -----------"
 	$(SILENT) ($(CD) "$(SRCROOT)/SpamAssassin" && perl Makefile.PL PREFIX=/ DESTDIR=$(DSTROOT))
-	$(SILENT) ($(CD) "$(SRCROOT)/SpamAssassin" && make CFLAGS="$(CFLAGS))
+	$(SILENT) ($(CD) "$(SRCROOT)/SpamAssassin" && make CFLAGS="$(CFLAGS)")
 
 make_sa_install :
 	$(SILENT) $(ECHO) "--------- Make Install Spam Assassin ---------"
