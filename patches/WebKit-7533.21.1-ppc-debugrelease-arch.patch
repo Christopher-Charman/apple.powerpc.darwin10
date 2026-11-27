@@ -1,0 +1,11 @@
+--- a/src/powerpc/WebKit-7533.21.1/mac/Configurations/DebugRelease.xcconfig
++++ b/src/powerpc/WebKit-7533.21.1/mac/Configurations/DebugRelease.xcconfig
+@@ -27,7 +27,7 @@
+ ARCHS_ = $(ARCHS_1040);
+ ARCHS_1040 = $(NATIVE_ARCH);
+ ARCHS_1050 = $(NATIVE_ARCH);
+-ARCHS_1060 = $(ARCHS_STANDARD_32_64_BIT);
++ARCHS_1060 = ppc ppc64 $(ARCHS_STANDARD_32_64_BIT);
+ ARCHS_1070 = $(ARCHS_STANDARD_32_64_BIT);
+ 
+ ONLY_ACTIVE_ARCH = YES;

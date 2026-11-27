@@ -1,0 +1,10 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/WebKit-7533.21.1",
+  "source_tree_sha": "624549ce961623b62130e9bdea06b00f4eca3851",
+  "upstream_tag": "WebKit-7533.21.1",
+  "upstream_commit": "b1689f2c1aecee0ef35f1ae492672aec4085462b",
+  "patch": "patches/WebKit-7533.21.1-ppc-debugrelease-arch.patch",
+  "rationale": "Select PPC and PPC64 explicitly for WebKit's Mac 10.6 Debug/Release configurations while retaining standard Intel architectures; see docs/provenance/webkit-7533.21.1-ppc-debugrelease-arch.md.",
+  "reviewer": "pending independent source review"
+}
