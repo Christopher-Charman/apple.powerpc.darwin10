@@ -67,6 +67,7 @@ jobs:
           python3 -m unittest discover -s tests -p "test_mysql55_ppc_config.py" -v
           python3 -m unittest discover -s tests -p "test_opendirectory_ppc64_framework_arch.py" -v
           python3 -m unittest discover -s tests -p "test_targetconfig_ppc64_arch.py" -v
+          python3 -m unittest discover -s tests -p "test_x11apps_ppc32_exec_arch.py" -v
           python3 -m unittest discover -s tests -p "test_webkit_ppc_debugrelease_arch.py" -v
           python3 -m unittest discover -s tests -p "test_securitytokend_ppc_ipc_key_handles.py" -v
           python3 -m unittest discover -s tests -p "test_spamassassin_ppc_make_sa.py" -v
