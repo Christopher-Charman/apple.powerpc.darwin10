@@ -1,0 +1,10 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/SmartCardServices-36160",
+  "source_tree_sha": "5ad03be15dd61f0cae258aa964d9c2d2221eff92",
+  "upstream_tag": "SmartCardServices-36160",
+  "upstream_commit": "13d969e50893e52fab130055170aef624dd01817",
+  "patch": "patches/SmartCardServices-36160-ppc32-respawn.patch",
+  "rationale": "Prefer the matching 32-bit PowerPC slice when a PPC64 pcscd respawns for a 32-bit reader bundle; see docs/provenance/smartcardservices-36160-ppc32-respawn.md.",
+  "reviewer": "pending independent source review"
+}

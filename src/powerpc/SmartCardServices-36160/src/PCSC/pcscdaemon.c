@@ -693,7 +693,11 @@ void tryRespawn()
 {
 #if MAX_OS_X_VERSION_MIN_REQUIRED <= MAX_OS_X_VERSION_10_5
 	/* now try respawn */
+#if defined(__ppc__) || defined(__ppc64__)
+	static cpu_type_t only32cpu[] = { CPU_TYPE_POWERPC };
+#else
 	static cpu_type_t only32cpu[] = { CPU_TYPE_I386 };
+#endif
 	const size_t only32cpuSize = (sizeof(only32cpu) / sizeof(cpu_type_t));
 	
 	int rx;

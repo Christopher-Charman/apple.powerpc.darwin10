@@ -1,0 +1,34 @@
+name: SmartCardServices PPC32 respawn source
+
+on:
+  pull_request:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/SmartCardServices-36160/src/PCSC/pcscdaemon.c'
+      - 'patches/SmartCardServices-36160-ppc32-respawn.*'
+      - 'tests/test_smartcardservices_ppc32_respawn.py'
+      - '.github/workflows/smartcardservices-ppc32-respawn-source.yml'
+  push:
+    branches:
+      - PowerPC
+    paths:
+      - 'src/powerpc/SmartCardServices-36160/src/PCSC/pcscdaemon.c'
+      - 'patches/SmartCardServices-36160-ppc32-respawn.*'
+      - 'tests/test_smartcardservices_ppc32_respawn.py'
+      - '.github/workflows/smartcardservices-ppc32-respawn-source.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - name: Verify pinned source, exact patch, and architecture path
+        run: |
+          python3 -m unittest discover -s tests -p 'test_smartcardservices_ppc32_respawn.py' -v
