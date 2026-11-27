@@ -11,6 +11,15 @@
 			<key>TARGET_RT_BIG_ENDIAN</key>
 			<true/>
 		</dict>
+		<key>ppc64</key>
+		<dict>
+			<key>TARGET_CPU_PPC64</key>
+			<true/>
+			<key>TARGET_RT_64_BIT</key>
+			<true/>
+			<key>TARGET_RT_BIG_ENDIAN</key>
+			<true/>
+		</dict>
 		<key>i386</key>
 		<dict>
 			<key>TARGET_CPU_X86</key>
