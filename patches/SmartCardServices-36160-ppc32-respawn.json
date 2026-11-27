@@ -1,5 +1,5 @@
 {
-  "target": "10.6.8 PowerPC64 with 32-bit PowerPC smart-card reader drivers",
+  "target": "10.6.8",
   "source_tree": "src/releases/10.6.8/SmartCardServices-36160",
   "source_tree_sha": "5ad03be15dd61f0cae258aa964d9c2d2221eff92",
   "upstream_tag": "SmartCardServices-36160",
