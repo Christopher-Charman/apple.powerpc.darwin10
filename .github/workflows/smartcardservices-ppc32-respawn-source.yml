@@ -32,4 +32,3 @@ jobs:
       - name: Verify pinned source, exact patch, and architecture path
         run: |
           python3 -m unittest discover -s tests -p 'test_smartcardservices_ppc32_respawn.py' -v
-          python3 tools/ppc_patch_gate.py patches/SmartCardServices-36160-ppc32-respawn.json

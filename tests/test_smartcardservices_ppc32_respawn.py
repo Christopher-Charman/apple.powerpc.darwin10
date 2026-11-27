@@ -1,5 +1,6 @@
 """Source-only guard for SmartCardServices PPC64 to PPC32 reader respawn."""
 
+import difflib
 import hashlib
 import unittest
 from pathlib import Path
@@ -9,6 +10,7 @@ COMPONENT = Path("SmartCardServices-36160/src/PCSC")
 SOURCE = ROOT / "src/powerpc" / COMPONENT / "pcscdaemon.c"
 SNAPSHOT = ROOT / "src/releases/10.6.8" / COMPONENT / "pcscdaemon.c"
 READER = ROOT / "src/powerpc" / COMPONENT / "readerfactory.c"
+PATCH = ROOT / "patches/SmartCardServices-36160-ppc32-respawn.patch"
 OLD = b"\tstatic cpu_type_t only32cpu[] = { CPU_TYPE_I386 };\n"
 NEW = (b"#if defined(__ppc__) || defined(__ppc64__)\n"
        b"\tstatic cpu_type_t only32cpu[] = { CPU_TYPE_POWERPC };\n"
@@ -25,6 +27,13 @@ class SmartCardServicesRespawnTests(unittest.TestCase):
                          "a33281ea8bf27772e1b9393ea094bf5f15e383ca")
         self.assertEqual(original.count(OLD), 1)
         self.assertEqual(SOURCE.read_bytes(), original.replace(OLD, NEW))
+        fromfile = "a/src/powerpc/SmartCardServices-36160/src/PCSC/pcscdaemon.c"
+        tofile = "b/src/powerpc/SmartCardServices-36160/src/PCSC/pcscdaemon.c"
+        expected_patch = "".join(difflib.unified_diff(
+            original.decode().splitlines(keepends=True),
+            SOURCE.read_text().splitlines(keepends=True),
+            fromfile=fromfile, tofile=tofile))
+        self.assertEqual(PATCH.read_text(), expected_patch)
 
     def test_ppc64_reader_mismatch_reaches_matching_32_bit_slice(self):
         reader = READER.read_text()
