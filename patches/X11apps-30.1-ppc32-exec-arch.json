@@ -1,0 +1,10 @@
+{
+  "target": "10.6.8",
+  "source_tree": "src/releases/10.6.8/X11apps-30.1",
+  "source_tree_sha": "43531ce33f61a37652542c59433542890b986566",
+  "upstream_tag": "X11apps-30.1",
+  "upstream_commit": "0c764f59596b10773f667b7cc660d366cd8e0150",
+  "patch": "patches/X11apps-30.1-ppc32-exec-arch.patch",
+  "rationale": "Restore ppc to ordinary X11 application executable architecture selection while keeping ppc64 excluded and preserving the existing Intel selection; see docs/provenance/x11apps-30.1-ppc32-exec-arch.md.",
+  "reviewer": "pending independent source review"
+}

@@ -140,7 +140,7 @@ if($target eq 'install') {
         if($ENV{MACOSFORGE_RELEASE} eq "YES") {
             $arch_flags_exec .= " -arch $arch " unless $arch =~ /64/;
         } else {
-            $arch_flags_exec .= " -arch $arch " unless $arch =~ /ppc/;
+            $arch_flags_exec .= " -arch $arch " unless $arch =~ /ppc64/;
         }
     }
     
